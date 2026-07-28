@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export function MomentsGallerySection() {
   const t = useTranslations("Gallery");
@@ -39,11 +40,16 @@ export function MomentsGallerySection() {
           {marqueeList.map((imgUrl, idx) => (
             <div
               key={idx}
-              className="shrink-0 w-72 sm:w-96 lg:w-[420px] h-64 sm:h-80 lg:h-96 rounded-[5px] bg-white border border-black/10 shadow-sm overflow-hidden group hover:shadow-md transition-all duration-300"
+              className="shrink-0 w-72 sm:w-96 lg:w-[420px] h-64 sm:h-80 lg:h-96 rounded-[5px] bg-white border border-black/10 shadow-sm overflow-hidden relative group hover:shadow-md transition-all duration-300"
             >
-              <div
-                className="w-full h-full bg-cover bg-center bg-no-repeat group-hover:scale-105 transition-transform duration-700 ease-out"
-                style={{ backgroundImage: `url('${imgUrl}')` }}
+              <Image
+                src={imgUrl}
+                alt="The Narrow Gate Church Community Moment"
+                fill
+                sizes="(max-width: 768px) 288px, (max-width: 1024px) 384px, 420px"
+                quality={75}
+                loading="lazy"
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
               />
             </div>
           ))}

@@ -189,6 +189,9 @@ input:focus, textarea:focus, select:focus {
   display: flex;
   width: max-content;
   animation: marquee 150s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .animate-marquee:hover {

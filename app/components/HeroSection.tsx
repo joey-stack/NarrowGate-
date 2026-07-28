@@ -3,6 +3,8 @@
 import { useTranslations, useLocale } from "next-intl";
 import { useState, useEffect } from "react";
 
+import Image from "next/image";
+
 export function HeroSection() {
   const t = useTranslations("Hero");
   const locale = useLocale();
@@ -37,17 +39,24 @@ export function HeroSection() {
 
   return (
     <section className="relative bg-[#121212] text-white min-h-[85vh] flex flex-col justify-center items-center overflow-hidden">
-      {/* Background Image Crossfade Slider */}
+      {/* Optimized Background Image Crossfade Slider */}
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out pointer-events-none z-0 ${
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out pointer-events-none z-0 ${
             index === currentSlide ? "opacity-75" : "opacity-0"
           }`}
-          style={{
-            backgroundImage: `url('${slide.url}')`,
-          }}
-        />
+        >
+          <Image
+            src={slide.url}
+            alt={slide.caption}
+            fill
+            priority={index === 0}
+            sizes="100vw"
+            quality={75}
+            className="object-cover object-center"
+          />
+        </div>
       ))}
 
       {/* Subtle Gradient Overlay */}

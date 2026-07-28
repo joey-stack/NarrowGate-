@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export function AboutLeadershipSection() {
   const t = useTranslations("AboutLeadership");
@@ -33,9 +34,14 @@ export function AboutLeadershipSection() {
               className="rounded-lg bg-[#1E1E1E] border border-black/10 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 group hover:-translate-y-0.5 relative h-[400px] sm:h-[440px]"
             >
               {/* 100% Full-Height Image */}
-              <div
-                className="absolute inset-0 bg-cover bg-top bg-no-repeat transition-transform duration-500"
-                style={{ backgroundImage: `url('${leader.img}')` }}
+              <Image
+                src={leader.img}
+                alt={leader.name}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                quality={75}
+                loading="lazy"
+                className="object-cover object-top transition-transform duration-500"
               />
               {/* Subtle Dark Gradient Overlay at bottom */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />
