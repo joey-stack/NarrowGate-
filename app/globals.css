@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors (Official Foursquare Brand Palette) */
+  --primary: #121212;
+  --secondary: #1E1E1E;
+  --accent: #6B21A8;
+  --accent-light: #7E22CE;
+  --accent-gold: #EAB308;
+  --background: #F8F8F8;
+  --surface: #FFFFFF;
+  --text-primary: #000000;
+  --text-secondary: #525252;
+
+  /* 8pt Grid Spacing Tokens */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* Soft Elevation Shadow Tokens (Subtle & Crisp) */
+  --shadow-token-sm: 0 1px 3px rgba(0, 0, 0, 0.02);
+  --shadow-token-md: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-token-lg: 0 4px 14px rgba(0, 0, 0, 0.06);
+
+  /* Border Radius (Strict 8px Grid) */
+  --radius-lg: 8px;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-gold: var(--accent-gold);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --font-heading: var(--font-poppins);
+  --font-body: var(--font-inter);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-inter), sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Typography Utility Scale */
+.text-display {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.text-h1 {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.text-h2 {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.text-h3 {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.text-subheading {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.text-body {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.text-caption {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+/* UI Design System Components (Foursquare Royal Purple + Gold Hover) */
+.btn-primary {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  background-color: var(--accent);
+  color: #ffffff;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(107, 33, 168, 0.25);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-gold);
+  color: #121212;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(234, 179, 8, 0.4);
+}
+
+.btn-secondary {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: #ffffff;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.card-surface {
+  background-color: var(--surface);
+  border-radius: 8px;
+  box-shadow: var(--shadow-token-sm);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-surface:hover {
+  box-shadow: var(--shadow-token-md);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Accessible control focus ring */
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

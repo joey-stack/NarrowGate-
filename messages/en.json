@@ -1,0 +1,281 @@
+{
+  "Header": {
+    "churchName": "The Narrow Gate",
+    "churchSubtitle": "Foursquare Church",
+    "nav": {
+      "home": "Home",
+      "about": "About Us",
+      "getInvolved": "Get Involved",
+      "supportMission": "Support Mission",
+      "praiseWorship": "Praise & Worship",
+      "contact": "Contact"
+    },
+    "language": "Language"
+  },
+  "Hero": {
+    "titleLine1": "Faith. Family.",
+    "titleLine2": "Community.",
+    "locationBadge": "Motta di Livenza, Italy",
+    "tagline": "Join The Narrow Gate Foursquare Church in Motta di Livenza and be part of a community that grows in faith, supports one another, and reaches the unreached.",
+    "planVisit": "Plan Your Visit",
+    "supportMission": "Support the Mission"
+  },
+  "WhoWeAre": {
+    "badge": "Who We Are",
+    "title": "Our Mission is to Share Faith and Love With The World.",
+    "subtitle": "Located in Motta di Livenza, Italy, The Narrow Gate Foursquare Church is a vibrant international Christian community dedicated to preaching Jesus Christ as Savior, Baptizer with the Holy Spirit, Healer, and Soon-Coming King.",
+    "cta": "Get To Know Us"
+  },
+  "WatchSermons": {
+    "badge": "Watch",
+    "title": "Watch Our Messages & Praise",
+    "description": "Listen to anointed word preaching, pastoral encouragement, and praise worship recordings from our weekly services.",
+    "cta": "Watch Messages"
+  },
+  "WeeklyGatherings": {
+    "badge": "Events & Services",
+    "title": "Upcoming Gatherings",
+    "subtitle": "Join us in person or in prayer throughout the week in Motta di Livenza.",
+    "viewAll": "View All Schedule",
+    "wednesdayTitle": "Wednesday Bible Study",
+    "wednesdayTime": "Wednesday 6:30 PM – 8:30 PM",
+    "saturdayTitle": "Saturday Intercessory Prayer",
+    "saturdayTime": "Saturday 4:30 PM",
+    "sundayBreakfastTitle": "Sunday Breakfast & School",
+    "sundayBreakfastTime": "Sunday 9:00 AM & 9:20 AM",
+    "sundayServiceTitle": "Sunday Main Worship Service",
+    "sundayServiceTime": "Sunday 10:00 AM"
+  },
+  "MinistriesGrid": {
+    "badge": "Ministries",
+    "title": "Building Faith Through Service and Community",
+    "subtitle": "Discover opportunities to serve, grow, and connect across all age groups and departments.",
+    "cta": "Join a Ministry",
+    "children": "Children's Ministry",
+    "youth": "Youth & Young Adults",
+    "women": "Women's Ministry",
+    "men": "Men's Fellowship",
+    "choir": "Worship Choir",
+    "outreach": "Community Outreach"
+  },
+  "SupportMissionBanner": {
+    "badge": "Support Our Mission",
+    "quote": "\"Reaching the reached and the unreached.\"",
+    "description": "Your generosity enables us to provide full Student Education Trust Funds, food packages through Banco Alimentare, and housing care for widows and families in Italy.",
+    "cta": "Donate & Support"
+  },
+  "Gallery": {
+    "badge": "Gallery",
+    "title": "Moments That Bring Us Together"
+  },
+  "PlanVisitCard": {
+    "badge": "Visit Us",
+    "quoteLine1": "You are only a visitor once; after that,",
+    "quoteLine2": "you are part of our big family.",
+    "locationText": "Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italy",
+    "cta": "Plan Your Visit"
+  },
+  "AboutHero": {
+    "badge": "About Us",
+    "title": "The Narrow Gate Foursquare Church",
+    "subtitle": "Located in Motta di Livenza, Italy, we are a vibrant bilingual international church committed to exalting Jesus Christ, nurturing believers, and reaching our community with love and grace.",
+    "cta": "Contact Our Team"
+  },
+  "AboutMission": {
+    "badge": "Our Mission",
+    "quote": "Our mission is to lead people into a deeper relationship with God and create a welcoming community where everyone feels seen, loved, and valued. We envision a church that transforms lives through faith, service, and genuine connection—a place where hope is restored and hearts are united in purpose."
+  },
+  "AboutBeliefs": {
+    "badge": "Our Beliefs",
+    "title": "What We Believe",
+    "subtitle": "Our faith is anchored in the Holy Scriptures, centered on the Gospel of Jesus Christ across the 4 tenets of the Foursquare Gospel.",
+    "q1": "What is The Foursquare Gospel?",
+    "a1": "We preach Jesus Christ as Savior (John 3:16), Baptizer with the Holy Spirit (Acts 2:4), Healer (1 Peter 2:24), and Soon-Coming King (1 Thessalonians 4:16-17).",
+    "q2": "What do we believe about salvation?",
+    "a2": "Salvation is a free gift from God received through faith in Jesus Christ alone, transforming our hearts and securing eternal life.",
+    "q3": "What is the importance of prayer in our church?",
+    "a3": "We gather for Wednesday Bible study, Saturday intercessory prayer, and Sunday breakfast prayer, believing prayer unlocks God's presence and direction.",
+    "q4": "How do we express community and fellowship?",
+    "a4": "Through Love Feast gatherings, Cultural Sunday celebrations ('Our strength lies in our diversity' — 2 Cor 11:22), and active ministry groups.",
+    "q5": "What is our vision for visitors and members?",
+    "a5": "\"You are only a visitor once; after that, you are part of our big family.\" Everyone is welcomed with warmth and brotherly love.",
+    "q6": "What is our mission outreach in Italy?",
+    "a6": "\"Reaching the reached and the unreached\" through our Student Education Trust Fund, Banco Alimentare food bank, Shelter Partners, and Widows Project."
+  },
+  "AboutLeadership": {
+    "badge": "Our Leadership",
+    "title": "Meet Our Leaders",
+    "subtitle": "Dedicated pastoral team and department leaders serving with devotion in Motta di Livenza.",
+    "l1Name": "Rev. Uyi Loveday Evbuomwan",
+    "l1Role": "Senior Pastor & Founder",
+    "l2Name": "Pastoral Care Team",
+    "l2Role": "Counseling & Discipleship",
+    "l3Name": "Worship Ministry Leader",
+    "l3Role": "Choir & Music Director",
+    "l4Name": "Youth Ministry Team",
+    "l4Role": "Youth & Young Adults",
+    "l5Name": "Women's Ministry Leader",
+    "l5Role": "Women's Fellowship",
+    "l6Name": "Community Outreach Director",
+    "l6Role": "Student Fund & Food Bank"
+  },
+  "PastorWelcome": {
+    "badge": "A Message From Our Senior Pastor",
+    "headerTitle": "A Welcoming Church Family Centered on Faith, Hope & Gospel Grace",
+    "headerIntro": "Located in Motta di Livenza, Italy, The Narrow Gate Foursquare Church is dedicated to reaching the reached and the unreached with the transformative love of Jesus Christ.",
+    "pastorName": "Rev. Uyi Loveday Evbuomwan",
+    "pastorRole": "Senior Pastor & Founder",
+    "pastorBio": "Leading with devotion, pastoral care, and a heart for every individual and family in our international community.",
+    "quoteTitle": "Our Family Vision",
+    "quoteText": "You are only a visitor once; after that, you are part of our big family.",
+    "missionTitle": "Our Pastoral Heart",
+    "missionText": "We provide spiritual guidance, biblical teaching, and a warm international fellowship where everyone can grow in Christ.",
+    "ctaMore": "More About Us",
+    "ctaVisit": "Plan Your Visit"
+  },
+  "Schedule": {
+    "title": "Weekly Service & Gathering Times",
+    "subtitle": "Join us in person or in prayer throughout the week",
+    "wednesday": "Wednesday",
+    "wednesdayEvent": "Bible Study",
+    "wednesdayTime": "6:30 PM – 8:30 PM",
+    "saturday": "Saturday",
+    "saturdayEvent": "Intercessory Prayer",
+    "saturdayTime": "4:30 PM",
+    "sunday": "Sunday",
+    "sundayBreakfast": "Breakfast Prayer",
+    "sundayBreakfastTime": "9:00 AM",
+    "sundaySchool": "Sunday School",
+    "sundaySchoolTime": "9:20 AM",
+    "sundayService": "Sunday Service",
+    "sundayServiceTime": "10:00 AM"
+  },
+  "Departments": {
+    "badge": "Church Life",
+    "title": "Our Church Departments",
+    "subtitle": "Every generation and demographic has a place to grow, serve, and thrive.",
+    "menTitle": "Men's Fellowship",
+    "menDesc": "Empowering men to be spiritual leaders in their homes, workplace, and church.",
+    "womenTitle": "Women's Ministry",
+    "womenDesc": "Connecting women through prayer, fellowship, mentorship, and spiritual growth.",
+    "childrenTitle": "Children's Ministry",
+    "childrenDesc": "Nurturing young hearts in a safe, fun, and Gospel-centered environment.",
+    "youthTitle": "Youth & Young Adults",
+    "youthDesc": "Inspiring the next generation to live boldly for Christ in a modern world.",
+    "choirTitle": "Worship Choir",
+    "choirDesc": "Leading the congregation into deep, anointed praise and worship."
+  },
+  "CommunityProjects": {
+    "badge": "Our Impact",
+    "title": "Community & Outreach Projects",
+    "subtitle": "Putting faith into action through compassionate community support in Italy and beyond.",
+    "studentFundTitle": "Student Education Trust Fund",
+    "studentFundDesc": "Fully funded by The Narrow Gate Foursquare Church Italy to support local and international students in their academic journey.",
+    "shelterTitle": "Shelter Partners",
+    "shelterDesc": "Providing housing assistance and compassionate support to individuals and families in need.",
+    "widowsTitle": "Widows Project",
+    "widowsDesc": "Dedicated care, emotional support, and practical assistance for widows in our community.",
+    "foodBankTitle": "Banco Alimentare (Food Bank)",
+    "foodBankDesc": "Collecting and distributing food packages to families facing hardship in Motta di Livenza and surrounding areas.",
+    "cta": "Support Our Projects"
+  },
+  "Testimonials": {
+    "badge": "Community Voices",
+    "title": "Stories of Transformation",
+    "subtitle": "Hear from members of our church family about how God is working in their lives.",
+    "t1Quote": "The moment I stepped into The Narrow Gate, I felt genuine love and warmth. It truly is a family away from home.",
+    "t1Author": "Brother Emmanuel",
+    "t2Quote": "The Student Trust Fund gave me the hope and stability I needed to complete my university studies in Italy.",
+    "t2Author": "Sister Grace",
+    "t3Quote": "Bible study on Wednesday nights has deepened my understanding of Scripture and strengthened my faith journey.",
+    "t3Author": "Deacon Marco"
+  },
+  "ContactLocation": {
+    "badge": "Visit Us",
+    "title": "Join Us In Motta di Livenza",
+    "addressTitle": "Church Address",
+    "addressText": "Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italy",
+    "phoneTitle": "Phone",
+    "phoneText": "+39 - 3883629233",
+    "emailTitle": "Email",
+    "emailText": "fgcititaly@aol.com / uyisky@yahoo.com",
+    "ctaPlan": "Plan Your Visit",
+    "ctaContact": "Send Us a Message"
+  },
+  "About": {
+    "title": "About The Narrow Gate Foursquare Church",
+    "subtitle": "Rooted in scripture, dedicated to community, and passionate about global mission.",
+    "historyTitle": "Our History & Mission",
+    "historyText": "Located in Motta di Livenza, Italy, The Narrow Gate Foursquare Church is a vibrant bilingual international church committed to exalting Jesus Christ. We are affiliated with the International Church of the Foursquare Gospel, dedicated to preaching Jesus Christ as Savior, Baptizer with the Holy Spirit, Healer, and Soon-Coming King.",
+    "valuesTitle": "Core Values",
+    "v1Title": "Biblical Faith",
+    "v1Desc": "Grounded in the uncompromised Word of God.",
+    "v2Title": "Inclusive Family",
+    "v2Desc": "Welcoming people of all nations and backgrounds.",
+    "v3Title": "Compassionate Outreach",
+    "v3Desc": "Serving those in need through tangible community projects.",
+    "v4Title": "Spirit-Led Worship",
+    "v4Desc": "Experiencing God's presence in truth and passion."
+  },
+  "GetInvolved": {
+    "title": "Get Involved in Our Community",
+    "quoteBanner": "You are only a visitor once; after that, you are part of our big family.",
+    "subtitle": "Discover opportunities to serve, connect, and grow with our ministries.",
+    "ministriesTitle": "Ministries & Activities",
+    "counseling": "Counseling & Spiritual Guidance",
+    "counselingDesc": "Pastoral care and biblical guidance for life's challenges.",
+    "visitation": "Visitation & Follow-up",
+    "visitationDesc": "Reaching out to members, the sick, and new visitors with love and care.",
+    "childDedication": "Child Dedication",
+    "childDedicationDesc": "Presenting children before the Lord with congregational prayer.",
+    "families": "Families Ministry",
+    "familiesDesc": "Strengthening marriages and nurturing strong Christian homes.",
+    "testimonies": "Testimonies & Thanksgiving",
+    "testimoniesDesc": "Celebrating God's miraculous works and answered prayers.",
+    "loveFeast": "Love Feast & Fellowship",
+    "loveFeastDesc": "Sharing meals, joy, and brotherly affection together.",
+    "culturalSunday": "Cultural Sunday",
+    "culturalTheme": "\"Our strength lies in our diversity\" — 2 Corinthians 11:22",
+    "culturalDesc": "Celebrating our international diversity with traditional attire, music, and food.",
+    "cta": "Join a Ministry"
+  },
+  "SupportMission": {
+    "title": "Support Our Mission",
+    "missionBanner": "\"Reaching the reached and the unreached.\"",
+    "subtitle": "Your generosity enables us to spread the Gospel and transform lives across Italy and internationally.",
+    "waysToGive": "Ways to Support",
+    "educationFund": "Support Student Education Trust Fund",
+    "educationFundDesc": "Help provide full educational funding for deserving local and international students.",
+    "foodBank": "Support Banco Alimentare",
+    "foodBankDesc": "Donate towards monthly food packages for struggling families.",
+    "shelter": "Support Shelter & Widows Projects",
+    "shelterDesc": "Direct assistance for housing and care for widows and vulnerable community members.",
+    "bankDetails": "Bank & Transfer Details",
+    "bankContact": "Please contact us at +39 - 3883629233 or fgcititaly@aol.com for official giving account info."
+  },
+  "PraiseWorship": {
+    "title": "Praise & Worship Ministry",
+    "subtitle": "Exalting God in spirit and in truth through music, song, and adoration.",
+    "philosophyTitle": "Our Worship Philosophy",
+    "philosophyText": "Worship at The Narrow Gate is not just a musical performance, but a sacred encounter with the living God. Our worship team leads the congregation into intimate, powerful praise that transcends cultural and linguistic barriers.",
+    "choirCallout": "Join the Choir & Media Team",
+    "choirCalloutDesc": "If God has blessed you with musical talent, vocals, or technical skills in audio/video, we invite you to serve in the Worship Ministry."
+  },
+  "ContactPage": {
+    "title": "Contact Us",
+    "subtitle": "We would love to hear from you. Reach out with questions, prayer requests, or visit inquiries.",
+    "formTitle": "Send a Message",
+    "nameLabel": "Your Name",
+    "emailLabel": "Your Email",
+    "phoneLabel": "Phone Number",
+    "messageLabel": "Your Message",
+    "submitButton": "Send Message",
+    "successMessage": "Thank you! Your message has been sent."
+  },
+  "Footer": {
+    "rights": "All rights reserved.",
+    "location": "Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italy",
+    "phone": "+39 - 3883629233",
+    "email": "fgcititaly@aol.com / uyisky@yahoo.com"
+  }
+}

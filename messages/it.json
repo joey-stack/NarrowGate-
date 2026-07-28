@@ -1,0 +1,281 @@
+{
+  "Header": {
+    "churchName": "The Narrow Gate",
+    "churchSubtitle": "Chiesa Foursquare",
+    "nav": {
+      "home": "Home",
+      "about": "Chi Siamo",
+      "getInvolved": "Partecipa",
+      "supportMission": "Sostieni la Missione",
+      "praiseWorship": "Lode e Adorazione",
+      "contact": "Contatti"
+    },
+    "language": "Lingua"
+  },
+  "Hero": {
+    "titleLine1": "Fede. Famiglia.",
+    "titleLine2": "Comunità.",
+    "locationBadge": "Motta di Livenza, Italia",
+    "tagline": "Unisciti alla Chiesa Foursquare The Narrow Gate a Motta di Livenza e fai parte di una comunità che cresce nella fede, si sostiene e raggiunge i bisognosi.",
+    "planVisit": "Pianifica la Tua Visita",
+    "supportMission": "Sostieni la Missione"
+  },
+  "WhoWeAre": {
+    "badge": "Chi Siamo",
+    "title": "La Nostra Missione è Condividere la Fede e l'Amore Con il Mondo.",
+    "subtitle": "Situata a Motta di Livenza, la Chiesa Foursquare The Narrow Gate è una vivace comunità cristiana internazionale dedicata a proclamare Gesù Cristo come Salvatore, Battezzatore, Guaritore e Re che ritorna.",
+    "cta": "Conoscici Meglio"
+  },
+  "WatchSermons": {
+    "badge": "Guarda",
+    "title": "Guarda i Nostri Messaggi e Lode",
+    "description": "Ascolta la predicazione unta della Parola, l'incoraggiamento pastorale e i canti dei nostri culti settimanali.",
+    "cta": "Guarda i Messaggi"
+  },
+  "WeeklyGatherings": {
+    "badge": "Eventi e Culti",
+    "title": "Prossimi Incontri",
+    "subtitle": "Unisciti a noi di persona o in preghiera durante la settimana a Motta di Livenza.",
+    "viewAll": "Vedi Tutti gli Orari",
+    "wednesdayTitle": "Studio Biblico del Mercoledì",
+    "wednesdayTime": "Mercoledì 18:30 – 20:30",
+    "saturdayTitle": "Preghiera di Intercessione del Sabato",
+    "saturdayTime": "Sabato 16:30",
+    "sundayBreakfastTitle": "Preghiera Colazione e Scuola Domenicale",
+    "sundayBreakfastTime": "Domenica 09:00 e 09:20",
+    "sundayServiceTitle": "Culto Domenicale Principale",
+    "sundayServiceTime": "Domenica 10:00"
+  },
+  "MinistriesGrid": {
+    "badge": "Ministeri",
+    "title": "Costruire la Fede Attraverso il Servizio e la Comunità",
+    "subtitle": "Scopri le opportunità per servire, crescere e connetterti in ogni fascia d'età.",
+    "cta": "Unisciti a un Ministero",
+    "children": "Ministero Bambini",
+    "youth": "Giovani e Giovani Adulti",
+    "women": "Ministero Donne",
+    "men": "Ministero Uomini",
+    "choir": "Coro di Adorazione",
+    "outreach": "Progetti Comunitari"
+  },
+  "SupportMissionBanner": {
+    "badge": "Sostieni la Nostra Missione",
+    "quote": "\"Raggiungere chi è vicino e chi è lontano.\"",
+    "description": "La tua generosità ci permette di offrire il Fondo di Beneficenza per Studenti, pacchi alimentari tramite il Banco Alimentare e assistenza per le vedove in Italia.",
+    "cta": "Dona e Sostieni"
+  },
+  "Gallery": {
+    "badge": "Galleria",
+    "title": "Momenti Che Ci Uniscono"
+  },
+  "PlanVisitCard": {
+    "badge": "Vieni a Trovarci",
+    "quoteLine1": "Sei un visitatore solo la prima volta; dopo,",
+    "quoteLine2": "fai parte della nostra grande famiglia.",
+    "locationText": "Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italia",
+    "cta": "Pianifica la Tua Visita"
+  },
+  "AboutHero": {
+    "badge": "Chi Siamo",
+    "title": "Chiesa Foursquare The Narrow Gate",
+    "subtitle": "Situata a Motta di Livenza, siamo una vivace comunità internazionale bilingue impegnata ad esaltare Gesù Cristo, nutrire i credenti e servire con amore e grazia.",
+    "cta": "Contatta il Nostro Team"
+  },
+  "AboutMission": {
+    "badge": "La Nostra Missione",
+    "quote": "La nostra missione è guidare le persone in una relazione più profonda con Dio e creare una comunità accogliente dove ognuno si senta visto, amato e apprezzato. Immaginiamo una chiesa che trasforma le vite attraverso la fede, il servizio e una connessione sincera."
+  },
+  "AboutBeliefs": {
+    "badge": "I Nostri Valori e Fede",
+    "title": "Cosa Crediamo",
+    "subtitle": "La nostra fede è ancorata nelle Scritture, centrata sul Vangelo di Gesù Cristo nei 4 pilastri Foursquare.",
+    "q1": "Cos'è il Vangelo Foursquare?",
+    "a1": "Proclamiamo Gesù Cristo come Salvatore (Giovanni 3:16), Battezzatore con lo Spirito Santo (Atti 2:4), Guaritore (1 Pietro 2:24) e Re che ritorna (1 Tessalonicesi 4:16-17).",
+    "q2": "Cosa crediamo sulla salvezza?",
+    "a2": "La salvezza è un dono gratuito di Dio ricevuto solo per fede in Gesù Cristo, che trasforma il cuore e dona la vita eterna.",
+    "q3": "Qual è l'importanza della preghiera nella nostra chiesa?",
+    "a3": "Ci riuniamo per lo studio biblico del mercoledì, la preghiera di intercessione del sabato e la preghiera della domenica mattina, credendo nella potenza della preghiera.",
+    "q4": "Come viviamo la comunione e la comunità?",
+    "a4": "Attraverso la Festa dell'Amore, la Domenica Culturale ('La nostra forza sta nella nostra diversità' — 2 Corinzi 11:22) e i vari ministeri.",
+    "q5": "Qual è la nostra visione per visitatori e membri?",
+    "a5": "'Sei un visitatore solo la prima volta; dopo, fai parte della nostra grande famiglia.' Tutti sono accolti con calore e amore fraterno.",
+    "q6": "Qual è la nostra missione in Italia?",
+    "a6": "'Raggiungere chi è vicino e chi è lontano' attraverso il Fondo per Studenti, Banco Alimentare, Partner di Accoglienza e Progetto Vedove."
+  },
+  "AboutLeadership": {
+    "badge": "La Nostra Guida",
+    "title": "Incontra i Nostri Leader",
+    "subtitle": "Team pastorale e responsabili di dipartimento dedicati che servono con devozione a Motta di Livenza.",
+    "l1Name": "Rev. Uyi Loveday Evbuomwan",
+    "l1Role": "Pastore Senior e Fondatore",
+    "l2Name": "Team Cura Pastorale",
+    "l2Role": "Consulenza e Discepolato",
+    "l3Name": "Responsabile Adorazione",
+    "l3Role": "Direttore Coro e Musica",
+    "l4Name": "Team Ministero Giovani",
+    "l4Role": "Giovani e Giovani Adulti",
+    "l5Name": "Responsabile Ministero Donne",
+    "l5Role": "Comunione Donne",
+    "l6Name": "Direttore Progetti Comunitari",
+    "l6Role": "Fondo Studenti e Banco Alimentare"
+  },
+  "PastorWelcome": {
+    "badge": "Un Messaggio dal Nostro Pastore Senior",
+    "headerTitle": "Una Famiglia di Chiesa Accogliente Centrata su Fede, Speranza e Grazia",
+    "headerIntro": "Situata a Motta di Livenza, la Chiesa Foursquare The Narrow Gate è dedicata a raggiungere chi è vicino e chi è lontano con l'amore di Gesù Cristo.",
+    "pastorName": "Rev. Uyi Loveday Evbuomwan",
+    "pastorRole": "Pastore Senior e Fondatore",
+    "pastorBio": "Guida con dedizione, cura pastorale e un cuore per ogni individuo e famiglia nella nostra comunità internazionale.",
+    "quoteTitle": "La Nostra Visione di Famiglia",
+    "quoteText": "Sei un visitatore solo la prima volta; dopo, fai parte della nostra grande famiglia.",
+    "missionTitle": "Il Nostro Cuore Pastorale",
+    "missionText": "Offriamo guida spirituale, insegnamento biblico e una calorosa comunione internazionale dove ognuno può crescere in Cristo.",
+    "ctaMore": "Scopri di Più",
+    "ctaVisit": "Pianifica la Tua Visita"
+  },
+  "Schedule": {
+    "title": "Orari dei Servizi e degli Incontri Settimanali",
+    "subtitle": "Unisciti a noi di persona o in preghiera durante la settimana",
+    "wednesday": "Mercoledì",
+    "wednesdayEvent": "Studio Biblico",
+    "wednesdayTime": "18:30 – 20:30",
+    "saturday": "Sabato",
+    "saturdayEvent": "Preghiera di Intercessione",
+    "saturdayTime": "16:30",
+    "sunday": "Domenica",
+    "sundayBreakfast": "Preghiera della Colazione",
+    "sundayBreakfastTime": "09:00",
+    "sundaySchool": "Scuola Domenicale",
+    "sundaySchoolTime": "09:20",
+    "sundayService": "Culto Domenicale",
+    "sundayServiceTime": "10:00"
+  },
+  "Departments": {
+    "badge": "Vita della Chiesa",
+    "title": "I Nostri Dipartimenti",
+    "subtitle": "Ogni generazione e gruppo ha un luogo per crescere, servire e fiorire.",
+    "menTitle": "Ministero Uomini",
+    "menDesc": "Incoraggiare gli uomini ad essere guide spirituali in famiglia, sul lavoro e in chiesa.",
+    "womenTitle": "Ministero Donne",
+    "womenDesc": "Connettere le donne attraverso la preghiera, la comunione e la crescita spirituale.",
+    "childrenTitle": "Ministero Bambini",
+    "childrenDesc": "Nutrire i più piccoli in un ambiente sicuro, gioioso e centrato sul Vangelo.",
+    "youthTitle": "Giovani e Giovani Adulti",
+    "youthDesc": "Ispirare la nuova generazione a vivere con coraggio per Cristo nel mondo moderno.",
+    "choirTitle": "Coro di Adorazione",
+    "choirDesc": "Guidare la congregazione in una lode profonda e un'adorazione unta."
+  },
+  "CommunityProjects": {
+    "badge": "Il Nostro Impatto",
+    "title": "Progetti Comunitari e Sociali",
+    "subtitle": "Mettere la fede in azione attraverso un sostegno concreto per la comunità in Italia e all'estero.",
+    "studentFundTitle": "Fondo di Beneficenza per Studenti",
+    "studentFundDesc": "Interamente finanziato dalla Chiesa The Narrow Gate Foursquare Italia per sostenere studenti locali e internazionali.",
+    "shelterTitle": "Partner di Accoglienza",
+    "shelterDesc": "Offrire assistenza abitativa e sostegno umano a individui e famiglie in difficoltà.",
+    "widowsTitle": "Progetto Vedove",
+    "widowsDesc": "Cura dedicata, sostegno emotivo e aiuto pratico per le vedove della nostra comunità.",
+    "foodBankTitle": "Banco Alimentare",
+    "foodBankDesc": "Raccolta e distribuzione di pacchi alimentari alle famiglie bisognose a Motta di Livenza e dintorni.",
+    "cta": "Sostieni i Nostri Progetti"
+  },
+  "Testimonials": {
+    "badge": "Voci della Comunità",
+    "title": "Storie di Trasformazione",
+    "subtitle": "Ascolta le testimonianze dei membri della nostra famiglia su come Dio sta operando.",
+    "t1Quote": "Dal momento in cui sono entrato a The Narrow Gate, ho sentito un amore sincero. È una vera famiglia lontano da casa.",
+    "t1Author": "Fratello Emmanuel",
+    "t2Quote": "Il Fondo per gli Studenti mi ha dato la speranza e la stabilità per completare i miei studi universitari in Italia.",
+    "t2Author": "Sister Grace",
+    "t3Quote": "Lo studio biblico del mercoledì sera ha approfondito la mia conoscenza della Parola e rafforzato la mia fede.",
+    "t3Author": "Diacono Marco"
+  },
+  "ContactLocation": {
+    "badge": "Vieni a Trovarci",
+    "title": "Unisciti a Noi a Motta di Livenza",
+    "addressTitle": "Indirizzo della Chiesa",
+    "addressText": "Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italia",
+    "phoneTitle": "Telefono",
+    "phoneText": "+39 - 3883629233",
+    "emailTitle": "Email",
+    "emailText": "fgcititaly@aol.com / uyisky@yahoo.com",
+    "ctaPlan": "Pianifica la Tua Visita",
+    "ctaContact": "Inviaci un Messaggio"
+  },
+  "About": {
+    "title": "Chi Siamo - Chiesa Foursquare The Narrow Gate",
+    "subtitle": "Radicati nella Scrittura, dedicati alla comunità e appassionati della missione globale.",
+    "historyTitle": "La Nostra Storia e Missione",
+    "historyText": "Situata a Motta di Livenza, la Chiesa The Narrow Gate Foursquare è una vivace chiesa internazionale bilingue impegnata ad esaltare Gesù Cristo. Affiliata alla Chiesa Internazionale del Vangelo Foursquare, è dedicata a proclamare Gesù Cristo come Salvatore, Battezzatore con lo Spirito Santo, Guaritore e Re che ritorna.",
+    "valuesTitle": "Valori Fondamentali",
+    "v1Title": "Fede Biblica",
+    "v1Desc": "Fondata sulla Parola di Dio senza compromessi.",
+    "v2Title": "Famiglia Inclusiva",
+    "v2Desc": "Accogliere persone di ogni nazione e background.",
+    "v3Title": "Amore Concreto",
+    "v3Desc": "Servire i bisognosi attraverso progetti comunitari tangibili.",
+    "v4Title": "Adorazione nello Spirito",
+    "v4Desc": "Vivere la presenza di Dio in verità e passione."
+  },
+  "GetInvolved": {
+    "title": "Partecipa alla Nostra Comunità",
+    "quoteBanner": "Sei un visitatore solo la prima volta; dopo, fai parte della nostra grande famiglia.",
+    "subtitle": "Scopri le opportunità per servire, connetterti e crescere nei nostri ministeri.",
+    "ministriesTitle": "Ministeri e Attività",
+    "counseling": "Consulenza e Guida Spirituale",
+    "counselingDesc": "Cura pastorale e consiglio biblico per le sfide della vita.",
+    "visitation": "Visite e Cura Pastorale",
+    "visitationDesc": "Raggiungere i membri, i malati e i nuovi visitatori con amore e attenzione.",
+    "childDedication": "Dedica dei Bambini",
+    "childDedicationDesc": "Presentare i bambini al Signore con la preghiera della chiesa.",
+    "families": "Ministero Famiglie",
+    "familiesDesc": "Rafforzare i matrimoni e nutrire solide famiglie cristiane.",
+    "testimonies": "Testimonianze e Ringraziamenti",
+    "testimoniesDesc": "Celebrare le opere di Dio e le preghiere esaudite.",
+    "loveFeast": "Festa dell'Amore e Comunione",
+    "loveFeastDesc": "Condividere pasti, gioia e fraternità insieme.",
+    "culturalSunday": "Domenica Culturale",
+    "culturalTheme": "\"La nostra forza sta nella nostra diversità\" — 2 Corinzi 11:22",
+    "culturalDesc": "Celebrare la nostra diversità internazionale con abiti tradizionali, musica e cibo.",
+    "cta": "Unisciti a un Ministero"
+  },
+  "SupportMission": {
+    "title": "Sostieni la Nostra Missione",
+    "missionBanner": "\"Raggiungere chi è vicino e chi è lontano.\"",
+    "subtitle": "La tua generosità ci permette di diffondere il Vangelo e trasformare vite in Italia e all'estero.",
+    "waysToGive": "Modi per Sostenere",
+    "educationFund": "Fondo di Beneficenza per Studenti",
+    "educationFundDesc": "Aiuta a garantire la copertura educativa completa per studenti meritevoli.",
+    "foodBank": "Sostieni il Banco Alimentare",
+    "foodBankDesc": "Dona per i pacchi alimentari mensili per le famiglie in difficoltà.",
+    "shelter": "Progetti Accoglienza e Vedove",
+    "shelterDesc": "Assistenza diretta per la casa e cura delle vedove e persone vulnerabili.",
+    "bankDetails": "Dettagli Bancari e Donazioni",
+    "bankContact": "Contattaci al +39 - 3883629233 o fgcititaly@aol.com per le coordinate bancarie ufficiali."
+  },
+  "PraiseWorship": {
+    "title": "Ministero di Lode e Adorazione",
+    "subtitle": "Esaltare Dio in spirito e verità attraverso la musica, il canto e la preghiera.",
+    "philosophyTitle": "La Nostra Adorazione",
+    "philosophyText": "L'adorazione a The Narrow Gate non è solo un'esecuzione musicale, ma un incontro sacro con Dio. Il nostro team di adorazione guida la chiesa in una lode intima e potente che supera le barriere culturali e linguistiche.",
+    "choirCallout": "Unisciti al Coro e Team Media",
+    "choirCalloutDesc": "Se Dio ti ha benedetto con talenti musicali, di canto o competenze tecniche, ti invitiamo a servire nel Ministero di Adorazione."
+  },
+  "ContactPage": {
+    "title": "Contattaci",
+    "subtitle": "Saremo felici di ascoltarti. Scrivici per informazioni, richieste di preghiera o per organizzare una visita.",
+    "formTitle": "Invia un Messaggio",
+    "nameLabel": "Il Tuo Nome",
+    "emailLabel": "La Tua Email",
+    "phoneLabel": "Numero di Telefono",
+    "messageLabel": "Il Tuo Messaggio",
+    "submitButton": "Invia Messaggio",
+    "successMessage": "Thank you! Your message has been sent."
+  },
+  "Footer": {
+    "rights": "Tutti i diritti riservati.",
+    "location": "Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italia",
+    "phone": "+39 - 3883629233",
+    "email": "fgcititaly@aol.com / uyisky@yahoo.com"
+  }
+}
