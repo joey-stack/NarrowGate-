@@ -31,10 +31,14 @@ export default function Header() {
       {/* Main Header Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo / Branding (Crimson Red badge) */}
+          {/* Logo / Branding */}
           <a href={`/${locale}`} className="flex items-center gap-3 group">
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#B91C1C] group-hover:bg-[#991B1B] group-hover:text-white flex items-center justify-center font-heading font-bold text-white text-xl shadow-sm transition-all duration-300">
-              NG
+            <div className="h-10 sm:h-12 px-2.5 py-1 rounded-lg bg-white/95 border border-white/20 flex items-center justify-center shadow-sm group-hover:bg-white transition-all">
+              <img
+                src="/logo.png"
+                alt="The Narrow Gate Foursquare Church Italy"
+                className="h-7 sm:h-8 w-auto object-contain"
+              />
             </div>
             <div>
               <span className="block text-white font-heading font-bold text-base sm:text-lg leading-tight tracking-tight">
