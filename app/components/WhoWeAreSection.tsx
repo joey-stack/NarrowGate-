@@ -2,6 +2,7 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
+import { ScrollReveal } from "./ScrollReveal";
 
 export function WhoWeAreSection() {
   const t = useTranslations("WhoWeAre");
@@ -10,60 +11,64 @@ export function WhoWeAreSection() {
   return (
     <section className="py-20 sm:py-28 bg-[#F8F8F8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Sub-badge Pill */}
-        <div className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/15 text-accent text-xs font-heading font-bold uppercase tracking-wider mb-6">
-          {t("badge")}
-        </div>
-
-        {/* Split Header Row (OneChurch Template Style) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
-          <div className="lg:col-span-5">
-            <h3 className="text-caption font-heading font-bold text-accent uppercase tracking-widest mb-3">
-              Our Identity
-            </h3>
-            <a
-              href={`/${locale}/about`}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#121212] text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-accent transition-colors shadow-sm"
-            >
-              {t("cta")} →
-            </a>
+        <ScrollReveal>
+          {/* Sub-badge Pill */}
+          <div className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/15 text-accent text-xs font-heading font-bold uppercase tracking-wider mb-6">
+            {t("badge")}
           </div>
 
-          <div className="lg:col-span-7">
-            <h2 className="text-h1 text-[#121212] mb-6 leading-tight">
-              {t("title")}
-            </h2>
-            <p className="text-subheading text-[#525252] leading-relaxed">
-              {t("subtitle")}
-            </p>
-          </div>
-        </div>
+          {/* Split Header Row (OneChurch Template Style) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
+            <div className="lg:col-span-5">
+              <h3 className="text-caption font-heading font-bold text-accent uppercase tracking-widest mb-3">
+                Our Identity
+              </h3>
+              <a
+                href={`/${locale}/about`}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#121212] text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-accent transition-colors shadow-sm"
+              >
+                {t("cta")} →
+              </a>
+            </div>
 
-        {/* Large Feature Banner Card (Full Width, Centered, No Over-zoom) */}
-        <div className="relative rounded-lg overflow-hidden border border-black/10 shadow-sm min-h-[420px] sm:min-h-[480px] flex flex-col justify-end group">
-          <Image
-            src="https://framerusercontent.com/images/BJfx98tg96KSw6rzvYL6jgfVU.jpeg"
-            alt="The Narrow Gate Foursquare Church Motta di Livenza"
-            fill
-            sizes="(max-width: 1280px) 100vw, 1280px"
-            quality={75}
-            loading="lazy"
-            className="object-cover object-center transition-all duration-500"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/95 via-[#121212]/40 to-transparent z-10 pointer-events-none" />
-          
-          <div className="relative z-20 p-8 sm:p-12 max-w-2xl text-white">
-            <span className="inline-block px-3 py-1 rounded-lg bg-accent text-white font-heading font-bold text-xs uppercase tracking-wider mb-3">
-              Motta di Livenza • Italy
-            </span>
-            <h3 className="font-heading font-bold text-white text-2xl sm:text-3xl mb-2 leading-snug">
-              Welcoming Everyone Into God's Family
-            </h3>
-            <p className="text-white/80 text-sm sm:text-base leading-relaxed">
-              Experience warm Christian fellowship, spirit-filled worship, and true international unity in Italy.
-            </p>
+            <div className="lg:col-span-7">
+              <h2 className="text-h1 text-[#121212] mb-6 leading-tight">
+                {t("title")}
+              </h2>
+              <p className="text-subheading text-[#525252] leading-relaxed">
+                {t("subtitle")}
+              </p>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
+
+        {/* Large Feature Banner Card */}
+        <ScrollReveal delay={0.2}>
+          <div className="relative rounded-lg overflow-hidden border border-black/10 shadow-sm min-h-[420px] sm:min-h-[480px] flex flex-col justify-end group">
+            <Image
+              src="https://framerusercontent.com/images/BJfx98tg96KSw6rzvYL6jgfVU.jpeg"
+              alt="The Narrow Gate Foursquare Church Motta di Livenza"
+              fill
+              sizes="(max-width: 1280px) 100vw, 1280px"
+              quality={75}
+              loading="lazy"
+              className="object-cover object-center transition-all duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/95 via-[#121212]/40 to-transparent z-10 pointer-events-none" />
+            
+            <div className="relative z-20 p-8 sm:p-12 max-w-2xl text-white">
+              <span className="inline-block px-3 py-1 rounded-lg bg-accent text-white font-heading font-bold text-xs uppercase tracking-wider mb-3">
+                Motta di Livenza • Italy
+              </span>
+              <h3 className="font-heading font-bold text-white text-2xl sm:text-3xl mb-2 leading-snug">
+                Welcoming Everyone Into God's Family
+              </h3>
+              <p className="text-white/80 text-sm sm:text-base leading-relaxed">
+                Experience warm Christian fellowship, spirit-filled worship, and true international unity in Italy.
+              </p>
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
