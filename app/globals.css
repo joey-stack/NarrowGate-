@@ -174,3 +174,24 @@ input:focus, textarea:focus, select:focus {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
+
+/* Infinite Marquee Gallery Slider */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
