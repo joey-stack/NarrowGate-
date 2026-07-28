@@ -31,23 +31,13 @@ export default function Header() {
       {/* Main Header Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo / Branding */}
-          <a href={`/${locale}`} className="flex items-center gap-3 group">
-            <div className="h-10 sm:h-12 px-2.5 py-1 rounded-lg bg-white/95 border border-white/20 flex items-center justify-center shadow-sm group-hover:bg-white transition-all">
-              <img
-                src="/logo.png"
-                alt="The Narrow Gate Foursquare Church Italy"
-                className="h-7 sm:h-8 w-auto object-contain"
-              />
-            </div>
-            <div>
-              <span className="block text-white font-heading font-bold text-base sm:text-lg leading-tight tracking-tight">
-                {t("churchName")}
-              </span>
-              <span className="block text-white/60 text-xs font-body font-medium tracking-wide">
-                {t("churchSubtitle")}
-              </span>
-            </div>
+          {/* Standalone Logo Image (No extra text, no white background box) */}
+          <a href={`/${locale}`} className="flex items-center group py-1">
+            <img
+              src="/logo_white.png"
+              alt="The Narrow Gate Foursquare Church Italy"
+              className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-sm"
+            />
           </a>
 
           {/* Desktop Navigation Links */}

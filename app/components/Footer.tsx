@@ -11,25 +11,15 @@ export default function Footer() {
     <footer className="bg-primary text-white/80 border-t border-white/10 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
-          {/* Brand */}
+          {/* Standalone Logo Image (No extra text, no white background box) */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="h-10 sm:h-12 px-2.5 py-1 rounded-lg bg-white/95 border border-white/20 flex items-center justify-center shadow-sm">
-                <img
-                  src="/logo.png"
-                  alt="The Narrow Gate Foursquare Church Italy"
-                  className="h-7 sm:h-8 w-auto object-contain"
-                />
-              </div>
-              <div>
-                <span className="block text-white font-heading font-bold text-base leading-tight">
-                  The Narrow Gate
-                </span>
-                <span className="block text-accent-light text-xs font-body font-medium">
-                  Foursquare Church
-                </span>
-              </div>
-            </div>
+            <a href={`/${locale}`} className="inline-block">
+              <img
+                src="/logo_white.png"
+                alt="The Narrow Gate Foursquare Church Italy"
+                className="h-10 sm:h-12 w-auto object-contain"
+              />
+            </a>
             <p className="text-xs text-white/70 leading-relaxed">
               Formed by Jesus, together, for others in Motta di Livenza, Italy. Reaching the reached and the unreached.
             </p>
