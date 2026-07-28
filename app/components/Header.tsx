@@ -31,9 +31,9 @@ export default function Header() {
       {/* Main Header Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo / Branding (Foursquare Royal Purple badge) */}
+          {/* Logo / Branding (Crimson Red badge) */}
           <a href={`/${locale}`} className="flex items-center gap-3 group">
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#6B21A8] group-hover:bg-[#EAB308] group-hover:text-[#121212] flex items-center justify-center font-heading font-bold text-white text-xl shadow-sm transition-all duration-300">
+            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#B91C1C] group-hover:bg-[#991B1B] group-hover:text-white flex items-center justify-center font-heading font-bold text-white text-xl shadow-sm transition-all duration-300">
               NG
             </div>
             <div>
@@ -56,7 +56,7 @@ export default function Header() {
                   href={link.href}
                   className={`px-4 py-2 text-xs font-heading font-semibold rounded-md transition-all duration-200 ${
                     isActive
-                      ? "bg-[#6B21A8] text-white shadow-sm"
+                      ? "bg-[#B91C1C] text-white shadow-sm"
                       : "text-white/80 hover:text-white hover:bg-white/10"
                   }`}
                 >
@@ -66,7 +66,7 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Right Action Area (Language Switcher + Foursquare Royal Purple CTA) */}
+          {/* Right Action Area (Language Switcher + Crimson Red CTA) */}
           <div className="flex items-center gap-3">
             {/* Language Switcher Toggle */}
             <div className="flex items-center bg-white/10 rounded-lg p-1 border border-white/10">
@@ -74,7 +74,7 @@ export default function Header() {
                 onClick={() => switchLocale("en")}
                 className={`px-3 py-1 text-xs font-heading font-bold rounded-md transition-all duration-200 ${
                   locale === "en"
-                    ? "bg-[#6B21A8] text-white shadow-sm"
+                    ? "bg-[#B91C1C] text-white shadow-sm"
                     : "text-white/70 hover:text-white"
                 }`}
               >
@@ -84,7 +84,7 @@ export default function Header() {
                 onClick={() => switchLocale("it")}
                 className={`px-3 py-1 text-xs font-heading font-bold rounded-md transition-all duration-200 ${
                   locale === "it"
-                    ? "bg-[#6B21A8] text-white shadow-sm"
+                    ? "bg-[#B91C1C] text-white shadow-sm"
                     : "text-white/70 hover:text-white"
                 }`}
               >
@@ -92,10 +92,10 @@ export default function Header() {
               </button>
             </div>
 
-            {/* Header Right Action Button (Royal Purple -> Gold Hover) */}
+            {/* Header Right Action Button (Crimson Red -> Dark Red Hover) */}
             <a
               href={`/${locale}/contact`}
-              className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-[#6B21A8] text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-[#EAB308] hover:text-[#121212] transition-all shadow-sm"
+              className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-[#991B1B] hover:text-white transition-all shadow-sm"
             >
               Plan Your Visit
             </a>

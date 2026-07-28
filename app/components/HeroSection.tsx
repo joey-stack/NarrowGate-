@@ -77,11 +77,11 @@ export function HeroSection() {
           {t("tagline")}
         </p>
 
-        {/* Action CTAs: Foursquare Royal Purple Button -> Crown Gold on Hover */}
+        {/* Action CTAs: Crimson Red Button -> Dark Red on Hover */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-12">
           <a
             href={`/${locale}/contact`}
-            className="w-full sm:w-auto px-8 py-4 rounded-lg bg-[#6B21A8] text-white font-heading font-bold text-sm uppercase tracking-wider shadow-md hover:bg-[#EAB308] hover:text-[#121212] hover:scale-105 transition-all duration-200 text-center"
+            className="w-full sm:w-auto px-8 py-4 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-sm uppercase tracking-wider shadow-md hover:bg-[#991B1B] hover:text-white transition-all duration-200 text-center"
           >
             {t("planVisit")} →
           </a>

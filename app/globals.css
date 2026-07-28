@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  /* Colors (Official Foursquare Brand Palette) */
+  /* Colors (Primary Crimson Red Palette) */
   --primary: #121212;
   --secondary: #1E1E1E;
-  --accent: #6B21A8;
-  --accent-light: #7E22CE;
+  --accent: #B91C1C;
+  --accent-light: #DC2626;
   --accent-gold: #EAB308;
   --background: #F8F8F8;
   --surface: #FFFFFF;
@@ -107,7 +107,7 @@ body {
   color: var(--text-secondary);
 }
 
-/* UI Design System Components (Foursquare Royal Purple + Gold Hover) */
+/* UI Design System Components (Crimson Red Accent) */
 .btn-primary {
   font-family: var(--font-poppins), sans-serif;
   font-size: 0.875rem;
@@ -122,15 +122,15 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(107, 33, 168, 0.25);
+  box-shadow: 0 2px 8px rgba(185, 28, 28, 0.25);
   cursor: pointer;
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-gold);
-  color: #121212;
+  background-color: #991B1B;
+  color: #ffffff;
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(234, 179, 8, 0.4);
+  box-shadow: 0 4px 14px rgba(185, 28, 28, 0.4);
 }
 
 .btn-secondary {

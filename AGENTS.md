@@ -25,8 +25,8 @@ Pages: Home, About Us, Get Involved, Support Mission, Contact, Praise and Worshi
 
 ## 4. UI/UX Rules & Design System (Official Foursquare Brand System)
 * Primary Dark: `#121212` (Dark Charcoal - dominant dark brand color), Card Dark: `#1E1E1E`.
-* Primary Brand Accent: `#6B21A8` (Foursquare Royal Purple - CTAs, active pills & primary badges).
-* Hover & Highlight Accent: `#EAB308` (Warm Crown Gold - button hover state, active glows & gold text on dark purple).
+* Primary Brand Accent: `#B91C1C` (Crimson Red - CTAs, active pills & primary badges).
+* Hover Accent: `#991B1B` (Dark Crimson Red - sleek button hover state & active glows).
 * Secondary Accents: `#B91C1C` (Foursquare Scarlet Red) & `#0284C7` (Holy Spirit Blue) for category tags.
 * Background: `#F8F8F8` (Off-white), Surface: `#FFFFFF`, Primary Text: `#000000`, Secondary Text: `#525252`.
 * Typography: Headings (`Geist` / `Poppins` 600–800), Body (`Inter` 400–500).
