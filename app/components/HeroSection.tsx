@@ -64,7 +64,7 @@ export function HeroSection() {
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center flex flex-col items-center justify-center">
         {/* Floating Location Badge */}
-        <div className="inline-flex items-center gap-2 bg-[#121212]/60 backdrop-blur-md border border-white/20 rounded-lg px-4 py-1.5 mb-8 shadow-sm">
+        <div className="inline-flex items-center gap-2 bg-[#121212]/85 border border-white/20 rounded-lg px-4 py-1.5 mb-8 shadow-sm">
           <span className="w-2 h-2 rounded-full bg-[#EAB308] animate-pulse" />
           <span className="text-white text-xs sm:text-sm font-heading font-semibold uppercase tracking-widest">
             {t("locationBadge")}
@@ -96,7 +96,7 @@ export function HeroSection() {
           </a>
           <a
             href={`/${locale}/support-mission`}
-            className="w-full sm:w-auto px-8 py-4 rounded-lg border-2 border-white/40 bg-[#121212]/40 backdrop-blur-sm text-white font-heading font-bold text-sm uppercase tracking-wider hover:bg-white/10 transition-all duration-200 text-center"
+            className="w-full sm:w-auto px-8 py-4 rounded-lg border-2 border-white/40 bg-[#121212]/60 text-white font-heading font-bold text-sm uppercase tracking-wider hover:bg-white/10 transition-all duration-200 text-center"
           >
             {t("supportMission")}
           </a>
@@ -120,7 +120,7 @@ export function HeroSection() {
 
         {/* Quick Stats & Gathering Summary Bar */}
         <div className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-white/20 text-center">
-          <div className="p-4 rounded-lg bg-[#121212]/60 border border-white/15 backdrop-blur-md">
+          <div className="p-4 rounded-lg bg-[#1E1E1E] border border-white/15">
             <span className="block text-[#EAB308] font-heading font-bold text-lg sm:text-xl">
               Sun 9:00 AM & 10:00 AM
             </span>
@@ -129,7 +129,7 @@ export function HeroSection() {
             </span>
           </div>
 
-          <div className="p-4 rounded-lg bg-[#121212]/60 border border-white/15 backdrop-blur-md">
+          <div className="p-4 rounded-lg bg-[#1E1E1E] border border-white/15">
             <span className="block text-[#EAB308] font-heading font-bold text-lg sm:text-xl">
               Wed 6:30 PM & Sat 4:30 PM
             </span>
@@ -138,7 +138,7 @@ export function HeroSection() {
             </span>
           </div>
 
-          <div className="p-4 rounded-lg bg-[#121212]/60 border border-white/15 backdrop-blur-md">
+          <div className="p-4 rounded-lg bg-[#1E1E1E] border border-white/15">
             <span className="block text-[#EAB308] font-heading font-bold text-lg sm:text-xl">
               Bilingual (EN / IT)
             </span>
