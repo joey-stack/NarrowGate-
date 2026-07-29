@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { PlanVisitCardSection } from "../../components/PlanVisitCardSection";
+import { ScrollReveal } from "../../components/ScrollReveal";
 
 export default async function ContactPage({
   params,
@@ -33,26 +34,28 @@ function ContactContent() {
       {/* Hero Banner Section */}
       <section className="py-20 sm:py-28 bg-[#F8F8F8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/15 text-accent text-xs font-heading font-bold uppercase tracking-wider mb-6">
-            Get In Touch
-          </div>
+          <ScrollReveal>
+            <div className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/15 text-accent text-xs font-heading font-bold uppercase tracking-wider mb-6">
+              Get In Touch
+            </div>
 
-          <div className="max-w-3xl">
-            <h1 className="text-display text-[#121212] mb-4 leading-tight">
-              {t("title")}
-            </h1>
-            <p className="text-subheading text-[#525252] leading-relaxed">
-              {t("subtitle")}
-            </p>
-          </div>
+            <div className="max-w-3xl">
+              <h1 className="text-display text-[#121212] mb-4 leading-tight">
+                {t("title")}
+              </h1>
+              <p className="text-subheading text-[#525252] leading-relaxed">
+                {t("subtitle")}
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* Main Form & Location Details Grid (8px radius) */}
+      {/* Main Form & Location Details Grid */}
       <section className="pb-20 sm:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          {/* Left Form Card (7-span - 8px radius) */}
-          <div className="lg:col-span-7">
+          {/* Left Form Card */}
+          <ScrollReveal className="lg:col-span-7">
             <div className="rounded-lg bg-white border border-black/10 p-8 sm:p-10 shadow-sm">
               <h2 className="text-h2 text-[#121212] mb-6">{t("formTitle")}</h2>
 
@@ -110,10 +113,10 @@ function ContactContent() {
                 </button>
               </form>
             </div>
-          </div>
+          </ScrollReveal>
 
-          {/* Right Location & Details Card (5-span - 8px radius) */}
-          <div className="lg:col-span-5 space-y-8">
+          {/* Right Location & Details Card */}
+          <ScrollReveal delay={0.2} className="lg:col-span-5 space-y-8">
             <div className="rounded-lg bg-[#121212] text-white p-8 sm:p-10 border border-white/10 shadow-md space-y-6">
               <span className="text-xs font-heading font-bold uppercase tracking-wider text-accent bg-accent/20 px-3.5 py-1 rounded-md inline-block">
                 Contact Information
@@ -136,7 +139,7 @@ function ContactContent() {
               </div>
             </div>
 
-            {/* Address Card (8px radius) */}
+            {/* Address Card */}
             <div className="rounded-lg bg-white border border-black/10 p-8 text-center shadow-sm">
               <span className="text-xs font-heading font-bold uppercase tracking-wider text-accent bg-accent/15 px-3.5 py-1 rounded-md inline-block mb-3">
                 Church Location
@@ -144,7 +147,7 @@ function ContactContent() {
               <h4 className="font-heading font-bold text-[#121212] text-lg">Via Cadamure 1/19</h4>
               <p className="text-[#525252] text-sm mt-1">31045 Motta di Livenza (TV), Italy</p>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </div>
