@@ -16,7 +16,7 @@ export default async function ContactPage({
   return (
     <>
       <Header />
-      <main className="flex-1 bg-[#F8F8F8]">
+      <main id="main-content" className="flex-1 bg-[#F8F8F8]">
         <ContactContent />
         <PlanVisitCardSection />
       </main>

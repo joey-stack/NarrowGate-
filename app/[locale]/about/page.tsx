@@ -18,7 +18,7 @@ export default async function AboutPage({
   return (
     <>
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <AboutHeroSection />
         <AboutMissionSection />
         <AboutBeliefsDarkSection />

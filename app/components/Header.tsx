@@ -63,10 +63,11 @@ export default function Header() {
           {/* Right Action Area (Language Switcher + Crimson Red CTA) */}
           <div className="flex items-center gap-3">
             {/* Language Switcher Toggle */}
-            <div className="flex items-center bg-white/10 rounded-lg p-1 border border-white/10">
+            <div className="flex items-center bg-white/10 rounded-lg p-1 border border-white/10" role="group" aria-label="Language selector">
               <button
                 onClick={() => switchLocale("en")}
-                className={`px-3 py-1 text-xs font-heading font-bold rounded-md transition-all duration-200 ${
+                aria-label="Switch language to English"
+                className={`px-3 py-1 text-xs font-heading font-bold rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent ${
                   locale === "en"
                     ? "bg-[#B91C1C] text-white shadow-sm"
                     : "text-white/70 hover:text-white"
@@ -76,7 +77,8 @@ export default function Header() {
               </button>
               <button
                 onClick={() => switchLocale("it")}
-                className={`px-3 py-1 text-xs font-heading font-bold rounded-md transition-all duration-200 ${
+                aria-label="Passa alla lingua italiana"
+                className={`px-3 py-1 text-xs font-heading font-bold rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent ${
                   locale === "it"
                     ? "bg-[#B91C1C] text-white shadow-sm"
                     : "text-white/70 hover:text-white"
@@ -89,7 +91,7 @@ export default function Header() {
             {/* Header Right Action Button (Crimson Red -> Dark Red Hover) */}
             <a
               href={`/${locale}/contact`}
-              className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-[#991B1B] hover:text-white transition-all shadow-sm"
+              className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-[#991B1B] hover:text-white transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-accent"
             >
               Plan Your Visit
             </a>
@@ -97,8 +99,9 @@ export default function Header() {
             {/* Mobile Menu Trigger */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+              className="lg:hidden p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-accent"
               aria-label="Toggle navigation menu"
+              aria-expanded={mobileMenuOpen}
             >
               <svg
                 className="w-6 h-6"

@@ -17,7 +17,7 @@ export default async function GetInvolvedPage({
   return (
     <>
       <Header />
-      <main className="flex-1 bg-[#F8F8F8]">
+      <main id="main-content" className="flex-1 bg-[#F8F8F8]">
         <GetInvolvedContent locale={locale} />
         <PlanVisitCardSection />
       </main>

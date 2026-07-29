@@ -18,7 +18,7 @@ export default async function PraiseWorshipPage({
   return (
     <>
       <Header />
-      <main className="flex-1 bg-[#F8F8F8]">
+      <main id="main-content" className="flex-1 bg-[#F8F8F8]">
         <PraiseWorshipContent locale={locale} />
         <WatchSermonsSection />
         <PlanVisitCardSection />

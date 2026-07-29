@@ -17,7 +17,7 @@ export default async function SupportMissionPage({
   return (
     <>
       <Header />
-      <main className="flex-1 bg-[#F8F8F8]">
+      <main id="main-content" className="flex-1 bg-[#F8F8F8]">
         <SupportMissionContent locale={locale} />
         <PlanVisitCardSection />
       </main>
