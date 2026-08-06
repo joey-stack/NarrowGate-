@@ -59,46 +59,46 @@ export function HeroSection() {
         </div>
       ))}
 
-      {/* Subtle Gradient Overlay - Darker at bottom left, clear in middle/top */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/40 to-black/20 z-0 pointer-events-none" />
+      {/* Subtle Gradient Overlay - Soft gradient at bottom for text legibility */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/90 via-[#121212]/20 to-transparent z-0 pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 sm:pb-16 flex flex-col items-start justify-end">
-        {/* Bottom-Left Glass Content Card */}
-        <div className="max-w-2xl bg-[#121212]/85 backdrop-blur-md p-6 sm:p-8 rounded-xl border border-white/15 shadow-2xl mb-8">
+      <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 sm:pb-12 flex flex-col items-start justify-end">
+        {/* Transparent Bottom-Left Content Container (No background box) */}
+        <div className="max-w-md w-full mb-6">
           {/* Floating Location Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#121212] border border-white/20 rounded-lg px-3.5 py-1 mb-4 shadow-sm">
+          <div className="inline-flex items-center gap-2 bg-[#121212]/80 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-1 mb-3 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-[#EAB308] animate-pulse" />
             <span className="text-white text-xs font-heading font-semibold uppercase tracking-widest">
               {t("locationBadge")}
             </span>
           </div>
 
-          {/* Compact 2-Line Headline */}
-          <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight uppercase mb-4 text-white">
-            <span className="block drop-shadow-md">
+          {/* Compact Headline */}
+          <h1 className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-tight uppercase mb-3 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+            <span className="block">
               {t("titleLine1")}
             </span>
-            <span className="block text-[#EAB308] drop-shadow-md">
+            <span className="block text-[#EAB308]">
               {t("titleLine2")}
             </span>
           </h1>
 
           {/* Subtitle Tagline */}
-          <p className="text-sm sm:text-base text-white/90 font-body font-normal leading-relaxed mb-6">
+          <p className="text-xs sm:text-sm text-white/95 font-body font-normal leading-relaxed mb-5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
             {t("tagline")}
           </p>
 
           {/* Action CTAs */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto mb-6">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto mb-5">
             <a
               href={`/${locale}/contact`}
-              className="px-6 py-3 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider shadow-md hover:bg-[#991B1B] hover:text-white transition-all duration-200 text-center"
+              className="px-5 py-2.5 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#991B1B] hover:text-white transition-all duration-200 text-center"
             >
               {t("planVisit")} →
             </a>
             <a
               href={`/${locale}/support-mission`}
-              className="px-6 py-3 rounded-lg border border-white/40 bg-[#121212]/80 text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-white/10 transition-all duration-200 text-center"
+              className="px-5 py-2.5 rounded-lg border border-white/40 bg-[#121212]/70 backdrop-blur-xs text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-white/10 transition-all duration-200 text-center"
             >
               {t("supportMission")}
             </a>
@@ -113,7 +113,7 @@ export function HeroSection() {
                 className={`h-2 rounded-full transition-all duration-300 ${
                   idx === currentSlide
                     ? "w-8 bg-[#EAB308]"
-                    : "w-2 bg-white/40 hover:bg-white/70"
+                    : "w-2 bg-white/50 hover:bg-white/80"
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
@@ -121,31 +121,31 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Quick Stats & Gathering Summary Bar */}
-        <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
-          <div className="p-3.5 rounded-lg bg-[#1E1E1E]/90 backdrop-blur-sm border border-white/15">
-            <span className="block text-[#EAB308] font-heading font-bold text-sm sm:text-base">
+        {/* Quick Stats & Gathering Summary Bar - Minimalist transparent bar */}
+        <div className="w-full max-w-3xl grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-left border-t border-white/15 pt-4">
+          <div className="py-1">
+            <span className="block text-[#EAB308] font-heading font-bold text-xs sm:text-sm drop-shadow-sm">
               Sun 9:00 AM & 10:00 AM
             </span>
-            <span className="block text-white/80 text-[11px] mt-0.5 uppercase tracking-wider font-medium">
+            <span className="block text-white/80 text-[10px] uppercase tracking-wider font-medium">
               Sunday Worship Services
             </span>
           </div>
 
-          <div className="p-3.5 rounded-lg bg-[#1E1E1E]/90 backdrop-blur-sm border border-white/15">
-            <span className="block text-[#EAB308] font-heading font-bold text-sm sm:text-base">
+          <div className="py-1">
+            <span className="block text-[#EAB308] font-heading font-bold text-xs sm:text-sm drop-shadow-sm">
               Wed 6:30 PM & Sat 4:30 PM
             </span>
-            <span className="block text-white/80 text-[11px] mt-0.5 uppercase tracking-wider font-medium">
+            <span className="block text-white/80 text-[10px] uppercase tracking-wider font-medium">
               Bible Study & Prayer
             </span>
           </div>
 
-          <div className="p-3.5 rounded-lg bg-[#1E1E1E]/90 backdrop-blur-sm border border-white/15">
-            <span className="block text-[#EAB308] font-heading font-bold text-sm sm:text-base">
+          <div className="py-1">
+            <span className="block text-[#EAB308] font-heading font-bold text-xs sm:text-sm drop-shadow-sm">
               Bilingual (EN / IT)
             </span>
-            <span className="block text-white/80 text-[11px] mt-0.5 uppercase tracking-wider font-medium">
+            <span className="block text-white/80 text-[10px] uppercase tracking-wider font-medium">
               International Family
             </span>
           </div>
