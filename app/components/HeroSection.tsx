@@ -11,20 +11,20 @@ export function HeroSection() {
 
   const slides = [
     {
-      url: "https://framerusercontent.com/images/BJfx98tg96KSw6rzvYL6jgfVU.jpeg",
-      caption: "International Christian Fellowship",
-    },
-    {
-      url: "https://framerusercontent.com/images/4OVDWjW414cpwjACN4OVKzbVvk.webp",
+      url: "/images/hero/hero-slide-1.jpg",
       caption: "Pastoral Word & Biblical Teaching",
     },
     {
-      url: "https://framerusercontent.com/images/lPxQuEvoD0okg4XQKqeJOs9sR1Q.jpeg",
-      caption: "Sanctuary & Worship Environment",
+      url: "/images/hero/hero-slide-2.jpg",
+      caption: "Ministry & Leadership Celebration",
     },
     {
-      url: "https://framerusercontent.com/images/LHytLqj1LAp19pIe5hVKEmCFw.jpeg",
-      caption: "Praise & Worship Gathering",
+      url: "/images/hero/hero-slide-3.jpg",
+      caption: "Sanctuary Worship & Scripture Reading",
+    },
+    {
+      url: "/images/hero/hero-slide-4.jpg",
+      caption: "Intercessory & Personal Prayer",
     },
   ];
 
