@@ -62,8 +62,8 @@ export function HeroSection() {
       {/* Subtle Gradient Overlay - Soft gradient at bottom for text legibility */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/95 via-[#121212]/20 to-transparent z-0 pointer-events-none" />
 
-      {/* Main Content Area (Guaranteed Above the Fold) */}
-      <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-4 flex flex-col items-start justify-end flex-grow">
+      {/* Main Content Area (Lifted Significantly Above the Fold) */}
+      <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-16 sm:pb-24 flex flex-col items-start justify-end flex-grow">
         {/* Transparent Bottom-Left Content Container */}
         <div className="max-w-md w-full">
           {/* Floating Location Badge */}
