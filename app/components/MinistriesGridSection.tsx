@@ -9,7 +9,7 @@ export function MinistriesGridSection() {
   const locale = useLocale();
 
   const ministries = [
-    { title: t("children"), tag: "Kids", img: "https://framerusercontent.com/images/zg48dmZYiffPanx8Qwvuq2YkP5M.jpeg" },
+    { title: t("children"), tag: "Kids", img: "/images/ministries/childrens-ministry.jpg" },
     { title: t("youth"), tag: "Youth", img: "https://framerusercontent.com/images/bjdWEdmLsmlHJ6nkyV6S4kBw4.jpeg" },
     { title: t("women"), tag: "Women", img: "https://framerusercontent.com/images/wtmP5GsWRS9sVD5RlFZE1u02APU.jpeg" },
     { title: t("men"), tag: "Men", img: "https://framerusercontent.com/images/0RdQhzQ3ySrU6ryPntVtPzhEP20.jpeg" },

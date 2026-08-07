@@ -34,7 +34,7 @@ export default function Header() {
           {/* Standalone Logo Image (No extra text, no white background box) */}
           <a href={`/${locale}`} className="flex items-center group py-1">
             <img
-              src="/logo_white.png?v=3"
+              src="/logo_white.png?v=5"
               alt="The Narrow Gate Foursquare Church Italy"
               className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
