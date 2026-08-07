@@ -38,7 +38,7 @@ export function HeroSection() {
   }, [slides.length]);
 
   return (
-    <section className="relative bg-[#121212] text-white min-h-[120vh] flex flex-col justify-end overflow-hidden">
+    <section className="relative bg-[#121212] text-white min-h-[105vh] flex flex-col justify-between overflow-hidden">
       {/* Optimized Background Image Crossfade Slider */}
       {slides.map((slide, index) => (
         <div
@@ -60,13 +60,14 @@ export function HeroSection() {
       ))}
 
       {/* Subtle Gradient Overlay - Soft gradient at bottom for text legibility */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/90 via-[#121212]/20 to-transparent z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/95 via-[#121212]/20 to-transparent z-0 pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 sm:pb-12 flex flex-col items-start justify-end">
-        {/* Transparent Bottom-Left Content Container (No background box) */}
-        <div className="max-w-md w-full mb-6">
+      {/* Main Content Area (Guaranteed Above the Fold) */}
+      <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-4 flex flex-col items-start justify-end flex-grow">
+        {/* Transparent Bottom-Left Content Container */}
+        <div className="max-w-md w-full">
           {/* Floating Location Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#121212]/80 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-1 mb-3 shadow-sm">
+          <div className="inline-flex items-center gap-2 bg-[#121212]/80 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-1 mb-2.5 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-[#EAB308] animate-pulse" />
             <span className="text-white text-xs font-heading font-semibold uppercase tracking-widest">
               {t("locationBadge")}
@@ -74,7 +75,7 @@ export function HeroSection() {
           </div>
 
           {/* Compact Headline */}
-          <h1 className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-tight uppercase mb-3 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+          <h1 className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-tight uppercase mb-2.5 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
             <span className="block">
               {t("titleLine1")}
             </span>
@@ -84,12 +85,12 @@ export function HeroSection() {
           </h1>
 
           {/* Subtitle Tagline */}
-          <p className="text-xs sm:text-sm text-white/95 font-body font-normal leading-relaxed mb-5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+          <p className="text-xs sm:text-sm text-white/95 font-body font-normal leading-relaxed mb-4 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
             {t("tagline")}
           </p>
 
-          {/* Action CTAs */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto mb-5">
+          {/* Action CTAs (Above the Fold) */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto mb-4">
             <a
               href={`/${locale}/contact`}
               className="px-5 py-2.5 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#991B1B] hover:text-white transition-all duration-200 text-center"
@@ -120,10 +121,12 @@ export function HeroSection() {
             ))}
           </div>
         </div>
+      </div>
 
-        {/* Quick Stats & Gathering Summary Bar - Minimalist transparent bar */}
-        <div className="w-full max-w-3xl grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-left border-t border-white/15 pt-4">
-          <div className="py-1">
+      {/* Quick Stats & Gathering Summary Bar (Pushed Below the Fold) */}
+      <div className="relative z-10 w-full bg-[#121212]/95 border-t border-white/15 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
+          <div className="py-0.5">
             <span className="block text-[#EAB308] font-heading font-bold text-xs sm:text-sm drop-shadow-sm">
               Sun 9:00 AM & 10:00 AM
             </span>
@@ -132,7 +135,7 @@ export function HeroSection() {
             </span>
           </div>
 
-          <div className="py-1">
+          <div className="py-0.5">
             <span className="block text-[#EAB308] font-heading font-bold text-xs sm:text-sm drop-shadow-sm">
               Wed 6:30 PM & Sat 4:30 PM
             </span>
@@ -141,7 +144,7 @@ export function HeroSection() {
             </span>
           </div>
 
-          <div className="py-1">
+          <div className="py-0.5">
             <span className="block text-[#EAB308] font-heading font-bold text-xs sm:text-sm drop-shadow-sm">
               Bilingual (EN / IT)
             </span>
