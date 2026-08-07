@@ -38,7 +38,7 @@ export function HeroSection() {
   }, [slides.length]);
 
   return (
-    <section className="relative bg-[#121212] text-white min-h-screen flex flex-col justify-end overflow-hidden">
+    <section className="relative bg-[#121212] text-white min-h-[120vh] flex flex-col justify-end overflow-hidden">
       {/* Optimized Background Image Crossfade Slider */}
       {slides.map((slide, index) => (
         <div
