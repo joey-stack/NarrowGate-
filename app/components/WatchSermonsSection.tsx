@@ -38,7 +38,7 @@ export function WatchSermonsSection() {
 
               <div>
                 <a
-                  href="https://www.youtube.com/"
+                  href="https://www.youtube.com/@thenarrowgatefoursquare"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 rounded-lg bg-accent text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-accent-light transition-colors inline-flex items-center gap-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
@@ -65,7 +65,7 @@ export function WatchSermonsSection() {
 
               <div className="relative z-20 flex flex-col items-center">
                 <a
-                  href="https://www.youtube.com/"
+                  href="https://www.youtube.com/@thenarrowgatefoursquare"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Play Sunday Worship Service Recording"
