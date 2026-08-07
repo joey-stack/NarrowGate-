@@ -15,9 +15,9 @@ export default function Footer() {
           <div className="space-y-4">
             <a href={`/${locale}`} className="inline-block">
               <img
-                src="/logo_white.png?v=5"
+                src="/logo_white.png?v=6"
                 alt="The Narrow Gate Foursquare Church Italy"
-                className="h-10 sm:h-12 w-auto object-contain"
+                className="h-14 sm:h-18 w-auto object-contain"
               />
             </a>
             <p className="text-xs text-white/70 leading-relaxed">

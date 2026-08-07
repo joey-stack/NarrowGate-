@@ -32,10 +32,10 @@ function GetInvolvedContent({ locale }: { locale: string }) {
   const ministries = [
     { title: t("counseling"), desc: t("counselingDesc"), tag: "Counseling", img: "/images/ministries/guidance-counseling.jpg" },
     { title: t("visitation"), desc: t("visitationDesc"), tag: "Care", img: "https://framerusercontent.com/images/WpgTwT0ndOZLrmpVLOGMNE9Y.jpeg" },
-    { title: t("childDedication"), desc: t("childDedicationDesc"), tag: "Family", img: "https://framerusercontent.com/images/zg48dmZYiffPanx8Qwvuq2YkP5M.jpeg" },
-    { title: t("families"), desc: t("familiesDesc"), tag: "Marriage", img: "https://framerusercontent.com/images/Ho0BwXw6CF0WIxJh9LqZbxah0T0.jpeg" },
+    { title: t("childDedication"), desc: t("childDedicationDesc"), tag: "Family", img: "/images/ministries/child-dedication.jpg" },
+    { title: t("families"), desc: t("familiesDesc"), tag: "Marriage", img: "/images/ministries/families-ministry.jpg" },
     { title: t("testimonies"), desc: t("testimoniesDesc"), tag: "Thanksgiving", img: "https://framerusercontent.com/images/LHytLqj1LAp19pIe5hVKEmCFw.jpeg" },
-    { title: t("loveFeast"), desc: t("loveFeastDesc"), tag: "Fellowship", img: "https://framerusercontent.com/images/nXyNJr99Q0ww3MxaXh54neG1lQ.jpeg" },
+    { title: t("loveFeast"), desc: t("loveFeastDesc"), tag: "Fellowship", img: "/images/ministries/love-feast.jpg" },
   ];
 
   return (

@@ -30,13 +30,13 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-[#121212] border-b border-white/10 shadow-sm transition-colors">
       {/* Main Header Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-20 sm:h-24 lg:h-28">
           {/* Standalone Logo Image (No extra text, no white background box) */}
-          <a href={`/${locale}`} className="flex items-center group py-1">
+          <a href={`/${locale}`} className="flex items-center group py-2">
             <img
-              src="/logo_white.png?v=5"
+              src="/logo_white.png?v=6"
               alt="The Narrow Gate Foursquare Church Italy"
-              className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              className="h-14 sm:h-16 lg:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </a>
 
