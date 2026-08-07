@@ -13,7 +13,6 @@ export function MinistriesGridSection() {
     { title: t("youth"), tag: "Youth", img: "/images/ministries/youth-ministry.jpg" },
     { title: t("women"), tag: "Women", img: "/images/ministries/womens-ministry.jpg" },
     { title: t("men"), tag: "Men", img: "/images/ministries/mens-fellowship.jpg" },
-    { title: t("counseling"), tag: "Care", img: "/images/ministries/guidance-counseling.jpg" },
     { title: t("choir"), tag: "Worship", img: "/images/ministries/worship-choir.jpg" },
     { title: t("outreach"), tag: "Impact", img: "/images/ministries/community-outreach.jpg" },
   ];
