@@ -7,13 +7,13 @@ export function MomentsGallerySection() {
   const t = useTranslations("Gallery");
 
   const images = [
-    "https://framerusercontent.com/images/LHytLqj1LAp19pIe5hVKEmCFw.jpeg",
-    "https://framerusercontent.com/images/nXyNJr99Q0ww3MxaXh54neG1lQ.jpeg",
-    "https://framerusercontent.com/images/pyobvRb21KQL85H2LxbZQ5k1g.jpg",
-    "https://framerusercontent.com/images/Ho0BwXw6CF0WIxJh9LqZbxah0T0.jpeg",
-    "https://framerusercontent.com/images/4OVDWjW414cpwjACN4OVKzbVvk.webp",
-    "https://framerusercontent.com/images/lPxQuEvoD0okg4XQKqeJOs9sR1Q.jpeg",
-    "https://framerusercontent.com/images/BJfx98tg96KSw6rzvYL6jgfVU.jpeg",
+    "/images/ministries/youth-ministry.jpg",
+    "/images/ministries/womens-ministry.jpg",
+    "/images/ministries/mens-fellowship.jpg",
+    "/images/ministries/worship-choir.jpg",
+    "/images/ministries/community-outreach.jpg",
+    "/images/who-we-are-banner.jpg",
+    "/images/gatherings/sunday-service.jpg",
   ];
 
   // Duplicate images array for seamless infinite marquee loop

@@ -10,11 +10,12 @@ export function MinistriesGridSection() {
 
   const ministries = [
     { title: t("children"), tag: "Kids", img: "/images/ministries/childrens-ministry.jpg" },
-    { title: t("youth"), tag: "Youth", img: "https://framerusercontent.com/images/bjdWEdmLsmlHJ6nkyV6S4kBw4.jpeg" },
-    { title: t("women"), tag: "Women", img: "https://framerusercontent.com/images/wtmP5GsWRS9sVD5RlFZE1u02APU.jpeg" },
-    { title: t("men"), tag: "Men", img: "https://framerusercontent.com/images/0RdQhzQ3ySrU6ryPntVtPzhEP20.jpeg" },
-    { title: t("choir"), tag: "Worship", img: "https://framerusercontent.com/images/o6X1ExUxEg9aXlM6PNAcosjw.jpeg" },
-    { title: t("outreach"), tag: "Impact", img: "https://framerusercontent.com/images/e84uUhqW7kjrsUbllcDRJQjlOY.jpeg" },
+    { title: t("youth"), tag: "Youth", img: "/images/ministries/youth-ministry.jpg" },
+    { title: t("women"), tag: "Women", img: "/images/ministries/womens-ministry.jpg" },
+    { title: t("men"), tag: "Men", img: "/images/ministries/mens-fellowship.jpg" },
+    { title: t("counseling"), tag: "Care", img: "/images/ministries/guidance-counseling.jpg" },
+    { title: t("choir"), tag: "Worship", img: "/images/ministries/worship-choir.jpg" },
+    { title: t("outreach"), tag: "Impact", img: "/images/ministries/community-outreach.jpg" },
   ];
 
   return (
@@ -27,7 +28,7 @@ export function MinistriesGridSection() {
               <div className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/15 text-accent text-xs font-heading font-bold uppercase tracking-wider mb-4">
                 {t("badge")}
               </div>
-              <h2 className="text-h1 text-[#121212] leading-tight">
+              <h2 className="text-h1 text-[#121212] leading-tight max-w-md">
                 {t("title")}
               </h2>
             </div>
