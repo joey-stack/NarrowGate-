@@ -46,11 +46,11 @@ export function WhoWeAreSection() {
         <ScrollReveal delay={0.2}>
           <div className="relative rounded-lg overflow-hidden border border-black/10 shadow-sm min-h-[420px] sm:min-h-[480px] flex flex-col justify-end group">
             <Image
-              src="https://framerusercontent.com/images/BJfx98tg96KSw6rzvYL6jgfVU.jpeg"
-              alt="The Narrow Gate Foursquare Church Motta di Livenza"
+              src="/images/who-we-are-banner.jpg"
+              alt="The Narrow Gate Foursquare Church Motta di Livenza sanctuary service"
               fill
               sizes="(max-width: 1280px) 100vw, 1280px"
-              quality={75}
+              quality={85}
               loading="lazy"
               className="object-cover object-center transition-all duration-500"
             />

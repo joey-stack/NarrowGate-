@@ -13,25 +13,25 @@ export function WeeklyGatheringsDarkSection() {
       title: t("wednesdayTitle"),
       time: t("wednesdayTime"),
       tag: "WORSHIP & STUDY",
-      img: "https://framerusercontent.com/images/XcTEa2H0VRl9RNzFPr4EC9IrSdI.jpeg",
+      img: "/images/gatherings/bible-study.jpg",
     },
     {
       title: t("saturdayTitle"),
       time: t("saturdayTime"),
       tag: "PRAYER",
-      img: "https://framerusercontent.com/images/WpgTwT0ndOZLrmpVLOGMNE9Y.jpeg",
+      img: "/images/gatherings/intercessory-prayer.jpg",
     },
     {
       title: t("sundayBreakfastTitle"),
       time: t("sundayBreakfastTime"),
       tag: "FELLOWSHIP",
-      img: "https://framerusercontent.com/images/oPTAfw2wQfWWQhRumE5utkO6Q.jpeg",
+      img: "/images/gatherings/breakfast-prayer.jpg",
     },
     {
       title: t("sundayServiceTitle"),
       time: t("sundayServiceTime"),
       tag: "SUNDAY SERVICE",
-      img: "https://framerusercontent.com/images/djKKoTewQ4HPz44s0i9KC1icU.jpeg",
+      img: "/images/gatherings/sunday-service.jpg",
     },
   ];
 
