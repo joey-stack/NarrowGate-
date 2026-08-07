@@ -66,8 +66,8 @@ function PraiseWorshipContent({ locale }: { locale: string }) {
           <ScrollReveal delay={0.2}>
             <div className="relative rounded-lg overflow-hidden border border-black/10 shadow-sm min-h-[380px] flex flex-col justify-end group">
               <Image
-                src="https://framerusercontent.com/images/o6X1ExUxEg9aXlM6PNAcosjw.jpeg"
-                alt="Praise & Worship Ministry"
+                src="/images/ministries/worship-choir.jpg"
+                alt="Praise & Worship Ministry sanctuary choir"
                 fill
                 priority
                 sizes="(max-width: 1280px) 100vw, 1280px"

@@ -12,15 +12,14 @@ export function WhoWeAreSection() {
     <section className="py-20 sm:py-28 bg-[#F8F8F8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
-          {/* Sub-badge Pill */}
-          <div className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/15 text-accent text-xs font-heading font-bold uppercase tracking-wider mb-6">
-            {t("badge")}
-          </div>
-
           {/* Split Header Row (OneChurch Template Style) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
             <div className="lg:col-span-5">
-              <h3 className="text-caption font-heading font-bold text-accent uppercase tracking-widest mb-3">
+              {/* Sub-badge Pill */}
+              <div className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/15 text-accent text-xs font-heading font-bold uppercase tracking-wider mb-4">
+                {t("badge")}
+              </div>
+              <h3 className="text-caption font-heading font-bold text-accent uppercase tracking-widest mb-4">
                 Our Identity
               </h3>
               <a
