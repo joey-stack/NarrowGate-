@@ -38,7 +38,9 @@ export function WatchSermonsSection() {
 
               <div>
                 <a
-                  href={`/${locale}/praise-worship`}
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-6 py-3 rounded-lg bg-accent text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-accent-light transition-colors inline-flex items-center gap-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
                 >
                   {t("cta")} →
@@ -63,7 +65,9 @@ export function WatchSermonsSection() {
 
               <div className="relative z-20 flex flex-col items-center">
                 <a
-                  href={`/${locale}/praise-worship`}
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Play Sunday Worship Service Recording"
                   className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center shadow-md cursor-pointer hover:scale-110 transition-transform mb-6 focus:outline-none focus:ring-4 focus:ring-white/50"
                 >
