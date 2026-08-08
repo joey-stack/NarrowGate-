@@ -54,28 +54,28 @@ export function HeroSection() {
             priority={index === 0}
             sizes="100vw"
             quality={85}
-            className="object-cover object-center"
+            className="object-cover object-top"
           />
         </div>
       ))}
 
       {/* Subtle Gradient Overlay - Soft gradient at bottom for text legibility */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/95 via-[#121212]/20 to-transparent z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/95 via-[#121212]/30 to-transparent z-0 pointer-events-none" />
 
-      {/* Main Content Area (Lifted Significantly Above the Fold) */}
-      <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-16 sm:pb-24 flex flex-col items-start justify-end flex-grow">
-        {/* Transparent Bottom-Left Content Container */}
-        <div className="max-w-md w-full">
+      {/* Main Content Area (Centralized Above the Fold) */}
+      <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-16 sm:pb-24 flex flex-col items-center justify-end flex-grow text-center">
+        {/* Transparent Center Content Container */}
+        <div className="max-w-xl w-full flex flex-col items-center text-center mx-auto">
           {/* Floating Location Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#121212]/80 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-1 mb-2.5 shadow-sm">
+          <div className="inline-flex items-center gap-2 bg-[#121212]/80 backdrop-blur-sm border border-white/20 rounded-lg px-3.5 py-1 mb-3 shadow-sm mx-auto">
             <span className="w-2 h-2 rounded-full bg-[#EAB308] animate-pulse" />
             <span className="text-white text-xs font-heading font-semibold uppercase tracking-widest">
               {t("locationBadge")}
             </span>
           </div>
 
-          {/* Compact Headline */}
-          <h1 className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-tight uppercase mb-2.5 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+          {/* Scaled Up Headline (+25%) */}
+          <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight uppercase mb-3 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] text-center">
             <span className="block">
               {t("titleLine1")}
             </span>
@@ -85,28 +85,28 @@ export function HeroSection() {
           </h1>
 
           {/* Subtitle Tagline */}
-          <p className="text-xs sm:text-sm text-white/95 font-body font-normal leading-relaxed mb-4 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+          <p className="text-xs sm:text-sm text-white/95 font-body font-normal leading-relaxed mb-5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] max-w-md text-center mx-auto">
             {t("tagline")}
           </p>
 
-          {/* Action CTAs (Above the Fold) */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto mb-4">
+          {/* Centralized Action CTAs (Above the Fold) */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto mb-5 mx-auto">
             <a
               href={`/${locale}/contact`}
-              className="px-5 py-2.5 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#991B1B] hover:text-white transition-all duration-200 text-center"
+              className="px-6 py-3 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#991B1B] hover:text-white transition-all duration-200 text-center"
             >
               {t("planVisit")} →
             </a>
             <a
               href={`/${locale}/support-mission`}
-              className="px-5 py-2.5 rounded-lg border border-white/40 bg-[#121212]/70 backdrop-blur-xs text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-white/10 transition-all duration-200 text-center"
+              className="px-6 py-3 rounded-lg border border-white/40 bg-[#121212]/70 backdrop-blur-xs text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-white/10 transition-all duration-200 text-center"
             >
               {t("supportMission")}
             </a>
           </div>
 
-          {/* Slide Indicator Dots */}
-          <div className="flex items-center gap-2">
+          {/* Centralized Slide Indicator Dots */}
+          <div className="flex items-center justify-center gap-2 mx-auto">
             {slides.map((_, idx) => (
               <button
                 key={idx}
@@ -123,10 +123,10 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Quick Stats & Gathering Summary Bar (Pushed Below the Fold) */}
+      {/* Centralized Quick Stats & Gathering Summary Bar */}
       <div className="relative z-10 w-full bg-[#121212]/95 border-t border-white/15 py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
-          <div className="py-0.5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+          <div className="py-0.5 text-center">
             <span className="block text-[#EAB308] font-heading font-bold text-xs sm:text-sm drop-shadow-sm">
               Sun 9:00 AM & 10:00 AM
             </span>
@@ -135,7 +135,7 @@ export function HeroSection() {
             </span>
           </div>
 
-          <div className="py-0.5">
+          <div className="py-0.5 text-center">
             <span className="block text-[#EAB308] font-heading font-bold text-xs sm:text-sm drop-shadow-sm">
               Wed 6:30 PM & Sat 4:30 PM
             </span>
@@ -144,7 +144,7 @@ export function HeroSection() {
             </span>
           </div>
 
-          <div className="py-0.5">
+          <div className="py-0.5 text-center">
             <span className="block text-[#EAB308] font-heading font-bold text-xs sm:text-sm drop-shadow-sm">
               Bilingual (EN / IT)
             </span>
