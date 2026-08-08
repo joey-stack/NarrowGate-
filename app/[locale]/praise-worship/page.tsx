@@ -72,7 +72,7 @@ function PraiseWorshipContent({ locale }: { locale: string }) {
                 priority
                 sizes="(max-width: 1280px) 100vw, 1280px"
                 quality={75}
-                className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/90 via-[#121212]/40 to-transparent z-10 pointer-events-none" />
               

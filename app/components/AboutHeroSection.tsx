@@ -43,8 +43,8 @@ export function AboutHeroSection() {
         <ScrollReveal delay={0.2}>
           <div className="relative rounded-lg overflow-hidden border border-black/10 shadow-sm min-h-[420px] sm:min-h-[480px] flex flex-col justify-end group">
             <Image
-              src="https://framerusercontent.com/images/lPxQuEvoD0okg4XQKqeJOs9sR1Q.jpeg"
-              alt="About The Narrow Gate Foursquare Church"
+              src="/images/ministries/community-outreach.jpg"
+              alt="About The Narrow Gate Foursquare Church Motta di Livenza community outreach"
               fill
               priority
               sizes="(max-width: 1280px) 100vw, 1280px"
