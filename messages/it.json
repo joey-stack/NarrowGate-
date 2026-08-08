@@ -278,5 +278,34 @@
     "location": "Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italia",
     "phone": "+39 - 3883629233",
     "email": "fgcititaly@aol.com / uyisky@yahoo.com"
+  },
+  "PlanVisitModal": {
+    "title": "Pianifica la Tua Visita",
+    "subtitle": "Non vediamo l'ora di darti il benvenuto a The Narrow Gate Foursquare Church a Motta di Livenza! Facci sapere quando verrai per preparare un'accoglienza calorosa.",
+    "gatheringLabel": "Quale incontro vorresti frequentare?",
+    "gatherings": {
+      "sundayService": "Servizio Principale di Culto Domenicale (10:00)",
+      "sundayBreakfast": "Colazione e Scuola Domenicale (09:00 / 09:20)",
+      "wednesdayBible": "Studio Biblico del Mercoledì (18:30)",
+      "saturdayPrayer": "Preghiera d'Intercessione del Sabato (16:30)"
+    },
+    "dateLabel": "Data della Visita Prevista",
+    "fullNameLabel": "Nome e Cognome",
+    "fullNamePlaceholder": "Mario Rossi",
+    "emailLabel": "Indirizzo Email",
+    "emailPlaceholder": "mario@example.it",
+    "phoneLabel": "Numero di Telefono / WhatsApp",
+    "phonePlaceholder": "+39 388 362 9233",
+    "familyLabel": "Porterai la tua famiglia o bambini?",
+    "familyYes": "Sì, porterò ospiti/famiglia",
+    "familyNo": "Solo io",
+    "guestsCountLabel": "Numero di Ospiti / Membri della Famiglia",
+    "notesLabel": "Richieste Speciali / Note (Opzionale)",
+    "notesPlaceholder": "es. Prima volta che vi visito, ho bisogno di cuffie di traduzione, richiesta di preghiera...",
+    "submitBtn": "Riserva il Mio Posto per la Visita",
+    "submitting": "Riservando il Posto...",
+    "successTitle": "Tutto Pronto! Non Vediamo l'Ora di Incontrarti!",
+    "successMessage": "Grazie per aver pianificato la tua visita a The Narrow Gate Foursquare Church. Il Reverendo Uyi Loveday Evbuomwan e il nostro team di accoglienza ti aspetteranno in Via Cadamure, N1/19 31045, Motta Di Livenza, Italia.",
+    "closeBtn": "Fatto"
   }
 }

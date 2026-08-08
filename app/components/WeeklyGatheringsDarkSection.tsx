@@ -4,9 +4,12 @@ import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import { ScrollReveal, ScrollStaggerContainer, ScrollStaggerItem } from "./ScrollReveal";
 
+import { usePlanVisit } from "./PlanVisitContext";
+
 export function WeeklyGatheringsDarkSection() {
   const t = useTranslations("WeeklyGatherings");
   const locale = useLocale();
+  const { openPlanVisitModal } = usePlanVisit();
 
   const events = [
     {
@@ -14,24 +17,28 @@ export function WeeklyGatheringsDarkSection() {
       time: t("wednesdayTime"),
       tag: "WORSHIP & STUDY",
       img: "/images/gatherings/bible-study.jpg",
+      gatheringKey: "wednesdayBible",
     },
     {
       title: t("saturdayTitle"),
       time: t("saturdayTime"),
       tag: "PRAYER",
       img: "/images/gatherings/intercessory-prayer.jpg",
+      gatheringKey: "saturdayPrayer",
     },
     {
       title: t("sundayBreakfastTitle"),
       time: t("sundayBreakfastTime"),
       tag: "FELLOWSHIP",
       img: "/images/gatherings/breakfast-prayer.jpg",
+      gatheringKey: "sundayBreakfast",
     },
     {
       title: t("sundayServiceTitle"),
       time: t("sundayServiceTime"),
       tag: "SUNDAY SERVICE",
       img: "/images/gatherings/sunday-service.jpg",
+      gatheringKey: "sundayService",
     },
   ];
 
@@ -50,12 +57,12 @@ export function WeeklyGatheringsDarkSection() {
             </div>
 
             <div>
-              <a
-                href={`/${locale}/contact`}
-                className="px-6 py-3 rounded-lg bg-accent text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-accent-light transition-colors inline-block shadow-sm"
+              <button
+                onClick={() => openPlanVisitModal("sundayService")}
+                className="px-6 py-3 rounded-lg bg-accent text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-accent-light transition-colors inline-block shadow-sm cursor-pointer"
               >
-                {t("viewAll")} →
-              </a>
+                Plan a Visit →
+              </button>
             </div>
           </div>
         </ScrollReveal>
@@ -96,12 +103,12 @@ export function WeeklyGatheringsDarkSection() {
                   </div>
 
                   <div className="mt-6 pt-4 border-t border-white/10">
-                    <a
-                      href={`/${locale}/contact`}
-                      className="text-xs font-heading font-bold uppercase tracking-wider text-accent hover:text-accent-light transition-colors flex items-center gap-1"
+                    <button
+                      onClick={() => openPlanVisitModal(item.gatheringKey)}
+                      className="text-xs font-heading font-bold uppercase tracking-wider text-accent hover:text-accent-light transition-colors flex items-center gap-1 cursor-pointer"
                     >
                       Join Gathering →
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>

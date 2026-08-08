@@ -3,9 +3,12 @@
 import { useTranslations, useLocale } from "next-intl";
 import { ScrollReveal } from "./ScrollReveal";
 
+import { usePlanVisit } from "./PlanVisitContext";
+
 export function PlanVisitCardSection() {
   const t = useTranslations("PlanVisitCard");
   const locale = useLocale();
+  const { openPlanVisitModal } = usePlanVisit();
 
   return (
     <section className="py-16 sm:py-20 bg-[#121212] text-white relative overflow-hidden border-t border-white/10">
@@ -29,12 +32,12 @@ export function PlanVisitCardSection() {
 
             {/* Right Action Area */}
             <div className="shrink-0">
-              <a
-                href={`/${locale}/contact`}
-                className="px-8 py-4 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider shadow-md hover:bg-[#991B1B] hover:text-white transition-all inline-flex items-center gap-2"
+              <button
+                onClick={() => openPlanVisitModal("sundayService")}
+                className="px-8 py-4 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider shadow-md hover:bg-[#991B1B] hover:text-white transition-all inline-flex items-center gap-2 cursor-pointer"
               >
                 {t("cta")} →
-              </a>
+              </button>
             </div>
           </div>
         </ScrollReveal>

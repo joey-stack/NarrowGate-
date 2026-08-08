@@ -5,9 +5,12 @@ import { useState, useEffect } from "react";
 
 import Image from "next/image";
 
+import { usePlanVisit } from "./PlanVisitContext";
+
 export function HeroSection() {
   const t = useTranslations("Hero");
   const locale = useLocale();
+  const { openPlanVisitModal } = usePlanVisit();
 
   const slides = [
     {
@@ -91,12 +94,12 @@ export function HeroSection() {
 
           {/* Centralized Action CTAs (Above the Fold) */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto mb-5 mx-auto">
-            <a
-              href={`/${locale}/contact`}
-              className="px-6 py-3 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#991B1B] hover:text-white transition-all duration-200 text-center"
+            <button
+              onClick={() => openPlanVisitModal("sundayService")}
+              className="px-6 py-3 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#991B1B] hover:text-white transition-all duration-200 text-center cursor-pointer"
             >
               {t("planVisit")} →
-            </a>
+            </button>
             <a
               href={`/${locale}/support-mission`}
               className="px-6 py-3 rounded-lg border border-white/40 bg-[#121212]/70 backdrop-blur-xs text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-white/10 transition-all duration-200 text-center"

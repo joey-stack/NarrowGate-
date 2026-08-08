@@ -89,6 +89,9 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+import { PlanVisitProvider } from "../components/PlanVisitContext";
+import { PlanVisitModal } from "../components/PlanVisitModal";
+
 export default async function LocaleLayout({
   children,
   params,
@@ -171,7 +174,10 @@ export default async function LocaleLayout({
           Skip to main content
         </a>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <PlanVisitProvider>
+            {children}
+            <PlanVisitModal />
+          </PlanVisitProvider>
         </NextIntlClientProvider>
       </body>
     </html>

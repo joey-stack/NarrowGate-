@@ -278,5 +278,34 @@
     "location": "Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italy",
     "phone": "+39 - 3883629233",
     "email": "fgcititaly@aol.com / uyisky@yahoo.com"
+  },
+  "PlanVisitModal": {
+    "title": "Plan Your Visit",
+    "subtitle": "We can't wait to welcome you to The Narrow Gate Foursquare Church in Motta di Livenza! Let us know when you're coming so we can prepare a warm welcome for you.",
+    "gatheringLabel": "Which gathering would you like to attend?",
+    "gatherings": {
+      "sundayService": "Sunday Main Worship Service (10:00 AM)",
+      "sundayBreakfast": "Sunday Breakfast & Sunday School (9:00 AM / 9:20 AM)",
+      "wednesdayBible": "Wednesday Bible Study (6:30 PM)",
+      "saturdayPrayer": "Saturday Intercessory Prayer (4:30 PM)"
+    },
+    "dateLabel": "Planned Visit Date",
+    "fullNameLabel": "Full Name",
+    "fullNamePlaceholder": "John Doe",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "john@example.com",
+    "phoneLabel": "Phone / WhatsApp Number",
+    "phonePlaceholder": "+39 388 362 9233",
+    "familyLabel": "Are you bringing family or children?",
+    "familyYes": "Yes, I'm bringing guests/family",
+    "familyNo": "Just me",
+    "guestsCountLabel": "Number of Guests / Family Members",
+    "notesLabel": "Special Requests / Notes (Optional)",
+    "notesPlaceholder": "e.g., First time visiting, need translation headset, prayer request...",
+    "submitBtn": "Reserve My Visit Spot",
+    "submitting": "Reserving Spot...",
+    "successTitle": "You're All Set! We Can't Wait to Meet You!",
+    "successMessage": "Thank you for planning your visit to The Narrow Gate Foursquare Church. Reverend Uyi Loveday Evbuomwan and our greeting team will be expecting you at Via Cadamure, N1/19 31045, Motta Di Livenza, Italy.",
+    "closeBtn": "Done"
   }
 }

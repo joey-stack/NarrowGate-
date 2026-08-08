@@ -4,12 +4,15 @@ import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
 
+import { usePlanVisit } from "./PlanVisitContext";
+
 export default function Header() {
   const t = useTranslations("Header");
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { openPlanVisitModal } = usePlanVisit();
 
   const switchLocale = (newLocale: string) => {
     const segments = pathname.split("/");
@@ -89,12 +92,12 @@ export default function Header() {
             </div>
 
             {/* Header Right Action Button (Crimson Red -> Dark Red Hover) */}
-            <a
-              href={`/${locale}/contact`}
-              className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-[#991B1B] hover:text-white transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-accent"
+            <button
+              onClick={() => openPlanVisitModal("sundayService")}
+              className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-[#991B1B] hover:text-white transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-accent cursor-pointer"
             >
               Plan Your Visit
-            </a>
+            </button>
 
             {/* Mobile Menu Trigger */}
             <button
