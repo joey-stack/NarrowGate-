@@ -95,14 +95,10 @@ function ProjectDetailContent({
             {/* Back Navigation Link */}
             <a
               href={`/${locale}/support-mission`}
-              className="btn-gradient-link text-xs sm:text-sm inline-flex items-center gap-2 mb-8"
+              className="btn-gradient-link text-xs sm:text-sm inline-flex items-center gap-2 mb-6"
             >
               <span>{t("backLink")}</span>
             </a>
-
-            <div className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-4 shadow-sm block w-fit">
-              {t(`${projectKey}.badge`)}
-            </div>
 
             <h1 className="text-display text-[#121212] mb-4 leading-tight max-w-4xl">
               {t(`${projectKey}.title`)}
