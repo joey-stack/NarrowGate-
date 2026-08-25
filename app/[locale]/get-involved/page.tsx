@@ -34,7 +34,7 @@ function GetInvolvedContent({ locale }: { locale: string }) {
     { title: t("visitation"), desc: t("visitationDesc"), tag: "Care", img: "https://framerusercontent.com/images/WpgTwT0ndOZLrmpVLOGMNE9Y.jpeg" },
     { title: t("childDedication"), desc: t("childDedicationDesc"), tag: "Family", img: "/images/ministries/child-dedication.jpg" },
     { title: t("families"), desc: t("familiesDesc"), tag: "Marriage", img: "/images/ministries/families-ministry.jpg" },
-    { title: t("testimonies"), desc: t("testimoniesDesc"), tag: "Thanksgiving", img: "https://framerusercontent.com/images/LHytLqj1LAp19pIe5hVKEmCFw.jpeg" },
+    { title: t("testimonies"), desc: t("testimoniesDesc"), tag: "Thanksgiving", img: "/images/testimonies.webp" },
     { title: t("loveFeast"), desc: t("loveFeastDesc"), tag: "Fellowship", img: "/images/ministries/love-feast.jpg" },
   ];
 

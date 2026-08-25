@@ -40,7 +40,7 @@ function SupportMissionContent({ locale }: { locale: string }) {
       title: t("foodBank"),
       desc: t("foodBankDesc"),
       badge: "Banco Alimentare",
-      img: "https://framerusercontent.com/images/e84uUhqW7kjrsUbllcDRJQjlOY.jpeg",
+      img: "/images/banco-alimentare.webp",
     },
     {
       title: t("shelter"),
