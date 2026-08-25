@@ -31,7 +31,7 @@ function GetInvolvedContent({ locale }: { locale: string }) {
 
   const ministries = [
     { title: t("counseling"), desc: t("counselingDesc"), tag: "Counseling", img: "/images/ministries/guidance-counseling.jpg" },
-    { title: t("visitation"), desc: t("visitationDesc"), tag: "Care", img: "https://framerusercontent.com/images/WpgTwT0ndOZLrmpVLOGMNE9Y.jpeg" },
+    { title: t("visitation"), desc: t("visitationDesc"), tag: "Care", img: "/images/visitation.webp" },
     { title: t("childDedication"), desc: t("childDedicationDesc"), tag: "Family", img: "/images/ministries/child-dedication.jpg" },
     { title: t("families"), desc: t("familiesDesc"), tag: "Marriage", img: "/images/ministries/families-ministry.jpg" },
     { title: t("testimonies"), desc: t("testimoniesDesc"), tag: "Thanksgiving", img: "/images/testimonies.webp" },
