@@ -31,18 +31,21 @@ function SupportMissionContent({ locale }: { locale: string }) {
 
   const projects = [
     {
+      slug: "education-fund",
       title: t("educationFund"),
       desc: t("educationFundDesc"),
       badge: "Fully Funded by Church",
-      img: "https://framerusercontent.com/images/bjdWEdmLsmlHJ6nkyV6S4kBw4.jpeg",
+      img: "/images/education-fund.webp",
     },
     {
+      slug: "banco-alimentare",
       title: t("foodBank"),
       desc: t("foodBankDesc"),
       badge: "Banco Alimentare",
       img: "/images/banco-alimentare.webp",
     },
     {
+      slug: "shelter-widows",
       title: t("shelter"),
       desc: t("shelterDesc"),
       badge: "Shelter & Widows",
@@ -138,10 +141,10 @@ function SupportMissionContent({ locale }: { locale: string }) {
 
                     <div className="mt-6 pt-4 border-t border-black/5">
                       <a
-                        href={`/${locale}/contact`}
+                        href={`/${locale}/support-mission/${p.slug}`}
                         className="btn-gradient-link text-xs"
                       >
-                        <span>Support Project</span>
+                        <span>Learn More & Support</span>
                         <span className="arrow-icon">→</span>
                       </a>
                     </div>
