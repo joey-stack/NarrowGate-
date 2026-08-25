@@ -195,7 +195,7 @@ input:focus, textarea:focus, select:focus {
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 150s linear infinite;
+  animation: marquee 75s linear infinite;
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
