@@ -6,6 +6,7 @@ import Image from "next/image";
 interface GalleryItem {
   type: "image" | "video";
   src: string;
+  webmSrc?: string;
   poster?: string;
   alt: string;
 }
@@ -21,9 +22,10 @@ export function MomentsGallerySection() {
     },
     {
       type: "video",
-      src: "/videos/worship-video-1.mp4",
+      src: "/videos/worship-marquee.mp4",
+      webmSrc: "/videos/worship-marquee.webm",
       poster: "/images/gatherings/sunday-service.jpg",
-      alt: "Praise and Worship Moment",
+      alt: "Praise and Worship Highlight Video",
     },
     {
       type: "image",
@@ -32,7 +34,7 @@ export function MomentsGallerySection() {
     },
     {
       type: "video",
-      src: "/videos/worship-video-2.mp4",
+      src: "/videos/worship-video-1.mp4",
       poster: "/images/ministries/worship-choir.jpg",
       alt: "Community Worship Moment",
     },
@@ -43,7 +45,7 @@ export function MomentsGallerySection() {
     },
     {
       type: "video",
-      src: "/videos/worship-video-3.mp4",
+      src: "/videos/worship-video-2.mp4",
       poster: "/images/ministries/mens-fellowship.jpg",
       alt: "Church Fellowship Video",
     },
@@ -54,7 +56,7 @@ export function MomentsGallerySection() {
     },
     {
       type: "video",
-      src: "/videos/worship-video-4.mp4",
+      src: "/videos/worship-video-3.mp4",
       poster: "/images/who-we-are-banner.jpg",
       alt: "Sunday Service Joy",
     },
@@ -88,15 +90,18 @@ export function MomentsGallerySection() {
             >
               {item.type === "video" ? (
                 <video
-                  src={item.src}
                   poster={item.poster}
                   autoPlay
                   loop
                   muted
                   playsInline
                   preload="metadata"
+                  disablePictureInPicture
                   className="w-full h-full object-cover object-center pointer-events-none group-hover:scale-105 transition-transform duration-700 ease-out"
-                />
+                >
+                  {item.webmSrc && <source src={item.webmSrc} type="video/webm" />}
+                  <source src={item.src} type="video/mp4" />
+                </video>
               ) : (
                 <Image
                   src={item.src}

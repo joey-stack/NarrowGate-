@@ -54,14 +54,17 @@ export function WatchSermonsSection() {
           <ScrollReveal delay={0.2} className="lg:col-span-7">
             <div className="rounded-lg bg-black overflow-hidden shadow-md border border-black/10 relative h-[360px] sm:h-[420px] lg:h-[480px] w-full">
               <video
-                src="/videos/sermon-worship-recording.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
                 preload="metadata"
+                disablePictureInPicture
                 className="w-full h-full object-cover object-center pointer-events-none"
-              />
+              >
+                <source src="/videos/sermon-worship-recording.webm" type="video/webm" />
+                <source src="/videos/sermon-worship-recording.mp4" type="video/mp4" />
+              </video>
             </div>
           </ScrollReveal>
         </div>
