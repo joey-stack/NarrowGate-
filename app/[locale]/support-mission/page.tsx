@@ -46,7 +46,7 @@ function SupportMissionContent({ locale }: { locale: string }) {
       title: t("shelter"),
       desc: t("shelterDesc"),
       badge: "Shelter & Widows",
-      img: "https://framerusercontent.com/images/0RdQhzQ3ySrU6ryPntVtPzhEP20.jpeg",
+      img: "/images/shelter-widows.webp",
     },
   ];
 
