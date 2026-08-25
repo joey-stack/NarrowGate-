@@ -129,76 +129,96 @@ function ProjectDetailContent({
         </div>
       </section>
 
-      {/* Impact Stats Highlight Bar */}
-      <section className="py-12 bg-white border-y border-black/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div className="p-6 rounded-lg bg-[#f2ebd1] border border-black/5">
-                <span className="block font-heading font-extrabold text-3xl sm:text-4xl text-[#B91C1C] mb-1">
-                  {t(`${projectKey}.stat1Num`)}
-                </span>
-                <span className="block text-xs uppercase tracking-wider font-heading font-bold text-[#121212]">
-                  {t(`${projectKey}.stat1Label`)}
-                </span>
-              </div>
+      {/* Impact Stats Highlight Bar (Shown for other projects) */}
+      {slug !== "education-fund" && (
+        <section className="py-12 bg-white border-y border-black/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div className="p-6 rounded-lg bg-[#f2ebd1] border border-black/5">
+                  <span className="block font-heading font-extrabold text-3xl sm:text-4xl text-[#B91C1C] mb-1">
+                    {t(`${projectKey}.stat1Num`)}
+                  </span>
+                  <span className="block text-xs uppercase tracking-wider font-heading font-bold text-[#121212]">
+                    {t(`${projectKey}.stat1Label`)}
+                  </span>
+                </div>
 
-              <div className="p-6 rounded-lg bg-[#f2ebd1] border border-black/5">
-                <span className="block font-heading font-extrabold text-3xl sm:text-4xl text-[#B91C1C] mb-1">
-                  {t(`${projectKey}.stat2Num`)}
-                </span>
-                <span className="block text-xs uppercase tracking-wider font-heading font-bold text-[#121212]">
-                  {t(`${projectKey}.stat2Label`)}
-                </span>
-              </div>
+                <div className="p-6 rounded-lg bg-[#f2ebd1] border border-black/5">
+                  <span className="block font-heading font-extrabold text-3xl sm:text-4xl text-[#B91C1C] mb-1">
+                    {t(`${projectKey}.stat2Num`)}
+                  </span>
+                  <span className="block text-xs uppercase tracking-wider font-heading font-bold text-[#121212]">
+                    {t(`${projectKey}.stat2Label`)}
+                  </span>
+                </div>
 
-              <div className="p-6 rounded-lg bg-[#f2ebd1] border border-black/5">
-                <span className="block font-heading font-extrabold text-3xl sm:text-4xl text-[#B91C1C] mb-1">
-                  {t(`${projectKey}.stat3Num`)}
-                </span>
-                <span className="block text-xs uppercase tracking-wider font-heading font-bold text-[#121212]">
-                  {t(`${projectKey}.stat3Label`)}
-                </span>
+                <div className="p-6 rounded-lg bg-[#f2ebd1] border border-black/5">
+                  <span className="block font-heading font-extrabold text-3xl sm:text-4xl text-[#B91C1C] mb-1">
+                    {t(`${projectKey}.stat3Num`)}
+                  </span>
+                  <span className="block text-xs uppercase tracking-wider font-heading font-bold text-[#121212]">
+                    {t(`${projectKey}.stat3Label`)}
+                  </span>
+                </div>
               </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
 
       {/* Detailed Overview & Action Card Section */}
       <section className="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          {/* Left Column: Deep Overview & Objectives */}
+          {/* Left Column: Deep Overview */}
           <ScrollReveal className="lg:col-span-8 space-y-10">
-            <div className="rounded-lg bg-white p-8 sm:p-12 border border-black/10 shadow-sm space-y-6">
+            <div className={`rounded-lg p-8 sm:p-12 border border-black/10 shadow-sm space-y-8 ${slug === "education-fund" ? "bg-[#f2ebd1]" : "bg-white"}`}>
               <h2 className="text-h2 text-[#121212]">
                 {t(`${projectKey}.overviewTitle`)}
               </h2>
               <p className="text-body text-[#525252] leading-relaxed text-base sm:text-lg">
                 {t(`${projectKey}.overviewP1`)}
               </p>
+
+              {/* Official Emblem Graphic for Education Fund placed between P1 and P2 */}
+              {slug === "education-fund" && (
+                <div className="my-8 flex justify-center">
+                  <div className="relative w-full max-w-xl h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden border border-black/10 shadow-md bg-white p-4">
+                    <Image
+                      src="/images/student-trust-fund-emblem.webp"
+                      alt="Student's Trust Fund Official Emblem"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 600px"
+                      className="object-contain object-center"
+                    />
+                  </div>
+                </div>
+              )}
+
               <p className="text-body text-[#525252] leading-relaxed text-base sm:text-lg">
                 {t(`${projectKey}.overviewP2`)}
               </p>
             </div>
 
-            <div className="rounded-lg bg-white p-8 sm:p-12 border border-black/10 shadow-sm space-y-6">
-              <h3 className="text-h3 text-[#121212]">
-                {t(`${projectKey}.keyObjectivesTitle`)}
-              </h3>
-              <ul className="space-y-4">
-                {[1, 2, 3, 4].map((i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="shrink-0 w-6 h-6 rounded-full bg-eyebrow-gradient text-white flex items-center justify-center font-bold text-xs mt-0.5 shadow-sm">
-                      ✓
-                    </span>
-                    <span className="text-body text-[#121212] font-medium leading-relaxed">
-                      {t(`${projectKey}.obj${i}`)}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {slug !== "education-fund" && (
+              <div className="rounded-lg bg-white p-8 sm:p-12 border border-black/10 shadow-sm space-y-6">
+                <h3 className="text-h3 text-[#121212]">
+                  {t(`${projectKey}.keyObjectivesTitle`)}
+                </h3>
+                <ul className="space-y-4">
+                  {[1, 2, 3, 4].map((i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="shrink-0 w-6 h-6 rounded-full bg-eyebrow-gradient text-white flex items-center justify-center font-bold text-xs mt-0.5 shadow-sm">
+                        ✓
+                      </span>
+                      <span className="text-body text-[#121212] font-medium leading-relaxed">
+                        {t(`${projectKey}.obj${i}`)}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </ScrollReveal>
 
           {/* Right Column: Giving & Support Action Box */}
@@ -235,7 +255,7 @@ function ProjectDetailContent({
       </section>
 
       {/* Cross-Link Other Initiatives Grid */}
-      <section className="py-16 bg-white border-t border-black/5">
+      <section className="py-16 bg-[#f2ebd1] border-t border-black/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <h3 className="text-h3 text-[#121212] mb-8 text-center">
