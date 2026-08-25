@@ -24,7 +24,7 @@ export function MinistriesGridSection() {
         <ScrollReveal>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16">
             <div className="lg:col-span-7">
-              <div className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/15 text-accent text-xs font-heading font-bold uppercase tracking-wider mb-4">
+              <div className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-4 shadow-sm">
                 {t("badge")}
               </div>
               <h2 className="text-h1 text-[#121212] leading-tight max-w-md">

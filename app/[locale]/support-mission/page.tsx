@@ -56,7 +56,7 @@ function SupportMissionContent({ locale }: { locale: string }) {
       <section className="py-20 sm:py-28 bg-[#F8F8F8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/15 text-accent text-xs font-heading font-bold uppercase tracking-wider mb-6">
+            <div className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-6 shadow-sm">
               Support Our Mission
             </div>
 
@@ -100,7 +100,7 @@ function SupportMissionContent({ locale }: { locale: string }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <div className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/15 text-accent text-xs font-heading font-bold uppercase tracking-wider mb-4">
+              <div className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-4 shadow-sm">
                 Community Outreach Projects
               </div>
               <h2 className="text-h1 text-[#121212]">{t("waysToGive")}</h2>
@@ -152,7 +152,7 @@ function SupportMissionContent({ locale }: { locale: string }) {
           {/* Bank & Giving Card */}
           <ScrollReveal delay={0.2}>
             <div className="rounded-lg bg-[#121212] text-white p-8 sm:p-12 max-w-3xl mx-auto text-center border border-white/10 shadow-md">
-              <span className="text-xs font-heading font-bold uppercase tracking-wider text-accent bg-accent/20 px-3.5 py-1 rounded-md inline-block mb-4">
+              <span className="text-xs font-heading font-bold uppercase tracking-wider text-white bg-eyebrow-gradient px-3.5 py-1 rounded-md inline-block mb-4 shadow-sm">
                 Financial Integrity & Transparency
               </span>
               <h3 className="text-h2 text-white mb-4">{t("bankDetails")}</h3>

@@ -205,3 +205,9 @@ input:focus, textarea:focus, select:focus {
   animation-play-state: paused;
 }
 
+/* Eyebrow Section Badge Linear Gradient Utility */
+.bg-eyebrow-gradient {
+  background: linear-gradient(90deg, #E61A1A 0%, #FFD900 100%);
+}
+
+

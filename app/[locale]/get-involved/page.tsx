@@ -44,7 +44,7 @@ function GetInvolvedContent({ locale }: { locale: string }) {
       <section className="py-20 sm:py-28 bg-[#F8F8F8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/15 text-accent text-xs font-heading font-bold uppercase tracking-wider mb-6">
+            <div className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-6 shadow-sm">
               Get Involved
             </div>
 
@@ -90,7 +90,7 @@ function GetInvolvedContent({ locale }: { locale: string }) {
           <ScrollReveal>
             <div className="rounded-lg bg-[#F8F8F8] p-8 sm:p-10 border border-black/10 shadow-sm flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
               <div className="max-w-3xl">
-                <span className="inline-block px-3.5 py-1.5 rounded-lg bg-accent text-white text-xs font-heading font-bold uppercase tracking-wider mb-4">
+                <span className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-4 shadow-sm">
                   Special Annual Gathering
                 </span>
                 <h2 className="text-h1 text-[#121212] mb-2">Cultural Sunday</h2>
@@ -119,7 +119,7 @@ function GetInvolvedContent({ locale }: { locale: string }) {
       <section className="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <div className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/15 text-accent text-xs font-heading font-bold uppercase tracking-wider mb-4">
+            <div className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-4 shadow-sm">
               Ministries & Activities
             </div>
             <h2 className="text-h1 text-[#121212] mb-3">{t("ministriesTitle")}</h2>

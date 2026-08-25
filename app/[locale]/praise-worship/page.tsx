@@ -37,7 +37,7 @@ function PraiseWorshipContent({ locale }: { locale: string }) {
       <section className="py-20 sm:py-28 bg-[#F8F8F8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/15 text-accent text-xs font-heading font-bold uppercase tracking-wider mb-6">
+            <div className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-6 shadow-sm">
               Music & Worship Ministry
             </div>
 
@@ -97,7 +97,7 @@ function PraiseWorshipContent({ locale }: { locale: string }) {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <ScrollReveal>
             <div className="rounded-lg bg-[#F8F8F8] p-8 sm:p-12 border border-black/10 shadow-sm">
-              <span className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/15 text-accent text-xs font-heading font-bold uppercase tracking-wider mb-4">
+              <span className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-4 shadow-sm">
                 Worship Vision
               </span>
               <h2 className="text-h1 text-[#121212] mb-6">{t("philosophyTitle")}</h2>
@@ -109,7 +109,7 @@ function PraiseWorshipContent({ locale }: { locale: string }) {
 
           <ScrollReveal delay={0.2}>
             <div className="rounded-lg bg-[#121212] text-white p-8 sm:p-12 text-center border border-white/10 shadow-md">
-              <span className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/20 text-accent-light text-xs font-heading font-bold uppercase tracking-wider mb-4">
+              <span className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-4 shadow-sm">
                 Serve With Your Talents
               </span>
               <h3 className="text-h2 text-white mb-4">{t("choirCallout")}</h3>

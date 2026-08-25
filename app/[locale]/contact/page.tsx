@@ -35,7 +35,7 @@ function ContactContent() {
       <section className="py-20 sm:py-28 bg-[#F8F8F8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/15 text-accent text-xs font-heading font-bold uppercase tracking-wider mb-6">
+            <div className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-6 shadow-sm">
               Get In Touch
             </div>
 
@@ -118,7 +118,7 @@ function ContactContent() {
           {/* Right Location & Details Card */}
           <ScrollReveal delay={0.2} className="lg:col-span-5 space-y-8">
             <div className="rounded-lg bg-[#121212] text-white p-8 sm:p-10 border border-white/10 shadow-md space-y-6">
-              <span className="text-xs font-heading font-bold uppercase tracking-wider text-accent bg-accent/20 px-3.5 py-1 rounded-md inline-block">
+              <span className="text-xs font-heading font-bold uppercase tracking-wider text-white bg-eyebrow-gradient px-3.5 py-1 rounded-md inline-block shadow-sm">
                 Contact Information
               </span>
               <h3 className="text-h2 text-white">{tLoc("title")}</h3>
@@ -141,7 +141,7 @@ function ContactContent() {
 
             {/* Address Card */}
             <div className="rounded-lg bg-white border border-black/10 p-8 text-center shadow-sm">
-              <span className="text-xs font-heading font-bold uppercase tracking-wider text-accent bg-accent/15 px-3.5 py-1 rounded-md inline-block mb-3">
+              <span className="text-xs font-heading font-bold uppercase tracking-wider text-white bg-eyebrow-gradient px-3.5 py-1 rounded-md inline-block mb-3 shadow-sm">
                 Church Location
               </span>
               <h4 className="font-heading font-bold text-[#121212] text-lg">Via Cadamure 1/19</h4>

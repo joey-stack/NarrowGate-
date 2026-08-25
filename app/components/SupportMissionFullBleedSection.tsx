@@ -26,7 +26,7 @@ export function SupportMissionFullBleedSection() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <ScrollReveal>
-          <div className="inline-block px-4 py-1.5 rounded-lg bg-accent/20 text-accent-light text-xs font-heading font-bold uppercase tracking-wider mb-6">
+          <div className="inline-block px-4 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-6 shadow-sm">
             {t("badge")}
           </div>
 

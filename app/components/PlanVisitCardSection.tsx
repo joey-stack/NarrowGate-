@@ -18,7 +18,7 @@ export function PlanVisitCardSection() {
           <div className="rounded-lg bg-[#1E1E1E] text-white p-8 sm:p-10 border border-white/10 shadow-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 transition-all">
             {/* Left Text Block */}
             <div className="max-w-3xl">
-              <div className="inline-block px-3 py-1 rounded-md bg-[#B91C1C]/30 text-white text-xs font-heading font-bold uppercase tracking-wider mb-3 border border-[#B91C1C]/50">
+              <div className="inline-block px-3 py-1 rounded-md bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-3 shadow-sm">
                 {t("badge")}
               </div>
               <h3 className="font-heading font-bold text-white text-xl sm:text-2xl leading-snug mb-3">

@@ -27,7 +27,7 @@ export function AboutBeliefsDarkSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column (5-span) */}
           <ScrollReveal className="lg:col-span-5 sticky top-28">
-            <div className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/20 text-accent-light text-xs font-heading font-bold uppercase tracking-wider mb-4">
+            <div className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-4 shadow-sm">
               {t("badge")}
             </div>
             <h2 className="text-h1 text-white mb-6">{t("title")}</h2>

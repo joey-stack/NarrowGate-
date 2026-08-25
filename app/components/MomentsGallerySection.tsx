@@ -23,7 +23,7 @@ export function MomentsGallerySection() {
     <section className="py-20 sm:py-28 bg-[#F8F8F8] border-t border-black/5 overflow-hidden">
       {/* Section Heading */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-14">
-        <div className="inline-block px-3.5 py-1.5 rounded-lg bg-[#B91C1C]/15 text-[#B91C1C] text-xs font-heading font-bold uppercase tracking-wider mb-4 border border-[#B91C1C]/20">
+        <div className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-4 shadow-sm">
           {t("badge")}
         </div>
         <h2 className="text-h1 text-[#121212]">{t("title")}</h2>

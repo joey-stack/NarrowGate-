@@ -13,7 +13,7 @@ export function WatchSermonsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-12">
-            <div className="inline-block px-3.5 py-1.5 rounded-lg bg-accent/15 text-accent text-xs font-heading font-bold uppercase tracking-wider mb-4">
+            <div className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-4 shadow-sm">
               {t("badge")}
             </div>
             <h2 className="text-h1 text-[#121212]">{t("title")}</h2>
@@ -25,7 +25,7 @@ export function WatchSermonsSection() {
           <ScrollReveal className="lg:col-span-5 h-full">
             <div className="rounded-lg bg-[#F8F8F8] p-8 sm:p-10 flex flex-col justify-between h-full border border-black/10 shadow-sm">
               <div>
-                <span className="text-xs font-heading font-bold uppercase tracking-wider text-accent bg-accent/15 px-3 py-1 rounded-lg inline-block mb-4">
+                <span className="text-xs font-heading font-bold uppercase tracking-wider text-white bg-eyebrow-gradient px-3 py-1 rounded-lg inline-block mb-4 shadow-sm">
                   Audio & Video Messages
                 </span>
                 <h3 className="text-h3 text-[#121212] mb-4">
