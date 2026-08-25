@@ -17,7 +17,7 @@ export function AboutLeadershipSection() {
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-[#F8F8F8]">
+    <section className="py-20 sm:py-28 bg-[#f2ebd1]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-16">

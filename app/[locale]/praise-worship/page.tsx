@@ -18,7 +18,7 @@ export default async function PraiseWorshipPage({
   return (
     <>
       <Header />
-      <main id="main-content" className="flex-1 bg-[#F8F8F8]">
+      <main id="main-content" className="flex-1 bg-[#f2ebd1]">
         <PraiseWorshipContent locale={locale} />
         <WatchSermonsSection />
         <PlanVisitCardSection />
@@ -34,7 +34,7 @@ function PraiseWorshipContent({ locale }: { locale: string }) {
   return (
     <div>
       {/* Hero Banner Section */}
-      <section className="py-20 sm:py-28 bg-[#F8F8F8]">
+      <section className="py-20 sm:py-28 bg-[#f2ebd1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-6 shadow-sm">
@@ -97,7 +97,7 @@ function PraiseWorshipContent({ locale }: { locale: string }) {
       <section className="py-20 bg-white border-y border-black/5">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <ScrollReveal>
-            <div className="rounded-lg bg-[#F8F8F8] p-8 sm:p-12 border border-black/10 shadow-sm">
+            <div className="rounded-lg bg-[#f2ebd1] p-8 sm:p-12 border border-black/10 shadow-sm">
               <span className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-4 shadow-sm">
                 Worship Vision
               </span>

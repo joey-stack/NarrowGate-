@@ -96,7 +96,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto mb-5 mx-auto">
             <button
               onClick={() => openPlanVisitModal("sundayService")}
-              className="px-6 py-3 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#991B1B] hover:text-white transition-all duration-200 text-center cursor-pointer"
+              className="px-6 py-3 rounded-lg bg-white text-[#121212] font-heading font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-white/90 hover:scale-105 transition-all duration-200 text-center cursor-pointer"
             >
               {t("planVisit")} →
             </button>

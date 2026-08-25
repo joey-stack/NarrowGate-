@@ -17,7 +17,7 @@ export default async function SupportMissionPage({
   return (
     <>
       <Header />
-      <main id="main-content" className="flex-1 bg-[#F8F8F8]">
+      <main id="main-content" className="flex-1 bg-[#f2ebd1]">
         <SupportMissionContent locale={locale} />
         <PlanVisitCardSection />
       </main>
@@ -53,7 +53,7 @@ function SupportMissionContent({ locale }: { locale: string }) {
   return (
     <div>
       {/* Hero Banner Section */}
-      <section className="py-20 sm:py-28 bg-[#F8F8F8]">
+      <section className="py-20 sm:py-28 bg-[#f2ebd1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-6 shadow-sm">
@@ -112,7 +112,7 @@ function SupportMissionContent({ locale }: { locale: string }) {
             {projects.map((p, idx) => (
               <ScrollStaggerItem key={idx}>
                 <div
-                  className="rounded-lg bg-[#F8F8F8] border border-black/10 overflow-hidden flex flex-col justify-between hover:shadow-md transition-all duration-200 group hover:-translate-y-0.5 h-full"
+                  className="rounded-lg bg-[#f2ebd1] border border-black/10 overflow-hidden flex flex-col justify-between hover:shadow-md transition-all duration-200 group hover:-translate-y-0.5 h-full"
                 >
                   <div className="h-52 relative overflow-hidden">
                     <Image
@@ -124,7 +124,7 @@ function SupportMissionContent({ locale }: { locale: string }) {
                       loading="lazy"
                       className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#F8F8F8] via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#f2ebd1] via-transparent to-transparent" />
                     <span className="absolute top-3 left-3 text-xs font-heading font-bold uppercase tracking-wider px-3 py-1 rounded-md bg-accent text-white shadow-sm z-10">
                       {p.badge}
                     </span>

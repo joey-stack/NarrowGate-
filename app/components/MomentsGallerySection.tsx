@@ -20,7 +20,7 @@ export function MomentsGallerySection() {
   const marqueeList = [...images, ...images];
 
   return (
-    <section className="py-20 sm:py-28 bg-[#F8F8F8] border-t border-black/5 overflow-hidden">
+    <section className="py-20 sm:py-28 bg-[#f2ebd1] border-t border-black/5 overflow-hidden">
       {/* Section Heading */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-14">
         <div className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-4 shadow-sm">
@@ -32,8 +32,8 @@ export function MomentsGallerySection() {
       {/* Infinite Marquee Slider Container */}
       <div className="relative w-full overflow-hidden">
         {/* Left & Right Subtle Fade Gradients */}
-        <div className="absolute top-0 left-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-[#F8F8F8] to-transparent z-10 pointer-events-none" />
-        <div className="absolute top-0 right-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-[#F8F8F8] to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 left-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-[#f2ebd1] to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 right-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-[#f2ebd1] to-transparent z-10 pointer-events-none" />
 
         {/* Sliding Marquee Track */}
         <div className="animate-marquee flex items-center gap-6 px-3">

@@ -16,7 +16,7 @@ export default async function ContactPage({
   return (
     <>
       <Header />
-      <main id="main-content" className="flex-1 bg-[#F8F8F8]">
+      <main id="main-content" className="flex-1 bg-[#f2ebd1]">
         <ContactContent />
         <PlanVisitCardSection />
       </main>
@@ -32,7 +32,7 @@ function ContactContent() {
   return (
     <div>
       {/* Hero Banner Section */}
-      <section className="py-20 sm:py-28 bg-[#F8F8F8]">
+      <section className="py-20 sm:py-28 bg-[#f2ebd1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-6 shadow-sm">
@@ -67,7 +67,7 @@ function ContactContent() {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-black/10 focus:outline-none focus:border-accent font-body bg-[#F8F8F8] text-[#121212]"
+                    className="w-full px-4 py-3 rounded-lg border border-black/10 focus:outline-none focus:border-accent font-body bg-[#f2ebd1] text-[#121212]"
                     placeholder="Your Full Name"
                   />
                 </div>
@@ -80,7 +80,7 @@ function ContactContent() {
                     <input
                       type="email"
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-black/10 focus:outline-none focus:border-accent font-body bg-[#F8F8F8] text-[#121212]"
+                      className="w-full px-4 py-3 rounded-lg border border-black/10 focus:outline-none focus:border-accent font-body bg-[#f2ebd1] text-[#121212]"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -90,7 +90,7 @@ function ContactContent() {
                     </label>
                     <input
                       type="tel"
-                      className="w-full px-4 py-3 rounded-lg border border-black/10 focus:outline-none focus:border-accent font-body bg-[#F8F8F8] text-[#121212]"
+                      className="w-full px-4 py-3 rounded-lg border border-black/10 focus:outline-none focus:border-accent font-body bg-[#f2ebd1] text-[#121212]"
                       placeholder="+39 388 362 9233"
                     />
                   </div>
@@ -103,7 +103,7 @@ function ContactContent() {
                   <textarea
                     rows={5}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-black/10 focus:outline-none focus:border-accent font-body bg-[#F8F8F8] text-[#121212]"
+                    className="w-full px-4 py-3 rounded-lg border border-black/10 focus:outline-none focus:border-accent font-body bg-[#f2ebd1] text-[#121212]"
                     placeholder="Write your message or prayer request..."
                   />
                 </div>

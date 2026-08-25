@@ -23,7 +23,7 @@ export function WatchSermonsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Text Card */}
           <ScrollReveal className="lg:col-span-5 h-full">
-            <div className="rounded-lg bg-[#F8F8F8] p-8 sm:p-10 flex flex-col justify-between h-full border border-black/10 shadow-sm">
+            <div className="rounded-lg bg-[#f2ebd1] p-8 sm:p-10 flex flex-col justify-between h-full border border-black/10 shadow-sm">
               <div>
                 <span className="text-xs font-heading font-bold uppercase tracking-wider text-white bg-eyebrow-gradient px-3 py-1 rounded-lg inline-block mb-4 shadow-sm">
                   Audio & Video Messages

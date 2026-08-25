@@ -53,7 +53,7 @@ export default function Header() {
                   href={link.href}
                   className={`px-4 py-2 text-xs font-heading font-semibold rounded-md transition-all duration-200 ${
                     isActive
-                      ? "bg-[#B91C1C] text-white shadow-sm"
+                      ? "bg-white text-[#121212] font-bold shadow-sm"
                       : "text-white/80 hover:text-white hover:bg-white/10"
                   }`}
                 >
@@ -63,16 +63,16 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Right Action Area (Language Switcher + Crimson Red CTA) */}
+          {/* Right Action Area (Language Switcher + White CTA) */}
           <div className="flex items-center gap-3">
             {/* Language Switcher Toggle */}
             <div className="flex items-center bg-white/10 rounded-lg p-1 border border-white/10" role="group" aria-label="Language selector">
               <button
                 onClick={() => switchLocale("en")}
                 aria-label="Switch language to English"
-                className={`px-3 py-1 text-xs font-heading font-bold rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent ${
+                className={`px-3 py-1 text-xs font-heading font-bold rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white ${
                   locale === "en"
-                    ? "bg-[#B91C1C] text-white shadow-sm"
+                    ? "bg-white text-[#121212] shadow-sm"
                     : "text-white/70 hover:text-white"
                 }`}
               >
@@ -81,9 +81,9 @@ export default function Header() {
               <button
                 onClick={() => switchLocale("it")}
                 aria-label="Passa alla lingua italiana"
-                className={`px-3 py-1 text-xs font-heading font-bold rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent ${
+                className={`px-3 py-1 text-xs font-heading font-bold rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white ${
                   locale === "it"
-                    ? "bg-[#B91C1C] text-white shadow-sm"
+                    ? "bg-white text-[#121212] shadow-sm"
                     : "text-white/70 hover:text-white"
                 }`}
               >
@@ -91,10 +91,10 @@ export default function Header() {
               </button>
             </div>
 
-            {/* Header Right Action Button (Crimson Red -> Dark Red Hover) */}
+            {/* Header Right Action Button (White -> White/90 Hover + Scale) */}
             <button
               onClick={() => openPlanVisitModal("sundayService")}
-              className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-[#991B1B] hover:text-white transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-accent cursor-pointer"
+              className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-white text-[#121212] font-heading font-bold text-xs uppercase tracking-wider hover:bg-white/90 hover:scale-105 transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-white cursor-pointer"
             >
               Plan Your Visit
             </button>

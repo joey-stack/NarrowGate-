@@ -34,7 +34,7 @@ export function PlanVisitCardSection() {
             <div className="shrink-0">
               <button
                 onClick={() => openPlanVisitModal("sundayService")}
-                className="px-8 py-4 rounded-lg bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider shadow-md hover:bg-[#991B1B] hover:text-white transition-all inline-flex items-center gap-2 cursor-pointer"
+                className="px-8 py-4 rounded-lg bg-white text-[#121212] font-heading font-bold text-xs uppercase tracking-wider shadow-md hover:bg-white/90 hover:scale-105 transition-all inline-flex items-center gap-2 cursor-pointer"
               >
                 {t("cta")} →
               </button>
