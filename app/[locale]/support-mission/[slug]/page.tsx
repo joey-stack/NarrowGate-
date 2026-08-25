@@ -182,13 +182,13 @@ function ProjectDetailContent({
 
               {/* Official Emblem Graphic for Education Fund placed between P1 and P2 */}
               {slug === "education-fund" && (
-                <div className="my-8 flex justify-center">
-                  <div className="relative w-full max-w-xl h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden border border-black/10 shadow-md bg-white p-4">
+                <div className="my-8 w-full">
+                  <div className="relative w-full h-[320px] sm:h-[450px] lg:h-[540px] rounded-lg overflow-hidden">
                     <Image
                       src="/images/student-trust-fund-emblem.webp"
                       alt="Student's Trust Fund Official Emblem"
                       fill
-                      sizes="(max-width: 768px) 100vw, 600px"
+                      sizes="(max-width: 1024px) 100vw, 850px"
                       className="object-contain object-center"
                     />
                   </div>
