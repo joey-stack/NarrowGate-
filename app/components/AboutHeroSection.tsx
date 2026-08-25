@@ -31,9 +31,10 @@ export function AboutHeroSection() {
             <div className="lg:col-span-5 flex flex-col items-start lg:items-end justify-center">
               <a
                 href={`/${locale}/contact`}
-                className="px-8 py-4 rounded-lg bg-accent text-white font-heading font-bold text-sm uppercase tracking-wider shadow-sm hover:bg-accent-light transition-all hover:scale-105"
+                className="btn-gradient-link text-xs sm:text-sm"
               >
-                {t("cta")} →
+                <span>{t("cta")}</span>
+                <span className="arrow-icon">→</span>
               </a>
             </div>
           </div>

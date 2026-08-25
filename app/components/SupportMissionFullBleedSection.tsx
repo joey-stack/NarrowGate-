@@ -40,9 +40,10 @@ export function SupportMissionFullBleedSection() {
 
           <a
             href={`/${locale}/support-mission`}
-            className="px-8 py-4 rounded-lg bg-accent text-white font-heading font-bold text-sm uppercase tracking-wider shadow-md hover:bg-accent-light hover:scale-105 transition-all inline-block"
+            className="btn-gradient-link text-xs sm:text-sm"
           >
-            {t("cta")} →
+            <span>{t("cta")}</span>
+            <span className="arrow-icon">→</span>
           </a>
         </ScrollReveal>
       </div>

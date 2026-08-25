@@ -41,9 +41,10 @@ export function WatchSermonsSection() {
                   href="https://www.youtube.com/@thenarrowgatefoursquare"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 rounded-lg bg-accent text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-accent-light transition-colors inline-flex items-center gap-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                  className="btn-gradient-link text-xs"
                 >
-                  {t("cta")} →
+                  <span>{t("cta")}</span>
+                  <span className="arrow-icon">→</span>
                 </a>
               </div>
             </div>

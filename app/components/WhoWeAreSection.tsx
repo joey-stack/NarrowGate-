@@ -24,9 +24,10 @@ export function WhoWeAreSection() {
               </h3>
               <a
                 href={`/${locale}/about`}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#121212] text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-accent transition-colors shadow-sm"
+                className="btn-gradient-link text-xs"
               >
-                {t("cta")} →
+                <span>{t("cta")}</span>
+                <span className="arrow-icon">→</span>
               </a>
             </div>
 

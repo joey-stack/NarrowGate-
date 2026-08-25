@@ -73,9 +73,10 @@ function SupportMissionContent({ locale }: { locale: string }) {
               <div className="lg:col-span-5 flex flex-col items-start lg:items-end justify-center">
                 <a
                   href={`/${locale}/contact`}
-                  className="px-8 py-4 rounded-lg bg-accent text-white font-heading font-bold text-sm uppercase tracking-wider shadow-sm hover:bg-accent-light transition-all hover:scale-105"
+                  className="btn-gradient-link text-xs sm:text-sm"
                 >
-                  Donate Now →
+                  <span>Donate Now</span>
+                  <span className="arrow-icon">→</span>
                 </a>
               </div>
             </div>
@@ -138,9 +139,10 @@ function SupportMissionContent({ locale }: { locale: string }) {
                     <div className="mt-6 pt-4 border-t border-black/5">
                       <a
                         href={`/${locale}/contact`}
-                        className="text-xs font-heading font-bold uppercase tracking-wider text-[#121212] group-hover:text-accent flex items-center gap-1.5 transition-colors"
+                        className="btn-gradient-link text-xs"
                       >
-                        Support Project →
+                        <span>Support Project</span>
+                        <span className="arrow-icon">→</span>
                       </a>
                     </div>
                   </div>

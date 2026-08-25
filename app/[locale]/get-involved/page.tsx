@@ -61,9 +61,10 @@ function GetInvolvedContent({ locale }: { locale: string }) {
               <div className="lg:col-span-5 flex flex-col items-start lg:items-end justify-center">
                 <a
                   href={`/${locale}/contact`}
-                  className="px-8 py-4 rounded-lg bg-accent text-white font-heading font-bold text-sm uppercase tracking-wider shadow-sm hover:bg-accent-light transition-all hover:scale-105"
+                  className="btn-gradient-link text-xs sm:text-sm"
                 >
-                  {t("cta")} →
+                  <span>{t("cta")}</span>
+                  <span className="arrow-icon">→</span>
                 </a>
               </div>
             </div>
@@ -105,9 +106,10 @@ function GetInvolvedContent({ locale }: { locale: string }) {
               <div>
                 <a
                   href={`/${locale}/contact`}
-                  className="px-6 py-3 rounded-lg bg-[#121212] text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-accent transition-colors inline-block whitespace-nowrap"
+                  className="btn-gradient-link text-xs"
                 >
-                  Join Event →
+                  <span>Join Event</span>
+                  <span className="arrow-icon">→</span>
                 </a>
               </div>
             </div>
@@ -157,9 +159,10 @@ function GetInvolvedContent({ locale }: { locale: string }) {
                   <div className="mt-6 pt-4 border-t border-black/5">
                     <a
                       href={`/${locale}/contact`}
-                      className="text-xs font-heading font-bold uppercase tracking-wider text-[#121212] group-hover:text-accent flex items-center gap-1.5 transition-colors"
+                      className="btn-gradient-link text-xs"
                     >
-                      Get Involved →
+                      <span>Get Involved</span>
+                      <span className="arrow-icon">→</span>
                     </a>
                   </div>
                 </div>

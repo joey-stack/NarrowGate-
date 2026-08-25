@@ -59,9 +59,10 @@ export function WeeklyGatheringsDarkSection() {
             <div>
               <button
                 onClick={() => openPlanVisitModal("sundayService")}
-                className="px-6 py-3 rounded-lg bg-accent text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-accent-light transition-colors inline-block shadow-sm cursor-pointer"
+                className="btn-gradient-link text-xs"
               >
-                Plan a Visit →
+                <span>Plan a Visit</span>
+                <span className="arrow-icon">→</span>
               </button>
             </div>
           </div>
@@ -105,9 +106,10 @@ export function WeeklyGatheringsDarkSection() {
                   <div className="mt-6 pt-4 border-t border-white/10">
                     <button
                       onClick={() => openPlanVisitModal(item.gatheringKey)}
-                      className="text-xs font-heading font-bold uppercase tracking-wider text-accent hover:text-accent-light transition-colors flex items-center gap-1 cursor-pointer"
+                      className="btn-gradient-link text-xs"
                     >
-                      Join Gathering →
+                      <span>Join Gathering</span>
+                      <span className="arrow-icon">→</span>
                     </button>
                   </div>
                 </div>

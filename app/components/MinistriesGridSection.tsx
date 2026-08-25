@@ -37,9 +37,10 @@ export function MinistriesGridSection() {
               </p>
               <a
                 href={`/${locale}/get-involved`}
-                className="px-6 py-3 rounded-lg bg-accent text-white font-heading font-bold text-xs uppercase tracking-wider hover:bg-accent-light transition-colors inline-block shadow-sm"
+                className="btn-gradient-link text-xs"
               >
-                {t("cta")} →
+                <span>{t("cta")}</span>
+                <span className="arrow-icon">→</span>
               </a>
             </div>
           </div>
@@ -81,9 +82,10 @@ export function MinistriesGridSection() {
                   <div className="mt-6 pt-4 border-t border-black/5">
                     <a
                       href={`/${locale}/get-involved`}
-                      className="text-xs font-heading font-bold uppercase tracking-wider text-[#121212] group-hover:text-accent flex items-center gap-1.5 transition-colors"
+                      className="btn-gradient-link text-xs"
                     >
-                      Join Ministry →
+                      <span>Join Ministry</span>
+                      <span className="arrow-icon">→</span>
                     </a>
                   </div>
                 </div>
