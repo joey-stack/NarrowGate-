@@ -68,7 +68,7 @@ export function HeroSection() {
       {/* Main Content Area (Centralized Above the Fold) */}
       <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-16 sm:pb-24 flex flex-col items-center justify-end flex-grow text-center">
         {/* Transparent Center Content Container */}
-        <div className="max-w-xl w-full flex flex-col items-center text-center mx-auto">
+        <div className="max-w-3xl w-full flex flex-col items-center text-center mx-auto">
           {/* Floating Location Badge */}
           <div className="inline-flex items-center gap-2 bg-[#121212]/80 backdrop-blur-sm border border-white/20 rounded-lg px-3.5 py-1 mb-3 shadow-sm mx-auto">
             <span className="w-2 h-2 rounded-full bg-[#EAB308] animate-pulse" />
@@ -77,23 +77,23 @@ export function HeroSection() {
             </span>
           </div>
 
-          {/* Scaled Up Headline (+25%) */}
-          <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight uppercase mb-3 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] text-center">
+          {/* Scaled Up Headline (Desktop lg:text-6xl) */}
+          <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-6xl tracking-tight leading-tight uppercase mb-4 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] text-center">
             <span className="block">
               {t("titleLine1")}
             </span>
-            <span className="block text-[#EAB308]">
+            <span className="block text-white">
               {t("titleLine2")}
             </span>
           </h1>
 
           {/* Subtitle Tagline */}
-          <p className="text-xs sm:text-sm text-white/95 font-body font-normal leading-relaxed mb-5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] max-w-md text-center mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-white/95 font-body font-normal leading-relaxed mb-6 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] max-w-xl text-center mx-auto">
             {t("tagline")}
           </p>
 
           {/* Centralized Action CTAs (Above the Fold) */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto mb-5 mx-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto mb-6 mx-auto">
             <button
               onClick={() => openPlanVisitModal("sundayService")}
               className="px-6 py-3 rounded-lg bg-white text-[#121212] font-heading font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-white/90 hover:scale-105 transition-all duration-200 text-center cursor-pointer"
@@ -116,8 +116,8 @@ export function HeroSection() {
                 onClick={() => setCurrentSlide(idx)}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   idx === currentSlide
-                    ? "w-8 bg-[#EAB308]"
-                    : "w-2 bg-white/50 hover:bg-white/80"
+                    ? "w-8 bg-white"
+                    : "w-2 bg-white/40 hover:bg-white/80"
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
@@ -130,7 +130,7 @@ export function HeroSection() {
       <div className="relative z-10 w-full bg-[#121212]/95 border-t border-white/15 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
           <div className="py-0.5 text-center">
-            <span className="block text-[#EAB308] font-heading font-bold text-xs sm:text-sm drop-shadow-sm">
+            <span className="block text-white font-heading font-bold text-xs sm:text-sm drop-shadow-sm">
               Sun 9:00 AM & 10:00 AM
             </span>
             <span className="block text-white/80 text-[10px] uppercase tracking-wider font-medium">
@@ -139,7 +139,7 @@ export function HeroSection() {
           </div>
 
           <div className="py-0.5 text-center">
-            <span className="block text-[#EAB308] font-heading font-bold text-xs sm:text-sm drop-shadow-sm">
+            <span className="block text-white font-heading font-bold text-xs sm:text-sm drop-shadow-sm">
               Wed 6:30 PM & Sat 4:30 PM
             </span>
             <span className="block text-white/80 text-[10px] uppercase tracking-wider font-medium">
@@ -148,7 +148,7 @@ export function HeroSection() {
           </div>
 
           <div className="py-0.5 text-center">
-            <span className="block text-[#EAB308] font-heading font-bold text-xs sm:text-sm drop-shadow-sm">
+            <span className="block text-white font-heading font-bold text-xs sm:text-sm drop-shadow-sm">
               Bilingual (EN / IT)
             </span>
             <span className="block text-white/80 text-[10px] uppercase tracking-wider font-medium">
