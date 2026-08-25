@@ -221,8 +221,8 @@ function ProjectDetailContent({
             )}
           </ScrollReveal>
 
-          {/* Right Column: Giving & Support Action Box */}
-          <ScrollReveal className="lg:col-span-4 sticky top-28">
+          {/* Right Column: Giving & Support Action Box + Other Initiatives Stack */}
+          <ScrollReveal className="lg:col-span-4 space-y-8 sticky top-28">
             <div className="rounded-lg bg-[#121212] text-white p-8 sm:p-10 border border-white/10 shadow-md space-y-6">
               <span className="inline-block px-3 py-1 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider shadow-sm">
                 {t("howToHelp")}
@@ -250,49 +250,45 @@ function ProjectDetailContent({
                 </div>
               </div>
             </div>
-          </ScrollReveal>
-        </div>
-      </section>
 
-      {/* Cross-Link Other Initiatives Grid */}
-      <section className="py-16 bg-[#f2ebd1] border-t border-black/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <h3 className="text-h3 text-[#121212] mb-8 text-center">
-              {t("otherProjects")}
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {otherProjects.map((proj) => (
-                <a
-                  key={proj.slug}
-                  href={`/${locale}/support-mission/${proj.slug}`}
-                  className="rounded-lg bg-[#f2ebd1] border border-black/10 overflow-hidden group hover:shadow-md transition-all duration-200 flex flex-col"
-                >
-                  <div className="h-44 relative overflow-hidden">
-                    <Image
-                      src={proj.img}
-                      alt={proj.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      quality={75}
-                      className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                    <span className="absolute top-3 left-3 text-[10px] font-heading font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-accent text-white shadow-sm z-10">
-                      {proj.badge}
-                    </span>
-                  </div>
-                  <div className="p-6 flex items-center justify-between flex-1">
-                    <h4 className="font-heading font-bold text-sm text-[#121212] group-hover:text-[#B91C1C] transition-colors">
-                      {proj.title}
-                    </h4>
-                    <span className="btn-gradient-link text-xs shrink-0 ml-3">
-                      <span>View</span>
-                      <span className="arrow-icon">→</span>
-                    </span>
-                  </div>
-                </a>
-              ))}
+            {/* Other Outreach Initiatives Stacked Directly Under How You Can Help Card */}
+            <div className="space-y-4 pt-2">
+              <h4 className="font-heading font-bold text-xs uppercase tracking-wider text-[#121212] px-1">
+                {t("otherProjects")}
+              </h4>
+              <div className="space-y-4">
+                {otherProjects.map((proj) => (
+                  <a
+                    key={proj.slug}
+                    href={`/${locale}/support-mission/${proj.slug}`}
+                    className="rounded-lg bg-white border border-black/10 overflow-hidden group hover:shadow-md transition-all duration-200 flex flex-col block"
+                  >
+                    <div className="h-36 relative overflow-hidden">
+                      <Image
+                        src={proj.img}
+                        alt={proj.title}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 400px"
+                        quality={75}
+                        className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                      <span className="absolute top-3 left-3 text-[10px] font-heading font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-accent text-white shadow-sm z-10">
+                        {proj.badge}
+                      </span>
+                    </div>
+                    <div className="p-4 flex items-center justify-between">
+                      <h5 className="font-heading font-bold text-xs sm:text-sm text-[#121212] group-hover:text-[#B91C1C] transition-colors">
+                        {proj.title}
+                      </h5>
+                      <span className="btn-gradient-link text-xs shrink-0 ml-2">
+                        <span>View</span>
+                        <span className="arrow-icon">→</span>
+                      </span>
+                    </div>
+                  </a>
+                ))}
+              </div>
             </div>
           </ScrollReveal>
         </div>
