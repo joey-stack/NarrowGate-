@@ -62,8 +62,8 @@ export function WatchSermonsSection() {
                 disablePictureInPicture
                 className="w-full h-full object-cover object-center pointer-events-none"
               >
-                <source src="/videos/sermon-worship-recording.webm" type="video/webm" />
-                <source src="/videos/sermon-worship-recording.mp4" type="video/mp4" />
+                <source src="/videos/worship-marquee.webm" type="video/webm" />
+                <source src="/videos/worship-marquee.mp4" type="video/mp4" />
               </video>
             </div>
           </ScrollReveal>
