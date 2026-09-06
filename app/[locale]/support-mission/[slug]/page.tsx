@@ -37,7 +37,7 @@ const PROJECT_CONFIGS: Record<
   },
   "shelter-widows": {
     translationKey: "shelterWidows",
-    img: "/images/shelter-widows.webp",
+    img: "/images/shelter-widows-4k.webp",
   },
 };
 
