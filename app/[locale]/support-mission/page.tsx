@@ -49,7 +49,7 @@ function SupportMissionContent({ locale }: { locale: string }) {
       title: t("shelter"),
       desc: t("shelterDesc"),
       badge: "Shelter & Widows",
-      img: "/images/shelter-widows-4k.webp",
+      img: "/images/shelter-widows-partners.webp",
     },
   ];
 
