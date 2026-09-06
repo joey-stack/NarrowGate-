@@ -11,9 +11,6 @@ export function AboutLeadershipSection() {
     { name: t("l1Name"), role: t("l1Role"), img: "https://framerusercontent.com/images/4OVDWjW414cpwjACN4OVKzbVvk.webp" },
     { name: t("l2Name"), role: t("l2Role"), img: "https://framerusercontent.com/images/ulEa9UsvjLqBNL1roP8TxwmIuY.webp" },
     { name: t("l3Name"), role: t("l3Role"), img: "https://framerusercontent.com/images/A0QfvVVx0gpAXCNdOlMOZN4DzI.webp" },
-    { name: t("l4Name"), role: t("l4Role"), img: "https://framerusercontent.com/images/WbvZjnw8wDj8LpIrwpXUZ0Hz15k.webp" },
-    { name: t("l5Name"), role: t("l5Role"), img: "https://framerusercontent.com/images/mQphCG2WGkW0cKhZyDtMvw76GJY.webp" },
-    { name: t("l6Name"), role: t("l6Role"), img: "https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png" },
   ];
 
   return (

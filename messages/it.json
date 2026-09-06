@@ -112,13 +112,7 @@
     "l2Name": "Team Cura Pastorale",
     "l2Role": "Consulenza e Discepolato",
     "l3Name": "Responsabile Adorazione",
-    "l3Role": "Direttore Coro e Musica",
-    "l4Name": "Team Ministero Giovani",
-    "l4Role": "Giovani e Giovani Adulti",
-    "l5Name": "Responsabile Ministero Donne",
-    "l5Role": "Comunione Donne",
-    "l6Name": "Direttore Progetti Comunitari",
-    "l6Role": "Fondo Studenti e Banco Alimentare"
+    "l3Role": "Direttore Coro e Musica"
   },
   "PastorWelcome": {
     "badge": "Un Messaggio dal Nostro Pastore Senior",

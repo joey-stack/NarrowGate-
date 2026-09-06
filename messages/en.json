@@ -112,13 +112,7 @@
     "l2Name": "Pastoral Care Team",
     "l2Role": "Counseling & Discipleship",
     "l3Name": "Worship Ministry Leader",
-    "l3Role": "Choir & Music Director",
-    "l4Name": "Youth Ministry Team",
-    "l4Role": "Youth & Young Adults",
-    "l5Name": "Women's Ministry Leader",
-    "l5Role": "Women's Fellowship",
-    "l6Name": "Community Outreach Director",
-    "l6Role": "Student Fund & Food Bank"
+    "l3Role": "Choir & Music Director"
   },
   "PastorWelcome": {
     "badge": "A Message From Our Senior Pastor",
