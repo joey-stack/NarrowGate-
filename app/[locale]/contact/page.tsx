@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { PlanVisitCardSection } from "../../components/PlanVisitCardSection";
 import { ScrollReveal } from "../../components/ScrollReveal";
+import { ContactForm } from "../../components/ContactForm";
 
 export default async function ContactPage({
   params,
@@ -56,63 +57,7 @@ function ContactContent() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Form Card */}
           <ScrollReveal className="lg:col-span-7">
-            <div className="rounded-lg bg-white border border-black/10 p-8 sm:p-10 shadow-sm">
-              <h2 className="text-h2 text-[#121212] mb-6">{t("formTitle")}</h2>
-
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-xs font-heading font-bold uppercase tracking-wider text-[#121212] mb-2">
-                    {t("nameLabel")}
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-black/10 focus:outline-none focus:border-accent font-body bg-[#f2ebd1] text-[#121212]"
-                    placeholder="Your Full Name"
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-xs font-heading font-bold uppercase tracking-wider text-[#121212] mb-2">
-                      {t("emailLabel")}
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-black/10 focus:outline-none focus:border-accent font-body bg-[#f2ebd1] text-[#121212]"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-heading font-bold uppercase tracking-wider text-[#121212] mb-2">
-                      {t("phoneLabel")}
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full px-4 py-3 rounded-lg border border-black/10 focus:outline-none focus:border-accent font-body bg-[#f2ebd1] text-[#121212]"
-                      placeholder="+39 388 362 9233"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-heading font-bold uppercase tracking-wider text-[#121212] mb-2">
-                    {t("messageLabel")}
-                  </label>
-                  <textarea
-                    rows={5}
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-black/10 focus:outline-none focus:border-accent font-body bg-[#f2ebd1] text-[#121212]"
-                    placeholder="Write your message or prayer request..."
-                  />
-                </div>
-
-                <button type="submit" className="px-8 py-4 rounded-lg bg-accent text-[#121212] font-heading font-bold text-sm uppercase tracking-wider shadow-sm hover:bg-[#e4dac2] transition-all w-full sm:w-auto">
-                  {t("submitButton")} →
-                </button>
-              </form>
-            </div>
+            <ContactForm />
           </ScrollReveal>
 
           {/* Right Location & Details Card */}

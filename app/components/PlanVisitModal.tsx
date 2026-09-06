@@ -3,6 +3,7 @@
 import { useState, useEffect, FormEvent } from "react";
 import { useTranslations } from "next-intl";
 import { usePlanVisit } from "./PlanVisitContext";
+import { saveSubmission } from "../../lib/form-store";
 
 export function PlanVisitModal() {
   const t = useTranslations("PlanVisitModal");
@@ -53,11 +54,22 @@ export function PlanVisitModal() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate instant secure submission
+    // Save live submission to data store & Firestore
+    saveSubmission({
+      type: "plan_visit",
+      name: fullName,
+      email,
+      phone,
+      gathering,
+      visitDate: date,
+      guestsCount,
+      notes
+    });
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
-    }, 800);
+    }, 400);
   };
 
   return (
