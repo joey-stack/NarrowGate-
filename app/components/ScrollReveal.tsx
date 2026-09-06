@@ -20,6 +20,7 @@ export function ScrollReveal({
 }: ScrollRevealProps) {
   return (
     <motion.div
+      suppressHydrationWarning
       initial={{ opacity: 0, y: yOffset, scale: 0.98 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: "-60px" }}
@@ -46,6 +47,7 @@ export function ScrollStaggerContainer({
 }) {
   return (
     <motion.div
+      suppressHydrationWarning
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-60px" }}
@@ -73,6 +75,7 @@ export function ScrollStaggerItem({
 }) {
   return (
     <motion.div
+      suppressHydrationWarning
       variants={{
         hidden: { opacity: 0, y: 35, scale: 0.97 },
         visible: {
