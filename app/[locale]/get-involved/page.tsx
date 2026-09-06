@@ -30,7 +30,7 @@ function GetInvolvedContent({ locale }: { locale: string }) {
   const t = useTranslations("GetInvolved");
 
   const ministries = [
-    { title: t("counseling"), desc: t("counselingDesc"), tag: "Counseling", img: "/images/ministries/guidance-counseling.jpg" },
+    { title: t("counseling"), desc: t("counselingDesc"), tag: "Counseling", img: "/images/ministries/guidance-counseling.webp" },
     { title: t("visitation"), desc: t("visitationDesc"), tag: "Care", img: "/images/visitation.webp" },
     { title: t("childDedication"), desc: t("childDedicationDesc"), tag: "Family", img: "/images/ministries/child-dedication.jpg" },
     { title: t("families"), desc: t("familiesDesc"), tag: "Marriage", img: "/images/ministries/families-ministry.jpg" },
