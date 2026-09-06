@@ -208,7 +208,7 @@ function ProjectDetailContent({
                         fill
                         sizes="(max-width: 1024px) 100vw, 400px"
                         quality={75}
-                        className="object-contain object-center group-hover:scale-105 transition-transform duration-500"
+                        className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
                       <span className="absolute top-3 left-3 text-[10px] font-heading font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-accent text-white shadow-sm z-10">
