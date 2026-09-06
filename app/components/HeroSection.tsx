@@ -18,10 +18,6 @@ export function HeroSection() {
       caption: "Pastoral Word & Biblical Teaching",
     },
     {
-      url: "/images/hero/hero-slide-2.jpg",
-      caption: "Ministry & Leadership Celebration",
-    },
-    {
       url: "/images/hero/hero-slide-3.jpg",
       caption: "Sanctuary Worship & Scripture Reading",
     },
