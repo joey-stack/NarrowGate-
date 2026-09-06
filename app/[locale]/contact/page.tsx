@@ -145,7 +145,7 @@ function ContactContent() {
                 Church Location
               </span>
               <h4 className="font-heading font-bold text-[#121212] text-lg">Via Cadamure 1/19</h4>
-              <p className="text-[#525252] text-sm mt-1">31045 Motta di Livenza (TV), Italy</p>
+              <p className="text-[#525252] text-sm mt-1">31045 Motta di Livenza, Province of Treviso, North-East Italy</p>
             </div>
           </ScrollReveal>
         </div>

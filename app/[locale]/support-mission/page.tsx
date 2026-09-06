@@ -117,7 +117,7 @@ function SupportMissionContent({ locale }: { locale: string }) {
                 <div
                   className="rounded-lg bg-[#f2ebd1] border border-black/10 overflow-hidden flex flex-col justify-between hover:shadow-md transition-all duration-200 group hover:-translate-y-0.5 h-full"
                 >
-                  <div className="h-52 relative overflow-hidden">
+                  <div className="h-52 relative overflow-hidden bg-[#121212]">
                     <Image
                       src={p.img}
                       alt={p.title}
@@ -125,9 +125,9 @@ function SupportMissionContent({ locale }: { locale: string }) {
                       sizes="(max-width: 768px) 100vw, 33vw"
                       quality={75}
                       loading="lazy"
-                      className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      className="object-contain object-center group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#f2ebd1] via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
                     <span className="absolute top-3 left-3 text-xs font-heading font-bold uppercase tracking-wider px-3 py-1 rounded-md bg-accent text-white shadow-sm z-10">
                       {p.badge}
                     </span>

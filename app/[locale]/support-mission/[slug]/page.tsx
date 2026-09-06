@@ -201,16 +201,16 @@ function ProjectDetailContent({
                     href={`/${locale}/support-mission/${proj.slug}`}
                     className="rounded-lg bg-white border border-black/10 overflow-hidden group hover:shadow-md transition-all duration-200 flex flex-col block"
                   >
-                    <div className="h-36 relative overflow-hidden">
+                    <div className="h-36 relative overflow-hidden bg-[#121212]">
                       <Image
                         src={proj.img}
                         alt={proj.title}
                         fill
                         sizes="(max-width: 1024px) 100vw, 400px"
                         quality={75}
-                        className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                        className="object-contain object-center group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
                       <span className="absolute top-3 left-3 text-[10px] font-heading font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-accent text-white shadow-sm z-10">
                         {proj.badge}
                       </span>

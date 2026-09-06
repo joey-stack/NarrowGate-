@@ -15,15 +15,15 @@
   "Hero": {
     "titleLine1": "Faith. Family.",
     "titleLine2": "Community.",
-    "locationBadge": "Motta di Livenza, Italy",
-    "tagline": "Join The Narrow Gate Foursquare Church in Motta di Livenza and be part of a community that grows in faith, supports one another, and reaches the unreached.",
+    "locationBadge": "Motta di Livenza, Province of Treviso, North-East Italy",
+    "tagline": "Join The Narrow Gate Foursquare Church, located in Motta di Livenza, in the province of Treviso, North-East Italy, and be part of a community that grows in faith, supports one another, and reaches the unreached.",
     "planVisit": "Plan Your Visit",
     "supportMission": "Support the Mission"
   },
   "WhoWeAre": {
     "badge": "Who We Are",
     "title": "Our Mission is to Share Faith and Love With The World.",
-    "subtitle": "Located in Motta di Livenza, Italy, The Narrow Gate Foursquare Church is a vibrant international Christian community dedicated to preaching Jesus Christ as Savior, Baptizer with the Holy Spirit, Healer, and Soon-Coming King.",
+    "subtitle": "Located in Motta di Livenza, in the province of Treviso, North-East Italy, The Narrow Gate Foursquare Church is a vibrant international Christian community dedicated to preaching Jesus Christ as Savior, Baptizer with the Holy Spirit, Healer, and Soon-Coming King.",
     "cta": "Get To Know Us"
   },
   "WatchSermons": {
@@ -35,7 +35,7 @@
   "WeeklyGatherings": {
     "badge": "Events & Services",
     "title": "Upcoming Gatherings",
-    "subtitle": "Join us in person or in prayer throughout the week in Motta di Livenza.",
+    "subtitle": "Join us in person or in prayer throughout the week in Motta di Livenza, in the province of Treviso, North-East Italy.",
     "viewAll": "View All Schedule",
     "wednesdayTitle": "Wednesday Bible Study",
     "wednesdayTime": "Wednesday 6:30 PM – 8:30 PM",
@@ -73,13 +73,13 @@
     "badge": "Visit Us",
     "quoteLine1": "You are only a visitor once; after that,",
     "quoteLine2": "you are part of our big family.",
-    "locationText": "Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italy",
+    "locationText": "Via Cadamure 1/19, 31045 Motta di Livenza, Province of Treviso, North-East Italy",
     "cta": "Plan Your Visit"
   },
   "AboutHero": {
     "badge": "About Us",
     "title": "The Narrow Gate Foursquare Church",
-    "subtitle": "Located in Motta di Livenza, Italy, we are a vibrant bilingual international church committed to exalting Jesus Christ, nurturing believers, and reaching our community with love and grace.",
+    "subtitle": "Located in Motta di Livenza, in the province of Treviso, North-East Italy, we are a vibrant bilingual international church committed to exalting Jesus Christ, nurturing believers, and reaching our community with love and grace.",
     "cta": "Contact Our Team"
   },
   "AboutMission": {
@@ -106,7 +106,7 @@
   "AboutLeadership": {
     "badge": "Our Leadership",
     "title": "Meet Our Leaders",
-    "subtitle": "Dedicated pastoral team and department leaders serving with devotion in Motta di Livenza.",
+    "subtitle": "Dedicated pastoral team and department leaders serving with devotion in Motta di Livenza, in the province of Treviso, North-East Italy.",
     "l1Name": "Rev. Uyi Loveday Evbuomwan",
     "l1Role": "Senior Pastor (The Narrow Gate Foursquare Gospel Church)",
     "l2Name": "Rev. Renato Amato",
@@ -117,7 +117,7 @@
   "PastorWelcome": {
     "badge": "A Message From Our Senior Pastor",
     "headerTitle": "A Welcoming Church Family Centered on Faith, Hope & Gospel Grace",
-    "headerIntro": "Located in Motta di Livenza, Italy, The Narrow Gate Foursquare Church is dedicated to reaching the reached and the unreached with the transformative love of Jesus Christ.",
+    "headerIntro": "Located in Motta di Livenza, in the province of Treviso, North-East Italy, The Narrow Gate Foursquare Church is dedicated to reaching the reached and the unreached with the transformative love of Jesus Christ.",
     "pastorName": "Rev. Uyi Loveday Evbuomwan",
     "pastorRole": "Senior Pastor (The Narrow Gate Foursquare Gospel Church)",
     "pastorBio": "Leading with devotion, pastoral care, and a heart for every individual and family in our international community.",
@@ -187,9 +187,9 @@
   },
   "ContactLocation": {
     "badge": "Visit Us",
-    "title": "Join Us In Motta di Livenza",
+    "title": "Join Us In Motta di Livenza, Province of Treviso, North-East Italy",
     "addressTitle": "Church Address",
-    "addressText": "Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italy",
+    "addressText": "Via Cadamure 1/19, 31045 Motta di Livenza, Province of Treviso, North-East Italy",
     "phoneTitle": "Phone",
     "phoneText": "+39 - 3883629233",
     "emailTitle": "Email",
@@ -201,7 +201,7 @@
     "title": "About The Narrow Gate Foursquare Church",
     "subtitle": "Rooted in scripture, dedicated to community, and passionate about global mission.",
     "historyTitle": "Our History & Mission",
-    "historyText": "Located in Motta di Livenza, Italy, The Narrow Gate Foursquare Church is a vibrant bilingual international church committed to exalting Jesus Christ. We are affiliated with the International Church of the Foursquare Gospel, dedicated to preaching Jesus Christ as Savior, Baptizer with the Holy Spirit, Healer, and Soon-Coming King.",
+    "historyText": "Located in Motta di Livenza, in the province of Treviso, North-East Italy, The Narrow Gate Foursquare Church is a vibrant bilingual international church committed to exalting Jesus Christ. We are affiliated with the International Church of the Foursquare Gospel, dedicated to preaching Jesus Christ as Savior, Baptizer with the Holy Spirit, Healer, and Soon-Coming King.",
     "valuesTitle": "Core Values",
     "v1Title": "Biblical Faith",
     "v1Desc": "Grounded in the uncompromised Word of God.",
@@ -227,7 +227,7 @@
     "familiesDesc": "Strengthening marriages and nurturing strong Christian homes.",
     "testimonies": "Testimonies & Thanksgiving",
     "testimoniesDesc": "Celebrating God's miraculous works and answered prayers.",
-    "loveFeast": "Love Feast & Fellowship",
+    "loveFeast": "Children Love Feast & Fellowship",
     "loveFeastDesc": "Sharing meals, joy, and brotherly affection together.",
     "culturalSunday": "Cultural Sunday",
     "culturalTheme": "\"Our strength lies in our diversity\" — 2 Corinthians 11:22",
@@ -338,13 +338,13 @@
   },
   "Footer": {
     "rights": "All rights reserved.",
-    "location": "Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italy",
+    "location": "Via Cadamure 1/19, 31045 Motta di Livenza, Province of Treviso, North-East Italy",
     "phone": "+39 - 3883629233",
     "email": "fgcititaly@aol.com / uyisky@yahoo.com"
   },
   "PlanVisitModal": {
     "title": "Plan Your Visit",
-    "subtitle": "We can't wait to welcome you to The Narrow Gate Foursquare Church in Motta di Livenza! Let us know when you're coming so we can prepare a warm welcome for you.",
+    "subtitle": "We can't wait to welcome you to The Narrow Gate Foursquare Church, located in Motta di Livenza, in the province of Treviso, North-East Italy! Let us know when you're coming so we can prepare a warm welcome for you.",
     "gatheringLabel": "Which gathering would you like to attend?",
     "gatherings": {
       "sundayService": "Sunday Main Worship Service (10:00 AM)",

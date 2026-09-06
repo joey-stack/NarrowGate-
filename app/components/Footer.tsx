@@ -21,7 +21,7 @@ export default function Footer() {
               />
             </a>
             <p className="text-xs text-white/70 leading-relaxed">
-              Formed by Jesus, together, for others in Motta di Livenza, Italy. Reaching the reached and the unreached.
+              Formed by Jesus, together, for others in Motta di Livenza, in the province of Treviso, North-East Italy. Reaching the reached and the unreached.
             </p>
           </div>
 

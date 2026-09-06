@@ -15,15 +15,15 @@
   "Hero": {
     "titleLine1": "Fede. Famiglia.",
     "titleLine2": "Comunità.",
-    "locationBadge": "Motta di Livenza, Italia",
-    "tagline": "Unisciti alla Chiesa Foursquare The Narrow Gate a Motta di Livenza e fai parte di una comunità che cresce nella fede, si sostiene e raggiunge i bisognosi.",
+    "locationBadge": "Motta di Livenza, Provincia di Treviso, Nord-Est Italia",
+    "tagline": "Unisciti alla Chiesa Foursquare The Narrow Gate, situata a Motta di Livenza, in provincia di Treviso, nord-est Italia, e fai parte di una comunità che cresce nella fede, si sostiene e raggiunge i bisognosi.",
     "planVisit": "Pianifica la Tua Visita",
     "supportMission": "Sostieni la Missione"
   },
   "WhoWeAre": {
     "badge": "Chi Siamo",
     "title": "La Nostra Missione è Condividere la Fede e l'Amore Con il Mondo.",
-    "subtitle": "Situata a Motta di Livenza, la Chiesa Foursquare The Narrow Gate è una vivace comunità cristiana internazionale dedicata a proclamare Gesù Cristo come Salvatore, Battezzatore, Guaritore e Re che ritorna.",
+    "subtitle": "Situata a Motta di Livenza, in provincia di Treviso, nord-est Italia, la Chiesa Foursquare The Narrow Gate è una vivace comunità cristiana internazionale dedicata a proclamare Gesù Cristo come Salvatore, Battezzatore, Guaritore e Re che ritorna.",
     "cta": "Conoscici Meglio"
   },
   "WatchSermons": {
@@ -35,7 +35,7 @@
   "WeeklyGatherings": {
     "badge": "Eventi e Culti",
     "title": "Prossimi Incontri",
-    "subtitle": "Unisciti a noi di persona o in preghiera durante la settimana a Motta di Livenza.",
+    "subtitle": "Unisciti a noi di persona o in preghiera durante la settimana a Motta di Livenza, in provincia di Treviso, nord-est Italia.",
     "viewAll": "Vedi Tutti gli Orari",
     "wednesdayTitle": "Studio Biblico del Mercoledì",
     "wednesdayTime": "Mercoledì 18:30 – 20:30",
@@ -73,13 +73,13 @@
     "badge": "Vieni a Trovarci",
     "quoteLine1": "Sei un visitatore solo la prima volta; dopo,",
     "quoteLine2": "fai parte della nostra grande famiglia.",
-    "locationText": "Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italia",
+    "locationText": "Via Cadamure 1/19, 31045 Motta di Livenza, Provincia di Treviso, Nord-Est Italia",
     "cta": "Pianifica la Tua Visita"
   },
   "AboutHero": {
     "badge": "Chi Siamo",
     "title": "Chiesa Foursquare The Narrow Gate",
-    "subtitle": "Situata a Motta di Livenza, siamo una vivace comunità internazionale bilingue impegnata ad esaltare Gesù Cristo, nutrire i credenti e servire con amore e grazia.",
+    "subtitle": "Situata a Motta di Livenza, in provincia di Treviso, nord-est Italia, siamo una vivace comunità internazionale bilingue impegnata ad esaltare Gesù Cristo, nutrire i credenti e servire con amore e grazia.",
     "cta": "Contatta il Nostro Team"
   },
   "AboutMission": {
@@ -106,7 +106,7 @@
   "AboutLeadership": {
     "badge": "La Nostra Guida",
     "title": "Incontra i Nostri Leader",
-    "subtitle": "Team pastorale e responsabili di dipartimento dedicati che servono con devozione a Motta di Livenza.",
+    "subtitle": "Team pastorale e responsabili di dipartimento dedicati che servono con devozione a Motta di Livenza, in provincia di Treviso, nord-est Italia.",
     "l1Name": "Rev. Uyi Loveday Evbuomwan",
     "l1Role": "Pastore Senior (The Narrow Gate Foursquare Gospel Church)",
     "l2Name": "Rev. Renato Amato",
@@ -117,7 +117,7 @@
   "PastorWelcome": {
     "badge": "Un Messaggio dal Nostro Pastore Senior",
     "headerTitle": "Una Famiglia di Chiesa Accogliente Centrata su Fede, Speranza e Grazia",
-    "headerIntro": "Situata a Motta di Livenza, la Chiesa Foursquare The Narrow Gate è dedicata a raggiungere chi è vicino e chi è lontano con l'amore di Gesù Cristo.",
+    "headerIntro": "Situata a Motta di Livenza, in provincia di Treviso, nord-est Italia, la Chiesa Foursquare The Narrow Gate è dedicata a raggiungere chi è vicino e chi è lontano con l'amore di Gesù Cristo.",
     "pastorName": "Rev. Uyi Loveday Evbuomwan",
     "pastorRole": "Pastore Senior (The Narrow Gate Foursquare Gospel Church)",
     "pastorBio": "Guida con dedizione, cura pastorale e un cuore per ogni individuo e famiglia nella nostra comunità internazionale.",
@@ -187,9 +187,9 @@
   },
   "ContactLocation": {
     "badge": "Vieni a Trovarci",
-    "title": "Unisciti a Noi a Motta di Livenza",
+    "title": "Unisciti a Noi a Motta di Livenza, Provincia di Treviso, Nord-Est Italia",
     "addressTitle": "Indirizzo della Chiesa",
-    "addressText": "Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italia",
+    "addressText": "Via Cadamure 1/19, 31045 Motta di Livenza, Provincia di Treviso, Nord-Est Italia",
     "phoneTitle": "Telefono",
     "phoneText": "+39 - 3883629233",
     "emailTitle": "Email",
@@ -201,7 +201,7 @@
     "title": "Chi Siamo - Chiesa Foursquare The Narrow Gate",
     "subtitle": "Radicati nella Scrittura, dedicati alla comunità e appassionati della missione globale.",
     "historyTitle": "La Nostra Storia e Missione",
-    "historyText": "Situata a Motta di Livenza, la Chiesa The Narrow Gate Foursquare è una vivace chiesa internazionale bilingue impegnata ad esaltare Gesù Cristo. Affiliata alla Chiesa Internazionale del Vangelo Foursquare, è dedicata a proclamare Gesù Cristo come Salvatore, Battezzatore con lo Spirito Santo, Guaritore e Re che ritorna.",
+    "historyText": "Situata a Motta di Livenza, in provincia di Treviso, nord-est Italia, la Chiesa The Narrow Gate Foursquare è una vivace chiesa internazionale bilingue impegnata ad esaltare Gesù Cristo. Affiliata alla Chiesa Internazionale del Vangelo Foursquare, è dedicata a proclamare Gesù Cristo come Salvatore, Battezzatore con lo Spirito Santo, Guaritore e Re che ritorna.",
     "valuesTitle": "Valori Fondamentali",
     "v1Title": "Fede Biblica",
     "v1Desc": "Fondata sulla Parola di Dio senza compromessi.",
@@ -227,7 +227,7 @@
     "familiesDesc": "Rafforzare i matrimoni e nutrire solide famiglie cristiane.",
     "testimonies": "Testimonianze e Ringraziamenti",
     "testimoniesDesc": "Celebrare le opere di Dio e le preghiere esaudite.",
-    "loveFeast": "Festa dell'Amore e Comunione",
+    "loveFeast": "Festa dell'Amore per Bambini e Comunione",
     "loveFeastDesc": "Condividere pasti, gioia e fraternità insieme.",
     "culturalSunday": "Domenica Culturale",
     "culturalTheme": "\"La nostra forza sta nella nostra diversità\" — 2 Corinzi 11:22",
@@ -338,7 +338,7 @@
   },
   "Footer": {
     "rights": "Tutti i diritti riservati.",
-    "location": "Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italia",
+    "location": "Via Cadamure 1/19, 31045 Motta di Livenza, Provincia di Treviso, Nord-Est Italia",
     "phone": "+39 - 3883629233",
     "email": "fgcititaly@aol.com / uyisky@yahoo.com"
   },

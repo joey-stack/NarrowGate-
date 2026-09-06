@@ -134,7 +134,7 @@ function GetInvolvedContent({ locale }: { locale: string }) {
               <div
                 className="rounded-lg bg-white border border-black/10 overflow-hidden flex flex-col justify-between hover:shadow-md transition-all duration-200 group hover:-translate-y-0.5 h-full"
               >
-                <div className="h-48 relative overflow-hidden">
+                <div className="h-48 relative overflow-hidden bg-[#121212]">
                   <Image
                     src={m.img}
                     alt={m.title}
@@ -142,9 +142,9 @@ function GetInvolvedContent({ locale }: { locale: string }) {
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     quality={75}
                     loading="lazy"
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain object-center group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
                   <span className="absolute bottom-3 left-3 text-xs font-heading font-bold uppercase tracking-wider px-3 py-1 rounded-md bg-accent text-white shadow-sm z-10">
                     {m.tag}
                   </span>

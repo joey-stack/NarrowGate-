@@ -56,13 +56,13 @@ export function AboutHeroSection() {
             
             <div className="relative z-20 p-8 sm:p-12 max-w-2xl text-white">
               <span className="inline-block px-3 py-1 rounded-lg bg-accent text-white font-heading font-bold text-xs uppercase tracking-wider mb-3">
-                Motta di Livenza • Italy
+                Motta di Livenza • Treviso • North-East Italy
               </span>
               <h2 className="font-heading font-bold text-white text-2xl sm:text-3xl mb-2 leading-snug">
                 Reaching The Reached & The Unreached
               </h2>
               <p className="text-white/80 text-sm sm:text-base leading-relaxed">
-                A vibrant international Christian family in Motta di Livenza, Italy.
+                A vibrant international Christian family located in Motta di Livenza, in the province of Treviso, North-East Italy.
               </p>
             </div>
           </div>

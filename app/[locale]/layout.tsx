@@ -33,8 +33,8 @@ export async function generateMetadata({
     : "The Narrow Gate Foursquare Church | Motta di Livenza, Italy";
 
   const description = isIt
-    ? "Benvenuti alla Chiesa Foursquare The Narrow Gate a Motta di Livenza (TV). Una comunità cristiana internazionale e bilingue guidata dal Rev. Uyi Evbuomwan."
-    : "Welcome to The Narrow Gate Foursquare Church in Motta di Livenza, Italy. A welcoming bilingual international Christian family led by Rev. Uyi Evbuomwan.";
+    ? "Benvenuti alla Chiesa Foursquare The Narrow Gate, situata a Motta di Livenza, in provincia di Treviso, nord-est Italia. Una comunità cristiana internazionale e bilingue guidata dal Rev. Uyi Evbuomwan."
+    : "Welcome to The Narrow Gate Foursquare Church, located in Motta di Livenza, in the province of Treviso, North-East Italy. A welcoming bilingual international Christian family led by Rev. Uyi Evbuomwan.";
 
   return {
     title,
