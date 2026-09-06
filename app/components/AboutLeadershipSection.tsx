@@ -51,7 +51,7 @@ export function AboutLeadershipSection() {
                   <h3 className="font-heading font-bold text-white text-xl sm:text-2xl drop-shadow-md mb-1">
                     {leader.name}
                   </h3>
-                  <p className="text-accent-light text-xs sm:text-sm font-heading font-semibold uppercase tracking-wider">
+                  <p className="text-[#f2ebd1] text-xs sm:text-sm font-heading font-semibold uppercase tracking-wider">
                     {leader.role}
                   </p>
                 </div>
