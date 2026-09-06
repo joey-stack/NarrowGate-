@@ -10,14 +10,19 @@ export default function AdminLoginPage() {
   const [password, setPassword] = useState("admin123");
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
-  // If already logged in, redirect to dashboard
   useEffect(() => {
+    setIsMounted(true);
     const isAuth = localStorage.getItem("narrowgate_admin_authenticated");
     if (isAuth === "true") {
       router.push("/admin");
     }
   }, [router]);
+
+  if (!isMounted) {
+    return <div className="min-h-screen bg-[#0F172A]" suppressHydrationWarning />;
+  }
 
   const handleLogin = (e: FormEvent) => {
     e.preventDefault();
@@ -41,7 +46,7 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#090D16] relative overflow-hidden">
+    <div suppressHydrationWarning className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#090D16] relative overflow-hidden">
       {/* Background Subtle Ambient Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#B91C1C]/15 rounded-full blur-3xl pointer-events-none" />
 

@@ -15,8 +15,8 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-[#0F172A] text-[#F8FAFC] font-sans antialiased">
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen bg-[#0F172A] text-[#F8FAFC] font-sans antialiased" suppressHydrationWarning>
         {children}
       </body>
     </html>

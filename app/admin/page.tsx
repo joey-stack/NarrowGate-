@@ -18,9 +18,11 @@ export default function AdminDashboardPage() {
   const [selectedSubmission, setSelectedSubmission] = useState<Submission | null>(null);
   const [adminUser, setAdminUser] = useState<{ name: string; email: string } | null>(null);
   const [activeTab, setActiveTab] = useState<"submissions" | "firestore">("submissions");
+  const [isMounted, setIsMounted] = useState(false);
 
   // Check authentication & load data
   useEffect(() => {
+    setIsMounted(true);
     const isAuth = localStorage.getItem("narrowgate_admin_authenticated");
     if (isAuth !== "true") {
       router.push("/admin/login");
@@ -46,6 +48,10 @@ export default function AdminDashboardPage() {
     window.addEventListener("narrowgate_submission_updated", loadData);
     return () => window.removeEventListener("narrowgate_submission_updated", loadData);
   }, [router]);
+
+  if (!isMounted) {
+    return <div className="min-h-screen bg-[#0F172A]" suppressHydrationWarning />;
+  }
 
   const handleLogout = () => {
     localStorage.removeItem("narrowgate_admin_authenticated");
@@ -94,7 +100,7 @@ export default function AdminDashboardPage() {
   const visitCount = submissions.filter((s) => s.type === "plan_visit").length;
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0F172A] text-slate-100">
+    <div suppressHydrationWarning className="min-h-screen flex flex-col bg-[#0F172A] text-slate-100">
       {/* Top CMS Header */}
       <header className="h-16 bg-[#1E293B] border-b border-slate-800 px-4 sm:px-6 flex items-center justify-between sticky top-0 z-30 shadow-md">
         <div className="flex items-center gap-3">
