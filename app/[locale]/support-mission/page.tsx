@@ -160,10 +160,22 @@ function SupportMissionContent({ locale }: { locale: string }) {
               <span className="text-xs font-heading font-bold uppercase tracking-wider text-white bg-eyebrow-gradient px-3.5 py-1 rounded-md inline-block mb-4 shadow-sm">
                 Financial Integrity & Transparency
               </span>
-              <h3 className="text-h2 text-white mb-4">{t("bankDetails")}</h3>
-              <p className="text-white/80 font-body text-base max-w-xl mx-auto leading-relaxed">
-                {t("bankContact")}
-              </p>
+              <h3 className="text-h2 text-white mb-6">{t("bankDetails")}</h3>
+
+              <div className="bg-white/5 border border-white/10 rounded-lg p-6 max-w-xl mx-auto text-left space-y-4 font-body">
+                <div className="flex flex-col sm:flex-row justify-between sm:items-center border-b border-white/10 pb-3">
+                  <span className="text-white/60 text-xs sm:text-sm uppercase tracking-wider font-heading font-semibold">{t("bankNameLabel")}:</span>
+                  <span className="text-white font-medium text-sm sm:text-base mt-1 sm:mt-0">{t("bankNameValue")}</span>
+                </div>
+                <div className="flex flex-col sm:flex-row justify-between sm:items-center border-b border-white/10 pb-3">
+                  <span className="text-white/60 text-xs sm:text-sm uppercase tracking-wider font-heading font-semibold">{t("accountNumberLabel")}:</span>
+                  <span className="text-white font-mono font-medium text-sm sm:text-base mt-1 sm:mt-0 select-all">{t("accountNumberValue")}</span>
+                </div>
+                <div className="flex flex-col sm:flex-row justify-between sm:items-center">
+                  <span className="text-white/60 text-xs sm:text-sm uppercase tracking-wider font-heading font-semibold">{t("emailAddressLabel")}:</span>
+                  <a href={`mailto:${t("emailAddressValue")}`} className="text-white hover:text-yellow-400 underline font-medium text-sm sm:text-base mt-1 sm:mt-0 transition-colors">{t("emailAddressValue")}</a>
+                </div>
+              </div>
             </div>
           </ScrollReveal>
         </div>

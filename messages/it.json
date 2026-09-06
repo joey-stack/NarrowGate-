@@ -252,7 +252,12 @@
     "shelter": "Progetti Accoglienza e Vedove",
     "shelterDesc": "Assistenza diretta per la casa e cura delle vedove e persone vulnerabili.",
     "bankDetails": "Dettagli Bancari e Donazioni",
-    "bankContact": "Contattaci al +39 - 3883629233 o fgcititaly@aol.com per le coordinate bancarie ufficiali."
+    "bankNameLabel": "Nome Banca",
+    "bankNameValue": "Foursquare Gospel Church",
+    "accountNumberLabel": "Numero di Conto (IBAN)",
+    "accountNumberValue": "IT00X0000000000000000000000",
+    "emailAddressLabel": "Indirizzo Email",
+    "emailAddressValue": "fgcititaly@aol.com"
   },
   "ProjectDetails": {
     "backLink": "← Torna a Sostieni la Missione",

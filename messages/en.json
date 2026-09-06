@@ -252,7 +252,12 @@
     "shelter": "Support Shelter & Widows Projects",
     "shelterDesc": "Direct assistance for housing and care for widows and vulnerable community members.",
     "bankDetails": "Bank & Transfer Details",
-    "bankContact": "Please contact us at +39 - 3883629233 or fgcititaly@aol.com for official giving account info."
+    "bankNameLabel": "Bank Name",
+    "bankNameValue": "Foursquare Gospel Church",
+    "accountNumberLabel": "Account Number",
+    "accountNumberValue": "IT00X0000000000000000000000",
+    "emailAddressLabel": "Email Address",
+    "emailAddressValue": "fgcititaly@aol.com"
   },
   "ProjectDetails": {
     "backLink": "← Back to Support Mission",
