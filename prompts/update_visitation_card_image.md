@@ -1,17 +1,14 @@
-# Implementation Prompt: Update Visitation & Follow-up Card Image
+# Prompt: Update Visitation & Follow-Up Card Image
 
-## Objective
-Convert the user-provided image to optimized WebP format (`public/images/visitation.webp`) and update the Visitation & Follow-up ministry card in `app/[locale]/get-involved/page.tsx` to reference this local asset.
+## Goal
+Update the image asset for the **Visitation & Follow-up** card on the Get Involved page (`app/[locale]/get-involved/page.tsx`) with the user's provided church visitation team photograph.
 
-## Execution Steps
+## Proposed Changes
+1. **Asset Creation**:
+   - Converted the uploaded visitation photo into optimized WebP format saved at `public/images/visitation.webp` (1024x576, 98.5 KB).
+2. **`app/[locale]/get-involved/page.tsx`**:
+   - Confirm card 2 (`visitation`) references `/images/visitation.webp`.
 
-1. **Asset Conversion**:
-   - Converted uploaded image (`media__1787674647649.jpg`) to `public/images/visitation.webp` (71.3 KB).
-
-2. **Component Update (`app/[locale]/get-involved/page.tsx`)**:
-   - Update the `visitation` ministry card object image path to `/images/visitation.webp`.
-
-3. **Verification & Deployment**:
-   - Verify compilation with `cmd.exe /c npm run build`.
-   - Capture Puppeteer full-page screenshot of `/en/get-involved` to visually confirm the updated card image.
-   - Commit and push to `origin/main`.
+## Verification
+- Clear `.next` build cache and run static build (`cmd.exe /c npm run build`) to ensure clean compilation.
+- Commit and push changes to GitHub `origin/main`.
