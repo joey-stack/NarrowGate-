@@ -87,7 +87,7 @@ export function WeeklyGatheringsDarkSection() {
                     className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1E1E1E] via-transparent to-black/20" />
-                  <span className="absolute top-3 right-3 text-[10px] font-heading font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-accent text-white shadow-sm z-10">
+                  <span className="absolute top-3 right-3 text-[10px] font-heading font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-accent text-[#121212] shadow-sm z-10">
                     {item.tag}
                   </span>
                 </div>

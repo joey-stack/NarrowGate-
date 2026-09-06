@@ -4,8 +4,8 @@
   /* Colors (Primary Crimson Red Palette) */
   --primary: #121212;
   --secondary: #1E1E1E;
-  --accent: #B91C1C;
-  --accent-light: #DC2626;
+  --accent: #f2ebd1;
+  --accent-light: #f9f5e8;
   --accent-gold: #EAB308;
   --background: #f2ebd1;
   --surface: #FFFFFF;
@@ -114,7 +114,7 @@ body {
   color: var(--text-secondary);
 }
 
-/* UI Design System Components (Crimson Red Accent) */
+/* UI Design System Components (Off-White Accent) */
 .btn-primary {
   font-family: var(--font-poppins), sans-serif;
   font-size: 0.875rem;
@@ -124,20 +124,21 @@ body {
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   background-color: var(--accent);
-  color: #ffffff;
+  color: #121212;
+  border: 1px solid rgba(0, 0, 0, 0.15);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(185, 28, 28, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   cursor: pointer;
 }
 
 .btn-primary:hover {
-  background-color: #991B1B;
-  color: #ffffff;
+  background-color: #e4dac2;
+  color: #121212;
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(185, 28, 28, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
 
 .btn-secondary {
@@ -159,7 +160,7 @@ body {
 
 .btn-secondary:hover {
   background-color: var(--accent);
-  color: #ffffff;
+  color: #121212;
   transform: translateY(-1px);
 }
 
@@ -207,7 +208,9 @@ input:focus, textarea:focus, select:focus {
 
 /* Eyebrow Section Badge Linear Gradient Utility */
 .bg-eyebrow-gradient {
-  background: linear-gradient(90deg, #E61A1A 0%, #FFD900 100%);
+  background: linear-gradient(90deg, #f2ebd1 0%, #e4dac2 100%);
+  color: #121212;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 /* Animated Gradient Underline Button Utility */
@@ -221,9 +224,7 @@ input:focus, textarea:focus, select:focus {
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background: linear-gradient(90deg, #E61A1A 0%, #FFD900 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #121212;
   padding-bottom: 4px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -237,7 +238,7 @@ input:focus, textarea:focus, select:focus {
   left: 0;
   width: 100%;
   height: 2.5px;
-  background: linear-gradient(90deg, #E61A1A 0%, #FFD900 100%);
+  background: #121212;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -251,7 +252,7 @@ input:focus, textarea:focus, select:focus {
 
 .btn-gradient-link .arrow-icon {
   transition: transform 0.3s ease;
-  -webkit-text-fill-color: #FFD900;
+  color: #121212;
 }
 
 .btn-gradient-link:hover .arrow-icon {

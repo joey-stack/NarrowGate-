@@ -128,7 +128,7 @@ function SupportMissionContent({ locale }: { locale: string }) {
                       className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-                    <span className="absolute top-3 left-3 text-xs font-heading font-bold uppercase tracking-wider px-3 py-1 rounded-md bg-accent text-white shadow-sm z-10">
+                    <span className="absolute top-3 left-3 text-xs font-heading font-bold uppercase tracking-wider px-3 py-1 rounded-md bg-accent text-[#121212] shadow-sm z-10">
                       {p.badge}
                     </span>
                   </div>

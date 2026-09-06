@@ -108,7 +108,7 @@ function ContactContent() {
                   />
                 </div>
 
-                <button type="submit" className="px-8 py-4 rounded-lg bg-accent text-white font-heading font-bold text-sm uppercase tracking-wider shadow-sm hover:bg-accent-light transition-all w-full sm:w-auto">
+                <button type="submit" className="px-8 py-4 rounded-lg bg-accent text-[#121212] font-heading font-bold text-sm uppercase tracking-wider shadow-sm hover:bg-[#e4dac2] transition-all w-full sm:w-auto">
                   {t("submitButton")} →
                 </button>
               </form>

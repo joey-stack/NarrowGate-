@@ -55,7 +55,7 @@ export function AboutHeroSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/90 via-[#121212]/40 to-transparent z-10 pointer-events-none" />
             
             <div className="relative z-20 p-8 sm:p-12 max-w-2xl text-white">
-              <span className="inline-block px-3 py-1 rounded-lg bg-accent text-white font-heading font-bold text-xs uppercase tracking-wider mb-3">
+              <span className="inline-block px-3 py-1 rounded-lg bg-accent text-[#121212] font-heading font-bold text-xs uppercase tracking-wider mb-3">
                 Motta di Livenza • Treviso • North-East Italy
               </span>
               <h2 className="font-heading font-bold text-white text-2xl sm:text-3xl mb-2 leading-snug">
