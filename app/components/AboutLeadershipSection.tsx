@@ -9,7 +9,7 @@ export function AboutLeadershipSection() {
 
   const leaders = [
     { name: t("l1Name"), role: t("l1Role"), img: "/images/pastor-uyi.webp" },
-    { name: t("l2Name"), role: t("l2Role"), img: "https://framerusercontent.com/images/ulEa9UsvjLqBNL1roP8TxwmIuY.webp" },
+    { name: t("l2Name"), role: t("l2Role"), img: "/images/renato-amato.webp" },
     { name: t("l3Name"), role: t("l3Role"), img: "https://framerusercontent.com/images/A0QfvVVx0gpAXCNdOlMOZN4DzI.webp" },
   ];
 
