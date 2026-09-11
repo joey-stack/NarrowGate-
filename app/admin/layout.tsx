@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 import "../globals.css";
 
 const poppins = Poppins({
@@ -36,6 +37,7 @@ export default function AdminLayout({
       <body className="min-h-screen bg-[#0F172A] text-[#F8FAFC] font-sans antialiased" suppressHydrationWarning>
         {children}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
