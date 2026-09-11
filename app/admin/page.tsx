@@ -6,7 +6,8 @@ import {
   Submission,
   getSubmissions,
   updateSubmissionStatus,
-  deleteSubmission
+  deleteSubmission,
+  subscribeToSubmissions
 } from "../../lib/form-store";
 
 export default function AdminDashboardPage() {
@@ -44,9 +45,17 @@ export default function AdminDashboardPage() {
 
     loadData();
 
+    // Subscribe to live real-time Firestore updates
+    const unsubscribeFirestore = subscribeToSubmissions((data) => {
+      setSubmissions(data);
+    });
+
     // Listen for live form submission updates from main site
     window.addEventListener("narrowgate_submission_updated", loadData);
-    return () => window.removeEventListener("narrowgate_submission_updated", loadData);
+    return () => {
+      window.removeEventListener("narrowgate_submission_updated", loadData);
+      unsubscribeFirestore();
+    };
   }, [router]);
 
   if (!isMounted) {

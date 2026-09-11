@@ -1,3 +1,16 @@
+import { db } from "./firebase";
+import {
+  collection,
+  doc,
+  setDoc,
+  updateDoc,
+  deleteDoc,
+  getDocs,
+  query,
+  orderBy,
+  onSnapshot
+} from "firebase/firestore";
+
 export interface Submission {
   id: string;
   type: "contact" | "plan_visit";
@@ -15,7 +28,7 @@ export interface Submission {
 
 const STORAGE_KEY = "narrowgate_form_submissions_v1";
 
-// Initial seed submissions so the admin dashboard immediately renders realistic records
+// Initial seed submissions so the admin dashboard immediately renders realistic records if empty
 const INITIAL_SUBMISSIONS: Submission[] = [
   {
     id: "sub-101",
@@ -67,6 +80,7 @@ export function getSubmissions(): Submission[] {
   }
 }
 
+// Write submission to LocalStorage and Firestore
 export function saveSubmission(newSubmission: Omit<Submission, "id" | "createdAt" | "status">): Submission {
   const fullSubmission: Submission = {
     ...newSubmission,
@@ -80,13 +94,27 @@ export function saveSubmission(newSubmission: Omit<Submission, "id" | "createdAt
 
   if (typeof window !== "undefined") {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedList));
-    // Dispatch custom event to update admin dashboard UI live in the same browser window
     window.dispatchEvent(new Event("narrowgate_submission_updated"));
+  }
+
+  // Cloud Firestore Persistence
+  try {
+    const docRef = doc(db, "submissions", fullSubmission.id);
+    // Sanitize undefined fields to prevent Firestore serialization errors
+    const cleanedPayload = Object.fromEntries(
+      Object.entries(fullSubmission).filter(([_, v]) => v !== undefined)
+    );
+    setDoc(docRef, cleanedPayload).catch((err) => {
+      console.warn("Firestore background sync note:", err);
+    });
+  } catch (e) {
+    console.warn("Firestore save error:", e);
   }
 
   return fullSubmission;
 }
 
+// Update status in LocalStorage and Firestore
 export function updateSubmissionStatus(id: string, newStatus: Submission["status"]): Submission[] {
   const currentList = getSubmissions();
   const updatedList = currentList.map(item => 
@@ -98,9 +126,19 @@ export function updateSubmissionStatus(id: string, newStatus: Submission["status
     window.dispatchEvent(new Event("narrowgate_submission_updated"));
   }
 
+  try {
+    const docRef = doc(db, "submissions", id);
+    updateDoc(docRef, { status: newStatus }).catch((err) => {
+      console.warn("Firestore update status note:", err);
+    });
+  } catch (e) {
+    console.warn("Firestore update error:", e);
+  }
+
   return updatedList;
 }
 
+// Delete submission from LocalStorage and Firestore
 export function deleteSubmission(id: string): Submission[] {
   const currentList = getSubmissions();
   const updatedList = currentList.filter(item => item.id !== id);
@@ -110,5 +148,51 @@ export function deleteSubmission(id: string): Submission[] {
     window.dispatchEvent(new Event("narrowgate_submission_updated"));
   }
 
+  try {
+    const docRef = doc(db, "submissions", id);
+    deleteDoc(docRef).catch((err) => {
+      console.warn("Firestore delete note:", err);
+    });
+  } catch (e) {
+    console.warn("Firestore delete error:", e);
+  }
+
   return updatedList;
+}
+
+// Real-time Firestore subscription for Admin Dashboard
+export function subscribeToSubmissions(onUpdate: (submissions: Submission[]) => void): () => void {
+  try {
+    const submissionsCol = collection(db, "submissions");
+    const q = query(submissionsCol, orderBy("createdAt", "desc"));
+
+    const unsubscribe = onSnapshot(
+      q,
+      (snapshot) => {
+        if (!snapshot.empty) {
+          const remoteList: Submission[] = [];
+          snapshot.forEach((docSnap) => {
+            remoteList.push(docSnap.data() as Submission);
+          });
+
+          if (typeof window !== "undefined") {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(remoteList));
+          }
+          onUpdate(remoteList);
+        } else {
+          // If Firestore is brand new/empty, fall back to initial seeded list
+          onUpdate(getSubmissions());
+        }
+      },
+      (error) => {
+        console.warn("Firestore live subscription fallback to local cache:", error);
+        onUpdate(getSubmissions());
+      }
+    );
+
+    return unsubscribe;
+  } catch (e) {
+    console.warn("Firestore subscription error:", e);
+    return () => {};
+  }
 }
