@@ -11,8 +11,8 @@ export default function Footer() {
     <footer className="bg-primary text-white/80 border-t border-white/10 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
-          {/* Standalone Logo Image (No extra text, no white background box) */}
-          <div className="space-y-4">
+          {/* Standalone Logo Image with Scripture Quote */}
+          <div className="space-y-3 sm:space-y-4">
             <a href={`/${locale}`} className="inline-block">
               <img
                 src="/logo_white.png?v=6"
@@ -20,6 +20,20 @@ export default function Footer() {
                 className="h-14 sm:h-18 w-auto object-contain"
               />
             </a>
+
+            {/* Scripture Quote directly beneath logo */}
+            <blockquote
+              id="footer-scripture-quote"
+              className="border-l-2 border-accent/40 pl-3 py-0.5 text-left text-xs leading-relaxed"
+            >
+              <p className="italic text-white/70 font-body">
+                &ldquo;{t("verseQuote")}&rdquo;
+              </p>
+              <cite className="block text-xs text-accent/80 font-medium tracking-wide not-italic mt-1">
+                {t("verseCitation")}
+              </cite>
+            </blockquote>
+
             <p className="text-xs text-white/70 leading-relaxed">
               Formed by Jesus, together, for others in Motta di Livenza, in the province of Treviso, North-East Italy. Reaching the reached and the unreached.
             </p>
