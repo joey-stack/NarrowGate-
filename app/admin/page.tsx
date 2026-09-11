@@ -157,6 +157,69 @@ export default function AdminDashboardPage() {
         </div>
       </header>
 
+      {/* Mobile Tab Navigation */}
+      <div className="md:hidden flex items-center gap-1.5 p-2.5 bg-[#1E293B] border-b border-slate-800 overflow-x-auto text-xs shrink-0">
+        <button
+          type="button"
+          onClick={() => {
+            setActiveTab("submissions");
+            setFilterType("all");
+          }}
+          className={`px-3 py-1.5 rounded-lg font-bold whitespace-nowrap transition-all flex items-center gap-1.5 ${
+            activeTab === "submissions" && filterType === "all"
+              ? "bg-[#B91C1C] text-white shadow-md shadow-red-950/40"
+              : "text-slate-300 hover:bg-slate-800 hover:text-white"
+          }`}
+        >
+          <span>📋 All</span>
+          <span className="text-[10px] opacity-80">({totalCount})</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            setActiveTab("submissions");
+            setFilterType("contact");
+          }}
+          className={`px-3 py-1.5 rounded-lg font-bold whitespace-nowrap transition-all flex items-center gap-1.5 ${
+            activeTab === "submissions" && filterType === "contact"
+              ? "bg-[#B91C1C] text-white shadow-md shadow-red-950/40"
+              : "text-slate-300 hover:bg-slate-800 hover:text-white"
+          }`}
+        >
+          <span>💬 Contact</span>
+          <span className="text-[10px] opacity-80">({contactCount})</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            setActiveTab("submissions");
+            setFilterType("plan_visit");
+          }}
+          className={`px-3 py-1.5 rounded-lg font-bold whitespace-nowrap transition-all flex items-center gap-1.5 ${
+            activeTab === "submissions" && filterType === "plan_visit"
+              ? "bg-[#B91C1C] text-white shadow-md shadow-red-950/40"
+              : "text-slate-300 hover:bg-slate-800 hover:text-white"
+          }`}
+        >
+          <span>📅 Visits</span>
+          <span className="text-[10px] opacity-80">({visitCount})</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveTab("firestore")}
+          className={`px-3 py-1.5 rounded-lg font-bold whitespace-nowrap transition-all flex items-center gap-1.5 ${
+            activeTab === "firestore"
+              ? "bg-[#B91C1C] text-white shadow-md shadow-red-950/40"
+              : "text-slate-300 hover:bg-slate-800 hover:text-white"
+          }`}
+        >
+          <span>🔥 Firestore</span>
+        </button>
+      </div>
+
       {/* Main Layout Container */}
       <div className="flex-1 flex overflow-hidden">
         {/* Left CMS Sidebar */}
@@ -167,61 +230,98 @@ export default function AdminDashboardPage() {
                 Main Navigation
               </div>
               <nav className="space-y-1">
+                {/* 1. All Submissions */}
                 <button
-                  onClick={() => setActiveTab("submissions")}
+                  type="button"
+                  onClick={() => {
+                    setActiveTab("submissions");
+                    setFilterType("all");
+                  }}
                   className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-bold transition-all ${
-                    activeTab === "submissions"
+                    activeTab === "submissions" && filterType === "all"
                       ? "bg-[#B91C1C] text-white shadow-lg shadow-red-950/40"
-                      : "text-slate-300 hover:bg-slate-800"
+                      : "text-slate-300 hover:bg-slate-800 hover:text-white"
                   }`}
                 >
                   <div className="flex items-center gap-2.5">
                     <span>📋</span>
                     <span>All Submissions</span>
                   </div>
-                  <span className="px-2 py-0.5 rounded-full bg-black/20 text-[10px]">
+                  <span
+                    className={`px-2 py-0.5 rounded-full text-[10px] transition-colors ${
+                      activeTab === "submissions" && filterType === "all"
+                        ? "bg-black/30 text-white font-bold"
+                        : "bg-slate-800 text-slate-400"
+                    }`}
+                  >
                     {totalCount}
                   </span>
                 </button>
 
+                {/* 2. Contact Messages */}
                 <button
+                  type="button"
                   onClick={() => {
                     setActiveTab("submissions");
                     setFilterType("contact");
                   }}
-                  className="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:bg-slate-800 transition-all"
+                  className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-bold transition-all ${
+                    activeTab === "submissions" && filterType === "contact"
+                      ? "bg-[#B91C1C] text-white shadow-lg shadow-red-950/40"
+                      : "text-slate-300 hover:bg-slate-800 hover:text-white"
+                  }`}
                 >
                   <div className="flex items-center gap-2.5">
                     <span>💬</span>
                     <span>Contact Messages</span>
                   </div>
-                  <span className="px-2 py-0.5 rounded-full bg-slate-800 text-[10px] text-slate-400">
+                  <span
+                    className={`px-2 py-0.5 rounded-full text-[10px] transition-colors ${
+                      activeTab === "submissions" && filterType === "contact"
+                        ? "bg-black/30 text-white font-bold"
+                        : "bg-slate-800 text-slate-400"
+                    }`}
+                  >
                     {contactCount}
                   </span>
                 </button>
 
+                {/* 3. Visit Reservations */}
                 <button
+                  type="button"
                   onClick={() => {
                     setActiveTab("submissions");
                     setFilterType("plan_visit");
                   }}
-                  className="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:bg-slate-800 transition-all"
+                  className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-bold transition-all ${
+                    activeTab === "submissions" && filterType === "plan_visit"
+                      ? "bg-[#B91C1C] text-white shadow-lg shadow-red-950/40"
+                      : "text-slate-300 hover:bg-slate-800 hover:text-white"
+                  }`}
                 >
                   <div className="flex items-center gap-2.5">
                     <span>📅</span>
                     <span>Visit Reservations</span>
                   </div>
-                  <span className="px-2 py-0.5 rounded-full bg-slate-800 text-[10px] text-slate-400">
+                  <span
+                    className={`px-2 py-0.5 rounded-full text-[10px] transition-colors ${
+                      activeTab === "submissions" && filterType === "plan_visit"
+                        ? "bg-black/30 text-white font-bold"
+                        : "bg-slate-800 text-slate-400"
+                    }`}
+                  >
                     {visitCount}
                   </span>
                 </button>
 
+                {/* 4. Firestore Settings */}
                 <button
+                  type="button"
                   onClick={() => setActiveTab("firestore")}
-                  className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-semibold transition-all ${
+                  className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-bold transition-all ${
                     activeTab === "firestore"
-                      ? "bg-slate-800 text-white"
-                      : "text-slate-300 hover:bg-slate-800"
+                      ? "bg-[#B91C1C] text-white shadow-lg shadow-red-950/40"
+                      : "text-slate-300 hover:bg-slate-800 hover:text-white"
                   }`}
                 >
                   <span>🔥</span>
@@ -282,9 +382,21 @@ export default function AdminDashboardPage() {
           ) : (
             /* Main Submissions Tab */
             <>
-              {/* Top Analytics KPI Bar */}
+              {/* Top Analytics KPI Bar (Clickable Filter Tabs) */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="p-5 rounded-2xl bg-[#1E293B] border border-slate-800 flex items-center justify-between">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setActiveTab("submissions");
+                    setFilterType("all");
+                    setFilterStatus("all");
+                  }}
+                  className={`p-5 rounded-2xl bg-[#1E293B] border text-left flex items-center justify-between transition-all cursor-pointer ${
+                    filterType === "all" && filterStatus === "all"
+                      ? "border-red-500/80 ring-2 ring-red-500/30 shadow-lg shadow-red-950/30"
+                      : "border-slate-800 hover:border-slate-700"
+                  }`}
+                >
                   <div>
                     <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">
                       Total Submissions
@@ -294,9 +406,20 @@ export default function AdminDashboardPage() {
                   <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center text-xl font-bold">
                     📥
                   </div>
-                </div>
+                </button>
 
-                <div className="p-5 rounded-2xl bg-[#1E293B] border border-slate-800 flex items-center justify-between">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setActiveTab("submissions");
+                    setFilterStatus(filterStatus === "new" ? "all" : "new");
+                  }}
+                  className={`p-5 rounded-2xl bg-[#1E293B] border text-left flex items-center justify-between transition-all cursor-pointer ${
+                    filterStatus === "new"
+                      ? "border-amber-500/80 ring-2 ring-amber-500/30 shadow-lg shadow-amber-950/30"
+                      : "border-slate-800 hover:border-slate-700"
+                  }`}
+                >
                   <div>
                     <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">
                       New / Unread
@@ -306,9 +429,20 @@ export default function AdminDashboardPage() {
                   <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-xl font-bold">
                     🔔
                   </div>
-                </div>
+                </button>
 
-                <div className="p-5 rounded-2xl bg-[#1E293B] border border-slate-800 flex items-center justify-between">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setActiveTab("submissions");
+                    setFilterType(filterType === "contact" ? "all" : "contact");
+                  }}
+                  className={`p-5 rounded-2xl bg-[#1E293B] border text-left flex items-center justify-between transition-all cursor-pointer ${
+                    filterType === "contact"
+                      ? "border-purple-500/80 ring-2 ring-purple-500/30 shadow-lg shadow-purple-950/30"
+                      : "border-slate-800 hover:border-slate-700"
+                  }`}
+                >
                   <div>
                     <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">
                       Contact Queries
@@ -318,9 +452,20 @@ export default function AdminDashboardPage() {
                   <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-xl font-bold">
                     💬
                   </div>
-                </div>
+                </button>
 
-                <div className="p-5 rounded-2xl bg-[#1E293B] border border-slate-800 flex items-center justify-between">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setActiveTab("submissions");
+                    setFilterType(filterType === "plan_visit" ? "all" : "plan_visit");
+                  }}
+                  className={`p-5 rounded-2xl bg-[#1E293B] border text-left flex items-center justify-between transition-all cursor-pointer ${
+                    filterType === "plan_visit"
+                      ? "border-emerald-500/80 ring-2 ring-emerald-500/30 shadow-lg shadow-emerald-950/30"
+                      : "border-slate-800 hover:border-slate-700"
+                  }`}
+                >
                   <div>
                     <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">
                       Visit Reservations
@@ -330,11 +475,11 @@ export default function AdminDashboardPage() {
                   <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl font-bold">
                     📅
                   </div>
-                </div>
+                </button>
               </div>
 
-              {/* Data Toolbar (Search & Category Filters) */}
-              <div className="p-4 rounded-2xl bg-[#1E293B] border border-slate-800 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+              {/* Data Toolbar (Search & Category Filter Tabs) */}
+              <div className="p-4 rounded-2xl bg-[#1E293B] border border-slate-800 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
                 <div className="flex-1 max-w-md relative">
                   <input
                     type="text"
@@ -349,29 +494,66 @@ export default function AdminDashboardPage() {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-3">
-                  {/* Type Filter */}
-                  <select
-                    value={filterType}
-                    onChange={(e) => setFilterType(e.target.value as any)}
-                    className="px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs font-semibold text-slate-300 focus:outline-none focus:border-red-500"
-                  >
-                    <option value="all">All Form Types</option>
-                    <option value="contact">Contact Us Forms</option>
-                    <option value="plan_visit">Plan A Visit Forms</option>
-                  </select>
+                  {/* Type Filter Tab Pills */}
+                  <div className="flex items-center bg-slate-900/90 p-1 rounded-xl border border-slate-700">
+                    <button
+                      type="button"
+                      onClick={() => setFilterType("all")}
+                      className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                        filterType === "all"
+                          ? "bg-[#B91C1C] text-white shadow-sm"
+                          : "text-slate-400 hover:text-white"
+                      }`}
+                    >
+                      All Types
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setFilterType("contact")}
+                      className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                        filterType === "contact"
+                          ? "bg-[#B91C1C] text-white shadow-sm"
+                          : "text-slate-400 hover:text-white"
+                      }`}
+                    >
+                      Contact ({contactCount})
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setFilterType("plan_visit")}
+                      className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                        filterType === "plan_visit"
+                          ? "bg-[#B91C1C] text-white shadow-sm"
+                          : "text-slate-400 hover:text-white"
+                      }`}
+                    >
+                      Visits ({visitCount})
+                    </button>
+                  </div>
 
-                  {/* Status Filter */}
-                  <select
-                    value={filterStatus}
-                    onChange={(e) => setFilterStatus(e.target.value as any)}
-                    className="px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs font-semibold text-slate-300 focus:outline-none focus:border-red-500"
-                  >
-                    <option value="all">All Statuses</option>
-                    <option value="new">New / Unread</option>
-                    <option value="reviewed">Reviewed</option>
-                    <option value="contacted">Contacted</option>
-                    <option value="archived">Archived</option>
-                  </select>
+                  {/* Status Filter Tab Pills */}
+                  <div className="flex items-center bg-slate-900/90 p-1 rounded-xl border border-slate-700 overflow-x-auto">
+                    {[
+                      { id: "all", label: "All Status" },
+                      { id: "new", label: "New" },
+                      { id: "reviewed", label: "Reviewed" },
+                      { id: "contacted", label: "Contacted" },
+                      { id: "archived", label: "Archived" }
+                    ].map((st) => (
+                      <button
+                        key={st.id}
+                        type="button"
+                        onClick={() => setFilterStatus(st.id as any)}
+                        className={`px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
+                          filterStatus === st.id
+                            ? "bg-[#B91C1C] text-white shadow-sm"
+                            : "text-slate-400 hover:text-white"
+                        }`}
+                      >
+                        {st.label}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
 
