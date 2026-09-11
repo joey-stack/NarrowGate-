@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { locales } from "@/i18n/request";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../globals.css";
 
 const poppins = Poppins({
@@ -179,6 +180,7 @@ export default async function LocaleLayout({
             <PlanVisitModal />
           </PlanVisitProvider>
         </NextIntlClientProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
