@@ -366,6 +366,10 @@
     "heroSubtitle": "Scopri le nostre celebrazioni speciali in programma, anniversari della chiesa, summit e conferenze a Motta di Livenza.",
     "featuredSectionTitle": "Evento Speciale in Evidenza",
     "featuredSectionSubtitle": "La nostra celebrazione speciale più attesa — segna la data sul calendario e partecipa con la tua famiglia e i tuoi cari.",
+    "emptyTitle": "Nessun Evento Speciale Programmato al Momento",
+    "emptySubtitle": "Stiamo preparando il prossimo traguardo della chiesa e le conferenze speciali. Torna presto a trovarci per gli annunci, oppure unisciti ai nostri regolari servizi settimanali.",
+    "emptyServicesBtn": "Scopri i Servizi Settimanali",
+    "emptyContactBtn": "Contatta la Segreteria",
     "anniversary": {
       "tag": "CELEBRAZIONE PRINCIPALE",
       "title": "Anniversario Annuale della Chiesa e Celebrazione di Ringraziamento",

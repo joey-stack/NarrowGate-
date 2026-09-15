@@ -21,14 +21,17 @@ export function FeaturedEventSection() {
 
   useEffect(() => {
     const unsubscribe = subscribeToEvents((data) => {
-      if (data && data.length > 0) {
-        setEvents(data);
-      }
+      setEvents(data || []);
     });
     return () => unsubscribe();
   }, []);
 
   const featured = getNextFeaturedEvent(events);
+
+  // If no upcoming or special event is scheduled, cleanly hide section
+  if (!featured) {
+    return null;
+  }
 
   // Format date display nicely based on locale
   const formattedDate = (() => {

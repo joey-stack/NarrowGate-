@@ -29,9 +29,7 @@ export function EventsClientView({ initialEvents = DEFAULT_EVENTS }: EventsClien
   // Subscribe to real-time Firestore updates
   useEffect(() => {
     const unsubscribe = subscribeToEvents((data) => {
-      if (data && data.length > 0) {
-        setEvents(data);
-      }
+      setEvents(data || []);
     });
     return () => unsubscribe();
   }, []);
@@ -103,9 +101,44 @@ export function EventsClientView({ initialEvents = DEFAULT_EVENTS }: EventsClien
         </div>
       </section>
 
-      {/* 2. Top Next Featured Event Showcase */}
-      {nextFeatured && (
-        <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 2. Content: Empty State OR Events Sections */}
+      {events.length === 0 ? (
+        <section className="py-20 sm:py-28 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <ScrollReveal>
+            <div className="p-10 sm:p-14 rounded-2xl bg-white border border-black/5 shadow-sm space-y-6">
+              <div className="w-16 h-16 rounded-full bg-[#B91C1C]/10 text-[#B91C1C] flex items-center justify-center mx-auto text-2xl">
+                📅
+              </div>
+              <div className="space-y-2">
+                <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-[#121212]">
+                  {t("emptyTitle")}
+                </h2>
+                <p className="text-sm sm:text-base text-[#525252] font-body max-w-xl mx-auto leading-relaxed">
+                  {t("emptySubtitle")}
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
+                <Link
+                  href={`/${locale}#services`}
+                  className="px-6 py-3 rounded-lg bg-[#121212] hover:bg-[#B91C1C] text-white font-heading font-bold text-xs uppercase tracking-wider transition-colors shadow-sm"
+                >
+                  {t("emptyServicesBtn")} →
+                </Link>
+                <Link
+                  href={`/${locale}/contact`}
+                  className="px-6 py-3 rounded-lg bg-white border border-black/10 hover:border-black/30 text-[#121212] font-heading font-bold text-xs uppercase tracking-wider transition-colors"
+                >
+                  {t("emptyContactBtn")}
+                </Link>
+              </div>
+            </div>
+          </ScrollReveal>
+        </section>
+      ) : (
+        <>
+          {/* Top Next Featured Event Showcase */}
+          {nextFeatured && (
+            <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <div>
@@ -521,6 +554,8 @@ export function EventsClientView({ initialEvents = DEFAULT_EVENTS }: EventsClien
           </ScrollReveal>
         </div>
       </section>
+        </>
+      )}
 
       {/* Flyer Modal / Lightbox */}
       {previewFlyer && (

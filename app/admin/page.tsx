@@ -17,6 +17,8 @@ import {
   updateChurchEvent,
   deleteChurchEvent,
   seedDefaultEvents,
+  clearAllEvents,
+  isDefaultSeedsCleared,
   getUpcomingEvents,
   getPastEvents,
   getNextFeaturedEvent,
@@ -26,6 +28,8 @@ export default function AdminDashboardPage() {
   const router = useRouter();
   const [submissions, setSubmissions] = useState<Submission[]>([]);
   const [events, setEvents] = useState<ChurchEvent[]>([]);
+  const [seedsCleared, setSeedsCleared] = useState(false);
+  const [isClearingEvents, setIsClearingEvents] = useState(false);
   const [filterType, setFilterType] = useState<"all" | "contact" | "plan_visit">("all");
   const [filterStatus, setFilterStatus] = useState<"all" | "new" | "reviewed" | "contacted" | "archived">("all");
   const [searchQuery, setSearchQuery] = useState("");
@@ -77,6 +81,9 @@ export default function AdminDashboardPage() {
     const unsubscribeSubmissions = subscribeToSubmissions((data) => {
       setSubmissions(data);
     });
+
+    // Check if seeds were previously cleared
+    setSeedsCleared(isDefaultSeedsCleared());
 
     // Subscribe to Events
     const unsubscribeEvents = subscribeToEvents((data) => {
@@ -189,12 +196,32 @@ export default function AdminDashboardPage() {
   };
 
   const handleSeedEvents = async () => {
-    if (confirm("Seed default church events (Anniversary, Love Feast, Cultural Sunday, etc.) into Firestore?")) {
+    if (confirm("Seed the Church Anniversary celebration event into Firestore?")) {
       try {
         await seedDefaultEvents();
-        alert("Default church events seeded successfully!");
+        setSeedsCleared(false);
+        alert("Default church event seeded successfully!");
       } catch (err: any) {
         alert("Seed failed: " + err?.message);
+      }
+    }
+  };
+
+  const handleClearEvents = async () => {
+    if (
+      confirm(
+        "Are you sure you want to clear all default/seeded events from the database? Once cleared, this button will disappear and you can start adding fresh events."
+      )
+    ) {
+      setIsClearingEvents(true);
+      try {
+        await clearAllEvents();
+        setSeedsCleared(true);
+        alert("All default events have been cleared from the database. The database is now ready for your fresh events.");
+      } catch (err: any) {
+        alert("Failed to clear events: " + (err?.message || err));
+      } finally {
+        setIsClearingEvents(false);
       }
     }
   };
@@ -454,13 +481,28 @@ export default function AdminDashboardPage() {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <button
-                    onClick={handleSeedEvents}
-                    className="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-colors border border-slate-700 flex items-center gap-1.5"
-                  >
-                    <span>⚡</span>
-                    <span>Seed Default Events</span>
-                  </button>
+                  {!seedsCleared && (
+                    <>
+                      {events.length === 0 ? (
+                        <button
+                          onClick={handleSeedEvents}
+                          className="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-colors border border-slate-700 flex items-center gap-1.5"
+                        >
+                          <span>⚡</span>
+                          <span>Seed Default Events</span>
+                        </button>
+                      ) : (
+                        <button
+                          onClick={handleClearEvents}
+                          disabled={isClearingEvents}
+                          className="px-3.5 py-2 rounded-xl bg-red-950/40 hover:bg-red-900/60 text-red-300 text-xs font-semibold transition-colors border border-red-800/60 flex items-center gap-1.5 disabled:opacity-50"
+                        >
+                          <span>🗑️</span>
+                          <span>{isClearingEvents ? "Clearing..." : "Clear Default Events"}</span>
+                        </button>
+                      )}
+                    </>
+                  )}
 
                   <button
                     onClick={handleOpenCreateEvent}

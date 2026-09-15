@@ -366,6 +366,10 @@
     "heroSubtitle": "Discover our upcoming special celebrations, church anniversaries, summits, and ministry conferences in Motta di Livenza.",
     "featuredSectionTitle": "Featured Special Event",
     "featuredSectionSubtitle": "Our flagship upcoming special gathering — mark your calendar and join us with your family and loved ones.",
+    "emptyTitle": "No Upcoming Special Events Scheduled",
+    "emptySubtitle": "We are currently preparing our next church milestone and special conferences. Check back soon for announcements, or join our regular weekly services.",
+    "emptyServicesBtn": "Explore Weekly Services",
+    "emptyContactBtn": "Contact Administration",
     "anniversary": {
       "tag": "FEATURED CELEBRATION",
       "title": "Annual Church Anniversary & Thanksgiving Celebration",
