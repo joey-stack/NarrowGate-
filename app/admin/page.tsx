@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import {
   Submission,
-  getSubmissions,
+  subscribeToSubmissions,
   updateSubmissionStatus,
-  deleteSubmission
+  deleteSubmission,
 } from "../../lib/form-store";
 
 export default function AdminDashboardPage() {
@@ -20,7 +20,7 @@ export default function AdminDashboardPage() {
   const [activeTab, setActiveTab] = useState<"submissions" | "firestore">("submissions");
   const [isMounted, setIsMounted] = useState(false);
 
-  // Check authentication & load data
+  // Check authentication & subscribe to Firestore real-time updates
   useEffect(() => {
     setIsMounted(true);
     const isAuth = localStorage.getItem("narrowgate_admin_authenticated");
@@ -38,15 +38,12 @@ export default function AdminDashboardPage() {
       }
     }
 
-    const loadData = () => {
-      setSubmissions(getSubmissions());
-    };
+    // Subscribe to Firestore real-time updates (replaces localStorage polling)
+    const unsubscribe = subscribeToSubmissions((data) => {
+      setSubmissions(data);
+    });
 
-    loadData();
-
-    // Listen for live form submission updates from main site
-    window.addEventListener("narrowgate_submission_updated", loadData);
-    return () => window.removeEventListener("narrowgate_submission_updated", loadData);
+    return () => unsubscribe();
   }, [router]);
 
   if (!isMounted) {
@@ -59,21 +56,22 @@ export default function AdminDashboardPage() {
     router.push("/admin/login");
   };
 
-  const handleStatusChange = (id: string, status: Submission["status"]) => {
-    const updated = updateSubmissionStatus(id, status);
-    setSubmissions(updated);
+  const handleStatusChange = async (id: string, status: Submission["status"]) => {
+    // Optimistically update local UI while Firestore syncs
     if (selectedSubmission && selectedSubmission.id === id) {
       setSelectedSubmission({ ...selectedSubmission, status });
     }
+    await updateSubmissionStatus(id, status);
+    // onSnapshot will update the submissions list automatically
   };
 
-  const handleDelete = (id: string) => {
+  const handleDelete = async (id: string) => {
     if (confirm("Are you sure you want to delete this submission entry?")) {
-      const updated = deleteSubmission(id);
-      setSubmissions(updated);
       if (selectedSubmission && selectedSubmission.id === id) {
         setSelectedSubmission(null);
       }
+      await deleteSubmission(id);
+      // onSnapshot will update the submissions list automatically
     }
   };
 

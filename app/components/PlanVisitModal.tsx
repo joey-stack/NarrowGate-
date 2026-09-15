@@ -20,6 +20,7 @@ export function PlanVisitModal() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   // Sync state when modal opens or selected gathering changes
   useEffect(() => {
@@ -50,26 +51,29 @@ export function PlanVisitModal() {
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError(null);
 
-    // Save live submission to data store & Firestore
-    saveSubmission({
-      type: "plan_visit",
-      name: fullName,
-      email,
-      phone,
-      gathering,
-      visitDate: date,
-      guestsCount,
-      notes
-    });
-
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      await saveSubmission({
+        type: "plan_visit",
+        name: fullName,
+        email,
+        phone,
+        gathering,
+        visitDate: date,
+        guestsCount,
+        notes,
+      });
       setIsSubmitted(true);
-    }, 400);
+    } catch (err) {
+      console.error("Failed to submit plan-a-visit form:", err);
+      setSubmitError("Something went wrong. Please try again or contact us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -286,6 +290,11 @@ export function PlanVisitModal() {
                   className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white text-sm placeholder-white/40 focus:outline-none focus:border-[#B91C1C] focus:ring-1 focus:ring-[#B91C1C] transition-colors"
                 />
               </div>
+
+              {/* Submit Error */}
+              {submitError && (
+                <p className="text-xs text-red-400 font-medium">{submitError}</p>
+              )}
 
               {/* Submit Button */}
               <button

@@ -1,3 +1,18 @@
+import {
+  collection,
+  addDoc,
+  getDocs,
+  updateDoc,
+  deleteDoc,
+  doc,
+  query,
+  orderBy,
+  serverTimestamp,
+  onSnapshot,
+  type Unsubscribe,
+} from "firebase/firestore";
+import { db } from "./firebase";
+
 export interface Submission {
   id: string;
   type: "contact" | "plan_visit";
@@ -13,102 +28,101 @@ export interface Submission {
   createdAt: string;
 }
 
-const STORAGE_KEY = "narrowgate_form_submissions_v1";
+const COLLECTION = "submissions";
 
-// Initial seed submissions so the admin dashboard immediately renders realistic records
-const INITIAL_SUBMISSIONS: Submission[] = [
-  {
-    id: "sub-101",
-    type: "contact",
-    name: "Marco Rossi",
-    email: "marco.rossi@example.it",
-    phone: "+39 347 123 4567",
-    message: "Praise the Lord! I would like to inquire about the Wednesday Bible Study times and location in Motta di Livenza.",
-    status: "new",
-    createdAt: "2026-09-06T18:30:00Z"
-  },
-  {
-    id: "sub-102",
-    type: "plan_visit",
-    name: "Angela & David Chen",
-    email: "david.chen@example.com",
-    phone: "+39 388 987 6543",
-    gathering: "Sunday Worship Service",
-    visitDate: "2026-09-13",
-    guestsCount: "3",
-    notes: "We have a 4-year-old child and look forward to joining Sunday school and breakfast prayer.",
-    status: "reviewed",
-    createdAt: "2026-09-05T14:15:00Z"
-  },
-  {
-    id: "sub-103",
-    type: "contact",
-    name: "Elena Moretti",
-    email: "elena.m@example.it",
-    phone: "+39 320 555 0192",
-    message: "Requesting intercessory prayer support for family health.",
-    status: "contacted",
-    createdAt: "2026-09-04T09:45:00Z"
-  }
-];
-
-export function getSubmissions(): Submission[] {
-  if (typeof window === "undefined") return INITIAL_SUBMISSIONS;
-  
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(INITIAL_SUBMISSIONS));
-      return INITIAL_SUBMISSIONS;
-    }
-    return JSON.parse(raw);
-  } catch {
-    return INITIAL_SUBMISSIONS;
-  }
-}
-
-export function saveSubmission(newSubmission: Omit<Submission, "id" | "createdAt" | "status">): Submission {
-  const fullSubmission: Submission = {
+/**
+ * Save a new form submission to Firestore.
+ */
+export async function saveSubmission(
+  newSubmission: Omit<Submission, "id" | "createdAt" | "status">
+): Promise<Submission> {
+  const docRef = await addDoc(collection(db, COLLECTION), {
     ...newSubmission,
-    id: `sub-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
     status: "new",
-    createdAt: new Date().toISOString()
+    createdAt: serverTimestamp(),
+  });
+
+  return {
+    ...newSubmission,
+    id: docRef.id,
+    status: "new",
+    createdAt: new Date().toISOString(),
   };
-
-  const currentList = getSubmissions();
-  const updatedList = [fullSubmission, ...currentList];
-
-  if (typeof window !== "undefined") {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedList));
-    // Dispatch custom event to update admin dashboard UI live in the same browser window
-    window.dispatchEvent(new Event("narrowgate_submission_updated"));
-  }
-
-  return fullSubmission;
 }
 
-export function updateSubmissionStatus(id: string, newStatus: Submission["status"]): Submission[] {
-  const currentList = getSubmissions();
-  const updatedList = currentList.map(item => 
-    item.id === id ? { ...item, status: newStatus } : item
-  );
-
-  if (typeof window !== "undefined") {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedList));
-    window.dispatchEvent(new Event("narrowgate_submission_updated"));
-  }
-
-  return updatedList;
+/**
+ * Fetch all submissions from Firestore, ordered by newest first.
+ */
+export async function getSubmissions(): Promise<Submission[]> {
+  const q = query(collection(db, COLLECTION), orderBy("createdAt", "desc"));
+  const snapshot = await getDocs(q);
+  return snapshot.docs.map((d) => {
+    const data = d.data();
+    return {
+      id: d.id,
+      type: data.type,
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      message: data.message,
+      gathering: data.gathering,
+      visitDate: data.visitDate,
+      guestsCount: data.guestsCount,
+      notes: data.notes,
+      status: data.status,
+      // Firestore Timestamp → ISO string (fallback for serverTimestamp() pending writes)
+      createdAt: data.createdAt?.toDate
+        ? data.createdAt.toDate().toISOString()
+        : new Date().toISOString(),
+    } as Submission;
+  });
 }
 
-export function deleteSubmission(id: string): Submission[] {
-  const currentList = getSubmissions();
-  const updatedList = currentList.filter(item => item.id !== id);
+/**
+ * Subscribe to real-time updates on the submissions collection.
+ * Returns an unsubscribe function to clean up the listener.
+ */
+export function subscribeToSubmissions(
+  callback: (submissions: Submission[]) => void
+): Unsubscribe {
+  const q = query(collection(db, COLLECTION), orderBy("createdAt", "desc"));
+  return onSnapshot(q, (snapshot) => {
+    const submissions = snapshot.docs.map((d) => {
+      const data = d.data();
+      return {
+        id: d.id,
+        type: data.type,
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        message: data.message,
+        gathering: data.gathering,
+        visitDate: data.visitDate,
+        guestsCount: data.guestsCount,
+        notes: data.notes,
+        status: data.status,
+        createdAt: data.createdAt?.toDate
+          ? data.createdAt.toDate().toISOString()
+          : new Date().toISOString(),
+      } as Submission;
+    });
+    callback(submissions);
+  });
+}
 
-  if (typeof window !== "undefined") {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedList));
-    window.dispatchEvent(new Event("narrowgate_submission_updated"));
-  }
+/**
+ * Update the status of a submission document in Firestore.
+ */
+export async function updateSubmissionStatus(
+  id: string,
+  newStatus: Submission["status"]
+): Promise<void> {
+  await updateDoc(doc(db, COLLECTION, id), { status: newStatus });
+}
 
-  return updatedList;
+/**
+ * Permanently delete a submission document from Firestore.
+ */
+export async function deleteSubmission(id: string): Promise<void> {
+  await deleteDoc(doc(db, COLLECTION, id));
 }

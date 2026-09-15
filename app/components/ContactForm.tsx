@@ -14,27 +14,33 @@ export function ContactForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
-    saveSubmission({
-      type: "contact",
-      name,
-      email,
-      phone,
-      message
-    });
+    try {
+      await saveSubmission({
+        type: "contact",
+        name,
+        email,
+        phone,
+        message,
+      });
 
-    setTimeout(() => {
-      setIsSubmitting(false);
       setIsSubmitted(true);
       setName("");
       setEmail("");
       setPhone("");
       setMessage("");
-    }, 400);
+    } catch (err) {
+      console.error("Failed to submit contact form:", err);
+      setError("Something went wrong. Please try again or email us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -115,6 +121,10 @@ export function ContactForm() {
               placeholder="Write your message or prayer request..."
             />
           </div>
+
+          {error && (
+            <p className="text-sm text-red-600 font-medium">{error}</p>
+          )}
 
           <button
             type="submit"
