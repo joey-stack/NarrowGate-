@@ -169,7 +169,7 @@ export function EventsClientView({ initialEvents = DEFAULT_EVENTS }: EventsClien
                       {nextFeatured.tag || "Featured"}
                     </span>
                     <span className="px-3 py-1 rounded-full bg-[#121212]/5 text-[#525252] text-[11px] font-heading font-semibold">
-                      Closest Upcoming Event
+                      Closest Upcoming Special Event
                     </span>
                   </div>
 
@@ -338,16 +338,16 @@ export function EventsClientView({ initialEvents = DEFAULT_EVENTS }: EventsClien
           <ScrollReveal>
             <div className="text-center max-w-2xl mx-auto mb-16">
               <div className="inline-block px-3 py-1 rounded-md bg-[#0284C7]/10 text-[#0284C7] text-xs font-heading font-bold uppercase tracking-wider mb-2">
-                All Church Programs
+                Special Church Programs
               </div>
               <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-[#121212]">
                 {activeFilter === "past"
-                  ? "Past Church Milestones & Gatherings"
+                  ? "Past Special Events & Milestones"
                   : t("upcomingSectionTitle")}
               </h2>
               <p className="text-sm sm:text-base text-[#525252] mt-2 font-body">
                 {activeFilter === "past"
-                  ? "A legacy of worship, faith, and community impact celebrated together."
+                  ? "A legacy of faith, celebrations, and community impact celebrated together."
                   : t("upcomingSectionSubtitle")}
               </p>
             </div>

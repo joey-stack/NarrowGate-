@@ -33,9 +33,9 @@
     "cta": "Guarda i Messaggi"
   },
   "WeeklyGatherings": {
-    "badge": "Eventi e Culti",
-    "title": "Prossimi Incontri",
-    "subtitle": "Unisciti a noi di persona o in preghiera durante la settimana a Motta di Livenza, in provincia di Treviso, nord-est Italia.",
+    "badge": "Servizi Settimanali",
+    "title": "Culto Settimanale e Servizi",
+    "subtitle": "Unisciti a noi di persona o in preghiera per i nostri servizi settimanali regolari a Motta di Livenza, in provincia di Treviso, nord-est Italia.",
     "viewAll": "Vedi Tutti gli Orari",
     "wednesdayTitle": "Studio Biblico del Mercoledì",
     "wednesdayTime": "Mercoledì 18:30 – 20:30",
@@ -344,7 +344,7 @@
     "eventsLink": "Eventi e Celebrazioni"
   },
   "FeaturedEvent": {
-    "badge": "Celebrazione Speciale in Arrivo",
+    "badge": "Evento Speciale in Arrivo",
     "title": "Anniversario Annuale della Chiesa e Celebrazione di Ringraziamento",
     "themeLabel": "Tema dell'Anniversario",
     "theme": "\"Un Anno di Grazia Divina e Fruttuosità\"",
@@ -361,11 +361,11 @@
     "description": "Unisciti a noi per celebrare l'infinita fedeltà, la grazia e la guida divina di Dio attraverso un altro anno fecondo di ministero e impatto comunitario."
   },
   "Events": {
-    "badge": "Vita della Chiesa e Incontri Speciali",
-    "heroTitle": "Eventi e Celebrazioni Annuali",
-    "heroSubtitle": "Celebra con noi la fedeltà di Dio durante tutto l'anno a Motta di Livenza. Dal nostro anniversario annuale alle feste culturali e ai summit di preghiera, c'è un posto speciale per te.",
-    "featuredSectionTitle": "Evento Principale in Programma",
-    "featuredSectionSubtitle": "La nostra celebrazione più attesa — segna la data sul calendario e partecipa con la tua famiglia e i tuoi cari.",
+    "badge": "Eventi Speciali",
+    "heroTitle": "Eventi Speciali e Celebrazioni",
+    "heroSubtitle": "Scopri le nostre celebrazioni speciali in programma, anniversari della chiesa, summit e conferenze a Motta di Livenza.",
+    "featuredSectionTitle": "Evento Speciale in Evidenza",
+    "featuredSectionSubtitle": "La nostra celebrazione speciale più attesa — segna la data sul calendario e partecipa con la tua famiglia e i tuoi cari.",
     "anniversary": {
       "tag": "CELEBRAZIONE PRINCIPALE",
       "title": "Anniversario Annuale della Chiesa e Celebrazione di Ringraziamento",
@@ -387,8 +387,8 @@
       "inquire": "Contattaci / RSVP",
       "flyerTitle": "Locandina Ufficiale dell'Anniversario"
     },
-    "upcomingSectionTitle": "Incontri Annuali e Programmi Speciali",
-    "upcomingSectionSubtitle": "Scopri il nostro calendario annuale di ritiri spirituali, celebrazioni culturali e iniziative comunitarie.",
+    "upcomingSectionTitle": "Tutti gli Eventi Speciali",
+    "upcomingSectionSubtitle": "Consulta il nostro calendario di celebrazioni speciali e incontri organizzati dalla nostra segreteria pastorale.",
     "list": {
       "culturalSunday": {
         "title": "Celebrazione della Domenica Culturale",

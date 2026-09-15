@@ -33,9 +33,9 @@
     "cta": "Watch Messages"
   },
   "WeeklyGatherings": {
-    "badge": "Events & Services",
-    "title": "Upcoming Gatherings",
-    "subtitle": "Join us in person or in prayer throughout the week in Motta di Livenza, in the province of Treviso, North-East Italy.",
+    "badge": "Weekly Services",
+    "title": "Weekly Worship & Services",
+    "subtitle": "Join us in person or in prayer for our regular weekly services in Motta di Livenza, in the province of Treviso, North-East Italy.",
     "viewAll": "View All Schedule",
     "wednesdayTitle": "Wednesday Bible Study",
     "wednesdayTime": "Wednesday 6:30 PM – 8:30 PM",
@@ -344,7 +344,7 @@
     "eventsLink": "Events & Celebrations"
   },
   "FeaturedEvent": {
-    "badge": "Upcoming Special Celebration",
+    "badge": "Upcoming Special Event",
     "title": "Annual Church Anniversary & Thanksgiving Celebration",
     "themeLabel": "Anniversary Theme",
     "theme": "\"A Year of Divine Grace & Fruitfulness\"",
@@ -361,11 +361,11 @@
     "description": "Join us in celebrating God's boundless faithfulness, grace, and divine guidance across another fruitful year of ministry and community impact."
   },
   "Events": {
-    "badge": "Church Life & Special Gatherings",
-    "heroTitle": "Events & Annual Celebrations",
-    "heroSubtitle": "Celebrate God's faithfulness with us throughout the year in Motta di Livenza. From our annual church anniversary to special cultural feasts and worship summits, there is a place for you.",
-    "featuredSectionTitle": "Current Featured Event",
-    "featuredSectionSubtitle": "Our flagship upcoming celebration — mark your calendar and join us with your family and loved ones.",
+    "badge": "Special Events",
+    "heroTitle": "Special Events & Celebrations",
+    "heroSubtitle": "Discover our upcoming special celebrations, church anniversaries, summits, and ministry conferences in Motta di Livenza.",
+    "featuredSectionTitle": "Featured Special Event",
+    "featuredSectionSubtitle": "Our flagship upcoming special gathering — mark your calendar and join us with your family and loved ones.",
     "anniversary": {
       "tag": "FEATURED CELEBRATION",
       "title": "Annual Church Anniversary & Thanksgiving Celebration",
@@ -387,8 +387,8 @@
       "inquire": "Contact / RSVP",
       "flyerTitle": "Official Anniversary Flyer"
     },
-    "upcomingSectionTitle": "Annual Gatherings & Special Programs",
-    "upcomingSectionSubtitle": "Discover our annual calendar of spiritual retreats, cultural celebrations, and community initiatives.",
+    "upcomingSectionTitle": "All Special Events",
+    "upcomingSectionSubtitle": "Explore our special celebrations and ministry encounters organized by our church administration.",
     "list": {
       "culturalSunday": {
         "title": "Cultural Sunday Celebration",
