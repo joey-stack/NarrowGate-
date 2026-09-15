@@ -4,5 +4,8 @@ service cloud.firestore {
     match /submissions/{document=**} {
       allow read, write: if true;
     }
+    match /events/{document=**} {
+      allow read, write: if true;
+    }
   }
 }

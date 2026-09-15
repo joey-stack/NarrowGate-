@@ -1,15 +1,52 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { ScrollReveal } from "./ScrollReveal";
 import { usePlanVisit } from "./PlanVisitContext";
+import {
+  ChurchEvent,
+  DEFAULT_EVENTS,
+  getNextFeaturedEvent,
+  subscribeToEvents,
+} from "../../lib/events-store";
 
 export function FeaturedEventSection() {
   const t = useTranslations("FeaturedEvent");
   const locale = useLocale();
   const { openPlanVisitModal } = usePlanVisit();
+  const [events, setEvents] = useState<ChurchEvent[]>(DEFAULT_EVENTS);
+
+  useEffect(() => {
+    const unsubscribe = subscribeToEvents((data) => {
+      if (data && data.length > 0) {
+        setEvents(data);
+      }
+    });
+    return () => unsubscribe();
+  }, []);
+
+  const featured = getNextFeaturedEvent(events);
+
+  // Format date display nicely based on locale
+  const formattedDate = (() => {
+    try {
+      if (!featured.date) return t("dateValue");
+      const d = new Date(featured.date + "T00:00:00");
+      return d.toLocaleDateString(locale === "it" ? "it-IT" : "en-US", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+    } catch {
+      return featured.date;
+    }
+  })();
+
+  const flyerImage = featured.flyerUrl || "/images/events/anniversary-flyer.jpg";
 
   return (
     <section className="py-20 sm:py-28 bg-[#181818] text-white relative overflow-hidden border-t border-b border-white/10">
@@ -28,22 +65,29 @@ export function FeaturedEventSection() {
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight">
-                {t("title")}
+                {featured.title || t("title")}
               </h2>
 
               <p className="text-sm sm:text-base text-white/75 leading-relaxed font-body">
-                {t("description")}
+                {featured.overview || t("description")}
               </p>
 
               {/* Theme Callout Box */}
-              <div className="p-5 rounded-lg bg-white/5 border border-white/10 border-l-4 border-l-[#B91C1C]">
-                <span className="text-xs font-heading font-bold uppercase tracking-wider text-[#B91C1C] block mb-1">
-                  {t("themeLabel")}
-                </span>
-                <p className="text-lg sm:text-xl font-heading font-bold text-white italic">
-                  {t("theme")}
-                </p>
-              </div>
+              {featured.theme && (
+                <div className="p-5 rounded-lg bg-white/5 border border-white/10 border-l-4 border-l-[#B91C1C]">
+                  <span className="text-xs font-heading font-bold uppercase tracking-wider text-[#B91C1C] block mb-1">
+                    {t("themeLabel")}
+                  </span>
+                  <p className="text-lg sm:text-xl font-heading font-bold text-[#F2EBD1] italic">
+                    "{featured.theme}"
+                  </p>
+                  {featured.scripture && (
+                    <p className="text-xs text-white/60 font-body pt-1">
+                      {featured.scripture}
+                    </p>
+                  )}
+                </div>
+              )}
 
               {/* Event Details Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -55,7 +99,7 @@ export function FeaturedEventSection() {
                     {t("dateLabel")}
                   </div>
                   <p className="text-sm font-semibold text-white">
-                    {t("dateValue")}
+                    {formattedDate} {featured.time ? `• ${featured.time}` : ""}
                   </p>
                 </div>
 
@@ -67,30 +111,39 @@ export function FeaturedEventSection() {
                     </svg>
                     {t("locationLabel")}
                   </div>
-                  <p className="text-sm font-semibold text-white">
-                    {t("locationValue")}
+                  <p className="text-sm font-semibold text-white truncate">
+                    {featured.venue || t("locationValue")}
                   </p>
                 </div>
               </div>
 
-              {/* Highlights bullets */}
+              {/* Highlights bullets (from event schedule or default) */}
               <div className="space-y-2 pt-1">
                 <span className="text-xs font-heading font-bold uppercase tracking-wider text-white/60 block">
                   {t("highlightsLabel")}
                 </span>
                 <ul className="space-y-2 text-xs sm:text-sm text-white/80 font-body">
-                  <li className="flex items-start gap-2.5">
-                    <span className="text-[#B91C1C] font-bold mt-0.5">✦</span>
-                    <span>{t("highlight1")}</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="text-[#B91C1C] font-bold mt-0.5">✦</span>
-                    <span>{t("highlight2")}</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="text-[#B91C1C] font-bold mt-0.5">✦</span>
-                    <span>{t("highlight3")}</span>
-                  </li>
+                  {featured.schedule && featured.schedule.length > 0 ? (
+                    featured.schedule.slice(0, 3).map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-2.5">
+                        <span className="text-[#B91C1C] font-bold mt-0.5">✦</span>
+                        <span>
+                          <strong className="text-white font-medium">{item.time}</strong> — {item.title}
+                        </span>
+                      </li>
+                    ))
+                  ) : (
+                    <>
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-[#B91C1C] font-bold mt-0.5">✦</span>
+                        <span>{t("highlight1")}</span>
+                      </li>
+                      <li className="flex items-start gap-2.5">
+                        <span className="text-[#B91C1C] font-bold mt-0.5">✦</span>
+                        <span>{t("highlight2")}</span>
+                      </li>
+                    </>
+                  )}
                 </ul>
               </div>
 
@@ -122,19 +175,19 @@ export function FeaturedEventSection() {
               >
                 {/* Badge Overlay */}
                 <div className="absolute top-4 left-4 z-20 px-3 py-1 rounded-md bg-[#B91C1C] text-white text-[11px] font-heading font-bold uppercase tracking-wider shadow-md">
-                  Official Anniversary Flyer
+                  {featured.tag || "Upcoming Event"}
                 </div>
 
-                <div className="relative aspect-[3/4] w-full overflow-hidden">
+                <div className="relative aspect-[3/4] w-full overflow-hidden bg-black/40">
                   <Image
-                    src="/images/events/anniversary-flyer.jpg"
-                    alt={t("flyerAlt")}
+                    src={flyerImage}
+                    alt={featured.title || t("flyerAlt")}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px"
                     className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                     priority
                   />
-                  {/* Subtle hover gradient */}
+                  {/* Hover gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <span className="text-white text-xs font-heading font-bold flex items-center gap-2">
                       Click to View Full Event Details & Program Schedule →
