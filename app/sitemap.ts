@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://narrowgate-red.vercel.app';
   const locales = ['en', 'it'];
-  const routes = ['', '/about', '/get-involved', '/contact', '/praise-worship', '/support-mission'];
+  const routes = ['', '/about', '/events', '/get-involved', '/contact', '/praise-worship', '/support-mission'];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 

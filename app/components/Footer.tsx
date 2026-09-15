@@ -37,6 +37,15 @@ export default function Footer() {
               <li><strong className="text-white font-semibold">Sun:</strong> Sunday School (9:20 AM)</li>
               <li><strong className="text-white font-semibold">Sun:</strong> Main Service (10:00 AM)</li>
             </ul>
+            <div className="mt-4 pt-3 border-t border-white/10">
+              <a
+                href={`/${locale}/events`}
+                className="inline-flex items-center gap-1.5 text-xs font-heading font-semibold text-accent hover:text-accent-light transition-colors"
+              >
+                <span>{t("eventsLink")}</span>
+                <span>→</span>
+              </a>
+            </div>
           </div>
 
           {/* Location */}
@@ -76,7 +85,16 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
           <p>&copy; {currentYear} The Narrow Gate Foursquare Church. {t("rights")}</p>
-          <p className="text-white/40">Motta di Livenza (TV), Italy</p>
+          <div className="flex items-center gap-4">
+            <a
+              href={`/${locale}/events`}
+              className="hover:text-accent transition-colors font-medium text-white/70"
+            >
+              {t("eventsLink")}
+            </a>
+            <span className="text-white/20">•</span>
+            <p className="text-white/40">Motta di Livenza (TV), Italy</p>
+          </div>
         </div>
       </div>
     </footer>

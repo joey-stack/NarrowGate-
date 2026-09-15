@@ -5,6 +5,7 @@ import { HeroSection } from "../components/HeroSection";
 import { WhoWeAreSection } from "../components/WhoWeAreSection";
 import { WatchSermonsSection } from "../components/WatchSermonsSection";
 import { WeeklyGatheringsDarkSection } from "../components/WeeklyGatheringsDarkSection";
+import { FeaturedEventSection } from "../components/FeaturedEventSection";
 import { MinistriesGridSection } from "../components/MinistriesGridSection";
 import { SupportMissionFullBleedSection } from "../components/SupportMissionFullBleedSection";
 import { MomentsGallerySection } from "../components/MomentsGallerySection";
@@ -26,6 +27,7 @@ export default async function HomePage({
         <WhoWeAreSection />
         <WatchSermonsSection />
         <WeeklyGatheringsDarkSection />
+        <FeaturedEventSection />
         <MinistriesGridSection />
         <SupportMissionFullBleedSection />
         <MomentsGallerySection />

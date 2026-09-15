@@ -340,7 +340,90 @@
     "rights": "Tutti i diritti riservati.",
     "location": "Via Cadamure 1/19, 31045 Motta di Livenza, Provincia di Treviso, Nord-Est Italia",
     "phone": "+39 - 3883629233",
-    "email": "fgcititaly@aol.com / uyisky@yahoo.com"
+    "email": "fgcititaly@aol.com / uyisky@yahoo.com",
+    "eventsLink": "Eventi e Celebrazioni"
+  },
+  "FeaturedEvent": {
+    "badge": "Celebrazione Speciale in Arrivo",
+    "title": "Anniversario Annuale della Chiesa e Celebrazione di Ringraziamento",
+    "themeLabel": "Tema dell'Anniversario",
+    "theme": "\"Un Anno di Grazia Divina e Fruttuosità\"",
+    "dateLabel": "Data e Ora",
+    "dateValue": "Domenica 17 Novembre 2024 alle 10:00",
+    "locationLabel": "Luogo",
+    "locationValue": "Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italia",
+    "highlightsLabel": "Momenti Salienti della Celebrazione",
+    "highlight1": "Lode e Adorazione con la Corale The Narrow Gate",
+    "highlight2": "Parola Dinamica dell'Anniversario e Ringraziamento",
+    "highlight3": "Banchetto Love Feast e Fratellanza Internazionale",
+    "viewAllBtn": "Vedi Tutti gli Eventi e Dettagli",
+    "flyerAlt": "Locandina Ufficiale dell'Anniversario della Chiesa The Narrow Gate",
+    "description": "Unisciti a noi per celebrare l'infinita fedeltà, la grazia e la guida divina di Dio attraverso un altro anno fecondo di ministero e impatto comunitario."
+  },
+  "Events": {
+    "badge": "Vita della Chiesa e Incontri Speciali",
+    "heroTitle": "Eventi e Celebrazioni Annuali",
+    "heroSubtitle": "Celebra con noi la fedeltà di Dio durante tutto l'anno a Motta di Livenza. Dal nostro anniversario annuale alle feste culturali e ai summit di preghiera, c'è un posto speciale per te.",
+    "featuredSectionTitle": "Evento Principale in Programma",
+    "featuredSectionSubtitle": "La nostra celebrazione più attesa — segna la data sul calendario e partecipa con la tua famiglia e i tuoi cari.",
+    "anniversary": {
+      "tag": "CELEBRAZIONE PRINCIPALE",
+      "title": "Anniversario Annuale della Chiesa e Celebrazione di Ringraziamento",
+      "themeTitle": "Tema della Celebrazione",
+      "theme": "\"Un Anno di Grazia Divina e Fruttuosità\"",
+      "scripture": "Salmo 65:11 — \"Tu coroni l'annata con la tua benevolenza, e le tue orme stillano grasso.\"",
+      "date": "Domenica 17 Novembre 2024",
+      "time": "10:00 – 13:30 (Seguito dal Banchetto Love Feast)",
+      "venue": "The Narrow Gate Foursquare Church, Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italia",
+      "host": "Pastore Senior Rev. Uyi Loveday Evbuomwan e Team Pastorale",
+      "overview": "Ogni anno, la famiglia di The Narrow Gate Foursquare Church si riunisce con sincera gratitudine per celebrare un'altra pietra miliare della grazia di Dio, della salvezza e dell'impatto comunitario. Aspettati canti di lode e adorazione unti dallo Spirito, predicazione biblica ispirata, testimonianze della bontà del Signore e il nostro tradizionale banchetto Love Feast che celebra la nostra unità internazionale in Cristo.",
+      "scheduleTitle": "Programma della Giornata",
+      "part1": "10:00 – Colazione di Preghiera e Intercessione",
+      "part2": "10:30 – Lode e Adorazione dell'Anniversario",
+      "part3": "11:15 – Parola di Ringraziamento, Testimonianze e Dediche",
+      "part4": "12:30 – Banchetto Love Feast e Fratellanza Gioiosa",
+      "addToCalendar": "Aggiungi al Calendario",
+      "getDirections": "Ottieni Indicazioni",
+      "inquire": "Contattaci / RSVP",
+      "flyerTitle": "Locandina Ufficiale dell'Anniversario"
+    },
+    "upcomingSectionTitle": "Incontri Annuali e Programmi Speciali",
+    "upcomingSectionSubtitle": "Scopri il nostro calendario annuale di ritiri spirituali, celebrazioni culturali e iniziative comunitarie.",
+    "list": {
+      "culturalSunday": {
+        "title": "Celebrazione della Domenica Culturale",
+        "tag": "CELEBRAZIONE ANNUALE",
+        "date": "Ogni Giugno",
+        "desc": "Una festa vivace della nostra congregazione internazionale con abiti tradizionali, canti culturali e delizie culinarie da tutto il mondo.",
+        "theme": "\"La nostra forza sta nella nostra diversità\" (2 Corinzi 11:22)"
+      },
+      "loveFeast": {
+        "title": "Love Feast dei Bambini e delle Famiglie",
+        "tag": "MINISTERO DELLE FAMIGLIE",
+        "date": "Incontro Semestrale",
+        "desc": "Una festa gioiosa dedicata a valorizzare bambini e genitori con pasti condivisi, giochi, versetti biblici e regali speciali."
+      },
+      "prayerSummit": {
+        "title": "Summit Speciale di Preghiera e Digiuno",
+        "tag": "RINNOVAMENTO SPIRITUALE",
+        "date": "Primo Fine Settimana Trimestrale",
+        "desc": "Un fine settimana intensivo di intercessione, consacrazione e svolta spirituale per le famiglie, la chiesa e il territorio in Italia."
+      },
+      "youthEncounter": {
+        "title": "Incontro di Adorazione Giovani e Giovani Adulti",
+        "tag": "MINISTERO GIOVANILE",
+        "date": "Sabato Sera Stagionale",
+        "desc": "Una serata dinamica di culto contemporaneo, confronto aperto e amicizia cristiana per incoraggiare le nuove generazioni."
+      },
+      "foodDrive": {
+        "title": "Giornata di Distribuzione Banco Alimentare",
+        "tag": "IMPATTO SOCIALE",
+        "date": "Ultimo Sabato di Ogni Mese",
+        "desc": "Distribuzione di pacchi alimentari essenziali alle famiglie registrate che affrontano difficoltà economiche a Motta di Livenza."
+      }
+    },
+    "flyerUploadNotice": "Cerchi l'ultimo bollettino o vuoi informazioni su un evento specifico? Contatta la nostra segreteria pastorale.",
+    "planVisitCta": "Pianifica la Tua Visita a un Evento"
   },
   "PlanVisitModal": {
     "title": "Pianifica la Tua Visita",

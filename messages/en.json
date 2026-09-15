@@ -340,7 +340,90 @@
     "rights": "All rights reserved.",
     "location": "Via Cadamure 1/19, 31045 Motta di Livenza, Province of Treviso, North-East Italy",
     "phone": "+39 - 3883629233",
-    "email": "fgcititaly@aol.com / uyisky@yahoo.com"
+    "email": "fgcititaly@aol.com / uyisky@yahoo.com",
+    "eventsLink": "Events & Celebrations"
+  },
+  "FeaturedEvent": {
+    "badge": "Upcoming Special Celebration",
+    "title": "Annual Church Anniversary & Thanksgiving Celebration",
+    "themeLabel": "Anniversary Theme",
+    "theme": "\"A Year of Divine Grace & Fruitfulness\"",
+    "dateLabel": "Date & Time",
+    "dateValue": "Sunday, November 17, 2024 at 10:00 AM",
+    "locationLabel": "Venue",
+    "locationValue": "Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italy",
+    "highlightsLabel": "Celebration Highlights",
+    "highlight1": "Special Anointed Worship with the Narrow Gate Choir",
+    "highlight2": "Dynamic Anniversary Word & Thanksgiving Service",
+    "highlight3": "Love Feast Banquet & International Fellowship",
+    "viewAllBtn": "View All Events & Details",
+    "flyerAlt": "The Narrow Gate Annual Church Anniversary Flyer",
+    "description": "Join us in celebrating God's boundless faithfulness, grace, and divine guidance across another fruitful year of ministry and community impact."
+  },
+  "Events": {
+    "badge": "Church Life & Special Gatherings",
+    "heroTitle": "Events & Annual Celebrations",
+    "heroSubtitle": "Celebrate God's faithfulness with us throughout the year in Motta di Livenza. From our annual church anniversary to special cultural feasts and worship summits, there is a place for you.",
+    "featuredSectionTitle": "Current Featured Event",
+    "featuredSectionSubtitle": "Our flagship upcoming celebration — mark your calendar and join us with your family and loved ones.",
+    "anniversary": {
+      "tag": "FEATURED CELEBRATION",
+      "title": "Annual Church Anniversary & Thanksgiving Celebration",
+      "themeTitle": "Celebration Theme",
+      "theme": "\"A Year of Divine Grace & Fruitfulness\"",
+      "scripture": "Psalm 65:11 — \"You crown the year with your goodness, and your paths drop fatness.\"",
+      "date": "Sunday, November 17, 2024",
+      "time": "10:00 AM – 1:30 PM (Followed by Love Feast Banquet)",
+      "venue": "The Narrow Gate Foursquare Church, Via Cadamure 1/19, 31045 Motta di Livenza (TV), Italy",
+      "host": "Senior Pastor Rev. Uyi Loveday Evbuomwan & Ministry Team",
+      "overview": "Every year, The Narrow Gate Foursquare Church family gathers together in heartfelt gratitude to celebrate another milestone of God's grace, salvation, and community impact. Expect anointed praise and worship, inspirational preaching, inspiring testimonies of God's goodness, and our signature post-service Love Feast Banquet celebrating our international unity in Christ.",
+      "scheduleTitle": "Program Schedule",
+      "part1": "10:00 AM – Breakfast Prayer & Pre-service Intercession",
+      "part2": "10:30 AM – Anniversary Praise & Anointed Worship",
+      "part3": "11:15 AM – Thanksgiving Word, Testimonies & Special Dedications",
+      "part4": "12:30 PM – Love Feast Banquet & Joyful Fellowship",
+      "addToCalendar": "Add to Calendar",
+      "getDirections": "Get Directions",
+      "inquire": "Contact / RSVP",
+      "flyerTitle": "Official Anniversary Flyer"
+    },
+    "upcomingSectionTitle": "Annual Gatherings & Special Programs",
+    "upcomingSectionSubtitle": "Discover our annual calendar of spiritual retreats, cultural celebrations, and community initiatives.",
+    "list": {
+      "culturalSunday": {
+        "title": "Cultural Sunday Celebration",
+        "tag": "ANNUAL CELEBRATION",
+        "date": "Every June",
+        "desc": "A colorful celebration of our diverse international congregation with traditional attire, cultural music, and ethnic cuisines from around the globe.",
+        "theme": "\"Our strength lies in our diversity\" (2 Cor 11:22)"
+      },
+      "loveFeast": {
+        "title": "Children & Family Love Feast",
+        "tag": "FAMILY MINISTRY",
+        "date": "Bi-Annual Gathering",
+        "desc": "A joyful celebration dedicated to uplifting our children and families with shared meals, games, scripture memorization, and gifts."
+      },
+      "prayerSummit": {
+        "title": "Special Prayer & Fasting Summit",
+        "tag": "SPIRITUAL RENEWAL",
+        "date": "Quarterly First Weekend",
+        "desc": "Intensive weekend of intercession, spiritual breakthrough, and consecration for our families, church, and community in Italy."
+      },
+      "youthEncounter": {
+        "title": "Youth & Young Adults Worship Encounter",
+        "tag": "YOUTH MINISTRY",
+        "date": "Seasonal Saturday Evening",
+        "desc": "Dynamic evening of contemporary worship, open discussion, and fellowship equipping the next generation to stand firm in their faith."
+      },
+      "foodDrive": {
+        "title": "Banco Alimentare Food Distribution Day",
+        "tag": "COMMUNITY OUTREACH",
+        "date": "Last Saturday of Every Month",
+        "desc": "Distributing nutritional food care packages to registered families facing economic challenges in Motta di Livenza."
+      }
+    },
+    "flyerUploadNotice": "Looking for the latest event bulletin or planning a dedicated church gathering? Contact our pastoral administration.",
+    "planVisitCta": "Plan Your Visit to an Event"
   },
   "PlanVisitModal": {
     "title": "Plan Your Visit",
