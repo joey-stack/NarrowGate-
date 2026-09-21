@@ -91,8 +91,14 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+import dynamic from "next/dynamic";
 import { PlanVisitProvider } from "../components/PlanVisitContext";
-import { PlanVisitModal } from "../components/PlanVisitModal";
+
+// Lazy-load modal to avoid blocking critical render
+const PlanVisitModal = dynamic(
+  () => import("../components/PlanVisitModal").then((m) => m.PlanVisitModal),
+  { ssr: false }
+);
 
 export default async function LocaleLayout({
   children,
@@ -129,6 +135,15 @@ export default async function LocaleLayout({
       "addressRegion": "Treviso",
       "addressCountry": "IT"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 45.7797,
+      "longitude": 12.6074
+    },
+    "hasMap": "https://maps.google.com/?q=Via+Cadamure+1/19+31045+Motta+di+Livenza+Italy",
+    "sameAs": [
+      "https://www.youtube.com/@thenarrowgatefoursquare"
+    ],
     "telephone": "+393883629233",
     "email": "fgcititaly@aol.com",
     "pastor": {

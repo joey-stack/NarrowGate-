@@ -51,8 +51,9 @@ export function HeroSection() {
             alt={slide.caption}
             fill
             priority={index === 0}
+            loading={index === 0 ? "eager" : "lazy"}
             sizes="100vw"
-            quality={85}
+            quality={80}
             className="object-cover object-top"
           />
         </div>

@@ -2,11 +2,30 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
+import { useState, useEffect, useRef } from "react";
 import { ScrollReveal } from "./ScrollReveal";
 
 export function WatchSermonsSection() {
   const t = useTranslations("WatchSermons");
   const locale = useLocale();
+  const videoContainerRef = useRef<HTMLDivElement | null>(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    if (!videoContainerRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        }
+      },
+      { rootMargin: "250px" }
+    );
+
+    observer.observe(videoContainerRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="py-20 sm:py-28 bg-white border-t border-black/5">
@@ -52,19 +71,33 @@ export function WatchSermonsSection() {
 
           {/* Right Column: Autoplay Sermon Video Container */}
           <ScrollReveal delay={0.2} className="lg:col-span-7">
-            <div className="rounded-lg bg-black overflow-hidden shadow-md border border-black/10 relative h-[360px] sm:h-[420px] lg:h-[480px] w-full">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="metadata"
-                disablePictureInPicture
-                className="w-full h-full object-cover object-center pointer-events-none"
-              >
-                <source src="/videos/worship-marquee.webm" type="video/webm" />
-                <source src="/videos/worship-marquee.mp4" type="video/mp4" />
-              </video>
+            <div
+              ref={videoContainerRef}
+              className="rounded-lg bg-black overflow-hidden shadow-md border border-black/10 relative h-[360px] sm:h-[420px] lg:h-[480px] w-full"
+            >
+              {isInView ? (
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="none"
+                  disablePictureInPicture
+                  className="w-full h-full object-cover object-center pointer-events-none"
+                >
+                  <source src="/videos/worship-marquee.webm" type="video/webm" />
+                  <source src="/videos/worship-marquee.mp4" type="video/mp4" />
+                </video>
+              ) : (
+                <Image
+                  src="/images/gatherings/sunday-service.jpg"
+                  alt="Worship and sermon preview"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  className="object-cover object-center opacity-80"
+                  loading="lazy"
+                />
+              )}
             </div>
           </ScrollReveal>
         </div>

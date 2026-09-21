@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { useState, useEffect, useRef } from "react";
 
 interface GalleryItem {
   type: "image" | "video";
@@ -13,6 +14,24 @@ interface GalleryItem {
 
 export function MomentsGallerySection() {
   const t = useTranslations("Gallery");
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    if (!sectionRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        }
+      },
+      { rootMargin: "300px" } // Preload when 300px away from scrolling into view
+    );
+
+    observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   const baseItems: GalleryItem[] = [
     {
@@ -66,7 +85,7 @@ export function MomentsGallerySection() {
   const marqueeList = [...baseItems, ...baseItems];
 
   return (
-    <section className="py-20 sm:py-28 bg-[#f2ebd1] border-t border-black/5 overflow-hidden">
+    <section ref={sectionRef} className="py-20 sm:py-28 bg-[#f2ebd1] border-t border-black/5 overflow-hidden">
       {/* Section Heading */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-14">
         <div className="inline-block px-3.5 py-1.5 rounded-lg bg-eyebrow-gradient text-white text-xs font-heading font-bold uppercase tracking-wider mb-4 shadow-sm">
@@ -89,26 +108,38 @@ export function MomentsGallerySection() {
               className="shrink-0 w-72 sm:w-96 lg:w-[420px] h-64 sm:h-80 lg:h-96 rounded-[5px] bg-white border border-black/10 shadow-sm overflow-hidden relative group hover:shadow-md transition-all duration-300 transform-gpu"
             >
               {item.type === "video" ? (
-                <video
-                  poster={item.poster}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                  disablePictureInPicture
-                  className="w-full h-full object-cover object-center pointer-events-none group-hover:scale-105 transition-transform duration-700 ease-out"
-                >
-                  {item.webmSrc && <source src={item.webmSrc} type="video/webm" />}
-                  <source src={item.src} type="video/mp4" />
-                </video>
+                isInView ? (
+                  <video
+                    poster={item.poster}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="none"
+                    disablePictureInPicture
+                    className="w-full h-full object-cover object-center pointer-events-none group-hover:scale-105 transition-transform duration-700 ease-out"
+                  >
+                    {item.webmSrc && <source src={item.webmSrc} type="video/webm" />}
+                    <source src={item.src} type="video/mp4" />
+                  </video>
+                ) : (
+                  <Image
+                    src={item.poster || "/images/gatherings/sunday-service.jpg"}
+                    alt={item.alt}
+                    fill
+                    sizes="(max-width: 768px) 288px, (max-width: 1024px) 384px, 420px"
+                    quality={60}
+                    loading="lazy"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                  />
+                )
               ) : (
                 <Image
                   src={item.src}
                   alt={item.alt}
                   fill
                   sizes="(max-width: 768px) 288px, (max-width: 1024px) 384px, 420px"
-                  quality={75}
+                  quality={70}
                   loading="lazy"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
