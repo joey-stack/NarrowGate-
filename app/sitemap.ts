@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/about',
     '/events',
+    '/events/anniversary-2026',
     '/get-involved',
     '/contact',
     '/praise-worship',

@@ -2,6 +2,7 @@ import {
   collection,
   addDoc,
   getDocs,
+  getDoc,
   updateDoc,
   deleteDoc,
   doc,
@@ -184,7 +185,7 @@ export async function getChurchEvents(): Promise<ChurchEvent[]> {
         host: data.host || "",
         overview: data.overview || "",
         schedule: data.schedule || [],
-        flyerUrl: data.flyerUrl || "/images/events/anniversary-flyer.jpg",
+        flyerUrl: data.flyerUrl || "/images/events/back-to-bethel-20th-anniversary.jpg",
         tag: data.tag || "General",
         isFeatured: data.isFeatured ?? false,
         createdAt: data.createdAt?.toDate?.()?.toISOString() || new Date().toISOString(),
@@ -194,6 +195,44 @@ export async function getChurchEvents(): Promise<ChurchEvent[]> {
     console.warn("Firestore getChurchEvents failed, using default events:", error);
     return isDefaultSeedsCleared() ? [] : DEFAULT_EVENTS;
   }
+}
+
+/**
+ * Fetch a single church event by its ID (from DEFAULT_EVENTS or Firestore).
+ */
+export async function getChurchEventById(id: string): Promise<ChurchEvent | null> {
+  const defaultMatch = DEFAULT_EVENTS.find((e) => e.id === id);
+  if (defaultMatch) {
+    return defaultMatch;
+  }
+
+  try {
+    const docRef = doc(db, COLLECTION, id);
+    const snap = await getDoc(docRef);
+    if (snap.exists()) {
+      const data = snap.data();
+      return {
+        id: snap.id,
+        title: data.title || "",
+        theme: data.theme || "",
+        scripture: data.scripture || "",
+        date: data.date || "",
+        time: data.time || "",
+        venue: data.venue || "",
+        host: data.host || "",
+        overview: data.overview || "",
+        schedule: data.schedule || [],
+        flyerUrl: data.flyerUrl || "/images/events/back-to-bethel-20th-anniversary.jpg",
+        tag: data.tag || "General",
+        isFeatured: data.isFeatured ?? false,
+        createdAt: data.createdAt?.toDate?.()?.toISOString() || new Date().toISOString(),
+      };
+    }
+  } catch (error) {
+    console.warn(`Firestore getChurchEventById failed for ${id}:`, error);
+  }
+
+  return null;
 }
 
 /**
