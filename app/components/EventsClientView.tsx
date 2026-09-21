@@ -313,25 +313,25 @@ export function EventsClientView({ initialEvents = DEFAULT_EVENTS }: EventsClien
                   tabIndex={0}
                   onClick={() =>
                     setPreviewFlyer({
-                      url: nextFeatured.flyerUrl || "/images/events/anniversary-flyer.jpg",
+                      url: nextFeatured.flyerUrl || "/images/events/back-to-bethel-20th-anniversary.jpg",
                       title: nextFeatured.title,
                     })
                   }
                   onKeyDown={(e) => {
                     if (e.key === "Enter") {
                       setPreviewFlyer({
-                        url: nextFeatured.flyerUrl || "/images/events/anniversary-flyer.jpg",
+                        url: nextFeatured.flyerUrl || "/images/events/back-to-bethel-20th-anniversary.jpg",
                         title: nextFeatured.title,
                       });
                     }
                   }}
-                  className="w-full max-w-md relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 shadow-2xl group cursor-pointer"
+                  className="w-full max-w-lg relative aspect-[1024/721] rounded-lg overflow-hidden border border-white/10 shadow-2xl group cursor-pointer"
                 >
                   <Image
-                    src={nextFeatured.flyerUrl || "/images/events/anniversary-flyer.jpg"}
+                    src={nextFeatured.flyerUrl || "/images/events/back-to-bethel-20th-anniversary.jpg"}
                     alt={nextFeatured.title}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 550px"
                     className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     priority
                   />
@@ -342,7 +342,7 @@ export function EventsClientView({ initialEvents = DEFAULT_EVENTS }: EventsClien
                   </div>
                 </div>
 
-                <div className="mt-4 flex items-center justify-between w-full max-w-md text-xs text-white/70">
+                <div className="mt-4 flex items-center justify-between w-full max-w-lg text-xs text-white/70">
                   <span className="font-heading font-semibold text-white/90">
                     Official Celebration Flyer
                   </span>
@@ -350,7 +350,7 @@ export function EventsClientView({ initialEvents = DEFAULT_EVENTS }: EventsClien
                     type="button"
                     onClick={() =>
                       setPreviewFlyer({
-                        url: nextFeatured.flyerUrl || "/images/events/anniversary-flyer.jpg",
+                        url: nextFeatured.flyerUrl || "/images/events/back-to-bethel-20th-anniversary.jpg",
                         title: nextFeatured.title,
                       })
                     }
@@ -403,7 +403,7 @@ export function EventsClientView({ initialEvents = DEFAULT_EVENTS }: EventsClien
                     {/* Flyer / Poster Thumbnail */}
                     <div className="relative aspect-[16/10] w-full bg-[#121212] overflow-hidden">
                       <Image
-                        src={event.flyerUrl || "/images/events/anniversary-flyer.jpg"}
+                        src={event.flyerUrl || "/images/events/back-to-bethel-20th-anniversary.jpg"}
                         alt={event.title}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
@@ -428,7 +428,7 @@ export function EventsClientView({ initialEvents = DEFAULT_EVENTS }: EventsClien
                         type="button"
                         onClick={() =>
                           setPreviewFlyer({
-                            url: event.flyerUrl || "/images/events/anniversary-flyer.jpg",
+                            url: event.flyerUrl || "/images/events/back-to-bethel-20th-anniversary.jpg",
                             title: event.title,
                           })
                         }
@@ -566,7 +566,7 @@ export function EventsClientView({ initialEvents = DEFAULT_EVENTS }: EventsClien
           onClick={() => setPreviewFlyer(null)}
         >
           <div
-            className="relative max-w-2xl w-full max-h-[90vh] flex flex-col items-center"
+            className="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -576,7 +576,7 @@ export function EventsClientView({ initialEvents = DEFAULT_EVENTS }: EventsClien
             >
               ✕ Close
             </button>
-            <div className="relative w-full aspect-[3/4] max-h-[80vh] rounded-lg overflow-hidden border border-white/20 shadow-2xl">
+            <div className="relative w-full aspect-[1024/721] max-h-[80vh] rounded-lg overflow-hidden border border-white/20 shadow-2xl bg-black">
               <Image
                 src={previewFlyer.url}
                 alt={previewFlyer.title}

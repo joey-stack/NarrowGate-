@@ -54,7 +54,7 @@ export default function AdminDashboardPage() {
     host: "Senior Pastor Rev. Uyi Loveday Evbuomwan",
     overview: "",
     schedule: [{ time: "10:00 AM", title: "Opening Worship" }],
-    flyerUrl: "/images/events/anniversary-flyer.jpg",
+    flyerUrl: "/images/events/back-to-bethel-20th-anniversary.jpg",
     tag: "Anniversary",
     isFeatured: false,
   });
@@ -140,7 +140,7 @@ export default function AdminDashboardPage() {
         { time: "11:15 AM", title: "Thanksgiving Word & Testimonies" },
         { time: "12:30 PM", title: "Love Feast Banquet & Fellowship" },
       ],
-      flyerUrl: "/images/events/anniversary-flyer.jpg",
+      flyerUrl: "/images/events/back-to-bethel-20th-anniversary.jpg",
       tag: "Anniversary",
       isFeatured: false,
     });
@@ -159,7 +159,7 @@ export default function AdminDashboardPage() {
       host: event.host || "",
       overview: event.overview || "",
       schedule: event.schedule && event.schedule.length > 0 ? event.schedule : [{ time: "10:00 AM", title: "Opening" }],
-      flyerUrl: event.flyerUrl || "/images/events/anniversary-flyer.jpg",
+      flyerUrl: event.flyerUrl || "/images/events/back-to-bethel-20th-anniversary.jpg",
       tag: event.tag || "General",
       isFeatured: event.isFeatured ?? false,
     });
@@ -594,7 +594,7 @@ export default function AdminDashboardPage() {
                       {/* Flyer Thumbnail & Badges */}
                       <div className="relative aspect-[16/10] w-full bg-black/50 overflow-hidden">
                         <Image
-                          src={event.flyerUrl || "/images/events/anniversary-flyer.jpg"}
+                          src={event.flyerUrl || "/images/events/back-to-bethel-20th-anniversary.jpg"}
                           alt={event.title}
                           fill
                           className="object-cover object-center"
@@ -1060,17 +1060,17 @@ export default function AdminDashboardPage() {
                     type="text"
                     value={eventFormData.flyerUrl}
                     onChange={(e) => setEventFormData({ ...eventFormData, flyerUrl: e.target.value })}
-                    placeholder="e.g. /images/events/anniversary-flyer.jpg or https://..."
+                    placeholder="e.g. /images/events/back-to-bethel-20th-anniversary.jpg or https://..."
                     className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-red-500"
                   />
                   <div className="flex flex-wrap items-center gap-2 text-[10px] text-slate-400">
                     <span>Quick options:</span>
                     <button
                       type="button"
-                      onClick={() => setEventFormData({ ...eventFormData, flyerUrl: "/images/events/anniversary-flyer.jpg" })}
+                      onClick={() => setEventFormData({ ...eventFormData, flyerUrl: "/images/events/back-to-bethel-20th-anniversary.jpg" })}
                       className="hover:text-white underline"
                     >
-                      Anniversary Flyer
+                      20th Anniversary Flyer
                     </button>
                     <span>•</span>
                     <button

@@ -49,7 +49,10 @@ export function FeaturedEventSection() {
     }
   })();
 
-  const flyerImage = featured.flyerUrl || "/images/events/anniversary-flyer.jpg";
+  const flyerImage =
+    featured.flyerUrl === "/images/events/anniversary-flyer.jpg"
+      ? "/images/events/back-to-bethel-20th-anniversary.jpg"
+      : (featured.flyerUrl || "/images/events/back-to-bethel-20th-anniversary.jpg");
 
   return (
     <section className="py-20 sm:py-28 bg-[#181818] text-white relative overflow-hidden border-t border-b border-white/10">
@@ -174,19 +177,19 @@ export function FeaturedEventSection() {
             <div className="lg:col-span-5 flex justify-center">
               <Link
                 href={`/${locale}/events`}
-                className="group relative block w-full max-w-md rounded-lg overflow-hidden border border-white/15 shadow-2xl bg-[#121212] transition-transform duration-500 hover:scale-[1.02]"
+                className="group relative block w-full max-w-lg rounded-xl overflow-hidden border border-white/15 shadow-2xl bg-[#121212] transition-transform duration-500 hover:scale-[1.02]"
               >
                 {/* Badge Overlay */}
                 <div className="absolute top-4 left-4 z-20 px-3 py-1 rounded-md bg-[#B91C1C] text-white text-[11px] font-heading font-bold uppercase tracking-wider shadow-md">
                   {featured.tag || "Upcoming Event"}
                 </div>
 
-                <div className="relative aspect-[3/4] w-full overflow-hidden bg-black/40">
+                <div className="relative aspect-[1024/721] w-full overflow-hidden bg-black/40">
                   <Image
                     src={flyerImage}
                     alt={featured.title || t("flyerAlt")}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 550px"
                     className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                     priority
                   />
